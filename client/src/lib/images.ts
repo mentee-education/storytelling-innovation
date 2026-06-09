@@ -13,8 +13,8 @@ export const IMAGES = {
   communityActionDeck: "/images/communityActionDeck.webp",
   workshopKautz: "/images/workshopKautz.webp",
   germinationGamesLogo: "/images/germinationGamesLogo.webp",
-  songcomingCover: "/images/pinataMoonCover.webp",
-  pinataMoonCover: "/images/pinataMoonCover.webp",
+  songcomingCover: "/images/songcoming-cover.png",
+  pinataMoonCover: "/images/pinata-moon-cover.png",
   norwegianStudents: "/images/norwegianStudents.webp",
   upwardBoundWorkshop: "/images/upwardBoundWorkshop.webp",
   csiLogo: "/images/csiLogo.webp",
@@ -29,4 +29,10 @@ export const IMAGES = {
   torranTeachingCsi: "/images/torranTeachingCsi.webp",
   torranNorwayClassSelfie: "/images/torranNorwayClassSelfie.webp",
   torranHeadshot: "/images/torranClassroomSelfie.webp",
+
+  // Card images from original site
+  booksCard: "/images/books-card.png",
+  gamesCard: "/images/games-card.png",
+  workshopsCard: "/images/workshops-card.png",
+  siteLogo: "/images/site-logo.png",
 };
