@@ -116,11 +116,11 @@ export default function Home() {
             ].map((item) => (
               <Link key={item.label} href={item.href}>
                 <div className="group border-r-2 border-[#0A1628] last:border-r-0 cursor-pointer overflow-hidden">
-                  <div className="h-56 overflow-hidden">
+                  <div className="h-64 overflow-hidden bg-white flex items-center justify-center p-4">
                     <img
                       src={item.img}
                       alt={item.label}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div
