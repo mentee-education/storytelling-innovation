@@ -86,6 +86,16 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      {/* Developed by bar */}
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", backgroundColor: "#0a1220" }}>
+        <div className="container" style={{ padding: "1.25rem 0", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem" }}>
+          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 500, fontSize: "0.7rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>Developed by</span>
+          <a href="https://mentee.ca" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-opacity">
+            <img src="/images/mentee-logo.png" alt="Mentee" style={{ height: "28px", width: "auto", opacity: 0.8 }} />
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
