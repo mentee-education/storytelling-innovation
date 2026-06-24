@@ -20,10 +20,7 @@ const navLinks: NavItem[] = [
   {
     label: "News",
     href: "/news",
-    children: [
-      { label: "All News", href: "/news" },
-      { label: "Press Kit", href: "/press-kit" },
-    ],
+    children: [{ label: "Press Kit", href: "/press-kit" }],
   },
   {
     label: "Books",
@@ -76,23 +73,29 @@ function DropdownItem({ item, location }: { item: NavItem; location: string }) {
 
   return (
     <div ref={ref} className="relative">
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 px-3 py-2 transition-colors"
-        style={{
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 700,
-          fontSize: "0.9rem",
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          color: active ? "#E8531D" : "#0F1B2D",
-          background: "none",
-          border: "none",
-        }}
-      >
-        {item.label}
-        <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
-      </button>
+      <div className="flex items-center gap-0 px-3 py-2">
+        <Link
+          href={item.href}
+          className="no-underline transition-colors"
+          style={{
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 700,
+            fontSize: "0.9rem",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            color: active ? "#E8531D" : "#0F1B2D",
+          }}
+        >
+          {item.label}
+        </Link>
+        <button
+          onClick={() => setOpen(!open)}
+          style={{ background: "none", border: "none", cursor: "pointer", padding: "0 0 0 4px", color: active ? "#E8531D" : "#0F1B2D" }}
+          aria-label={`${item.label} submenu`}
+        >
+          <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
+        </button>
+      </div>
       {open && (
         <div
           className="absolute top-full left-0 mt-1 py-2 min-w-[180px] z-50"

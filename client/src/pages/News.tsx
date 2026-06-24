@@ -158,12 +158,12 @@ export default function News() {
                 overflow: "hidden",
               }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="grid grid-cols-1 md:grid-cols-2" style={{ minHeight: "320px" }}>
                 <div
                   style={{
-                    height: "360px",
                     overflow: "hidden",
                     borderRight: "2.5px solid #0F1B2D",
+                    minHeight: "280px",
                   }}
                 >
                   <img
@@ -174,7 +174,7 @@ export default function News() {
                 </div>
                 <div
                   style={{
-                    padding: "2.5rem",
+                    padding: "2rem",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
@@ -216,9 +216,9 @@ export default function News() {
                     </span>
                   </div>
                   <h2
-                    className="display-heading mb-4"
+                    className="display-heading mb-3"
                     style={{
-                      fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
+                      fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
                       color: "#0F1B2D",
                     }}
                   >
@@ -227,10 +227,10 @@ export default function News() {
                   <p
                     style={{
                       fontFamily: "'Barlow', sans-serif",
-                      fontSize: "1rem",
-                      lineHeight: 1.75,
+                      fontSize: "0.95rem",
+                      lineHeight: 1.7,
                       color: "rgba(15,27,45,0.75)",
-                      marginBottom: "1.75rem",
+                      marginBottom: "1.5rem",
                     }}
                   >
                     {featured.excerpt}
