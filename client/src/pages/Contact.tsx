@@ -9,7 +9,7 @@ import { IMAGES } from "@/lib/images";
 
 const WEB3FORMS_KEY = "f40bb234-f956-40a9-8d38-43d72d8210e0";
 const TORRAN_HEADSHOT = IMAGES.torranNorwayClassSelfie;
-const HERO_BG = IMAGES.groupOutdoor;
+const HERO_BG = "/images/contact-hero.png";
 
 const CONTACT_CAROUSEL = [
   "http://storytellinginnovation.com/wp-content/uploads/2026/01/Odin-and-Torran-photo-768x1024.jpg",

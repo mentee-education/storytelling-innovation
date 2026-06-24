@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const HERO_BG = "/images/games-hero.png";
+const HERO_BG = "/images/games-hero-gen.png";
 const STORYGROW_LOGO = IMAGES.germinationGamesLogo;
 const STORYGROW_CARDS = IMAGES.storygrowCards;
 const STORYGROW_CARDS2 = IMAGES.tinythingsCard;
