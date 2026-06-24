@@ -45,7 +45,7 @@ function VideoCard({ project }: { project: typeof projects[0] }) {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-md shadow-md hover:shadow-lg transition-shadow duration-300" style={{ border: "2px solid #0F1B2D" }}>
+    <div className="overflow-hidden rounded-sm shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ border: "2px solid #0F1B2D" }}>
       {/* Video - 16:9 aspect ratio */}
       <div className="relative aspect-video" style={{ backgroundColor: "#111" }}>
         {playing ? (
