@@ -43,7 +43,7 @@
 }
 
 :root {
-  --radius: 9999px; /* pill-shaped by default */
+  --radius: 0.375rem; /* subtle rounding */
   
   /* CSI Brand Colors */
   --csi-orange: #E8531D;
