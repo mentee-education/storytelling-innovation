@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
 
       <div className="container pt-10 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 md:items-center">
           {/* Brand */}
           <div>
             <div className="mb-4" style={{ lineHeight: 1.15 }}>

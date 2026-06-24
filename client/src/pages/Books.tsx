@@ -9,7 +9,7 @@ import { IMAGES } from "@/lib/images";
 
 const BASE = "https://storytellinginnovation.com/wp-content/uploads/2025/12/";
 const BASE2 = "https://storytellinginnovation.com/wp-content/uploads/2025/10/";
-const HERO_BG = IMAGES.workshopKautz;
+const HERO_BG = "/images/books-hero.png";
 const COMPILATION = IMAGES.pinataMoonBanner;
 
 const featuredBooks = [
@@ -273,7 +273,7 @@ export default function Books() {
                 All proceeds go to providing free copies of this book to the community.
               </p>
               <a
-                href="https://storytellinginnovation.com/books/"
+                href="https://desertinkpress.org/products/song-of-the-santa-cruz-river"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-pill btn-pill-orange no-underline"
