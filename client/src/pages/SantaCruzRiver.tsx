@@ -18,7 +18,7 @@ export default function SantaCruzRiver() {
           position: "relative",
           minHeight: "55vh",
           display: "flex",
-          alignItems: "flex-end",
+          alignItems: "center",
           overflow: "hidden",
           background: "linear-gradient(180deg, #2d5a1e 0%, #3a6b28 25%, #4a7a35 50%, #3d6a2a 75%, #1a3a12 100%)",
         }}
@@ -109,10 +109,10 @@ export default function SantaCruzRiver() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to top, rgba(10,22,15,0.85) 0%, rgba(10,22,15,0.3) 50%, transparent 100%)",
+            background: "rgba(10,22,15,0.45)",
           }}
         />
-        <div className="container relative z-10 pb-14 pt-24">
+        <div className="container relative z-10 py-20">
           <div className="script-label mb-2" style={{ color: "#FFD600", fontFamily: "'Caveat', cursive", fontSize: "1.5rem" }}>Trilingual Children's Book</div>
           <h1
             className="display-heading"

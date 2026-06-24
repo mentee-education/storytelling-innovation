@@ -1,15 +1,15 @@
 /*
  * Press Kit — bold editorial press kit page
- * All content preserved from storytellinginnovation.com/press-kit/
+ * Content sourced from storytellinginnovation.com/press-kit/
  */
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
-import { ArrowRight, Download, Mail, BookOpen, Award, Star } from "lucide-react";
+import { Mail, Award } from "lucide-react";
 
+const HERO_BG = "/images/presskit-hero.png";
 const TORRAN_HEADSHOT = "/images/torran-headshot.jpg";
-const TORRAN_TRANSPARENT = "/images/torran-transparent.webp";
 const SANTA_CRUZ_COVER = "/images/santa-cruz-river-cover.jpg";
 
 export default function PressKit() {
@@ -17,94 +17,52 @@ export default function PressKit() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "white" }}>
       <Navbar />
 
-      {/* HERO — dramatic split with Torran's headshot */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", display: "flex" }}>
-        {/* Left: dark navy with text */}
-        <div className="relative z-10 flex-1 flex items-center" style={{ backgroundColor: "#0A1628" }}>
-          {/* Diagonal yellow accent */}
-          <div
-            className="absolute top-0 right-0 w-32 h-full opacity-10"
-            style={{ background: "linear-gradient(135deg, #FFD600 0%, transparent 100%)" }}
-          />
-          <div className="relative w-full px-8 md:px-16 py-20 max-w-2xl ml-auto">
-            <p
-              className="mb-3"
-              style={{ fontFamily: "'Caveat', cursive", color: "#FFD600", fontSize: "1.5rem" }}
-            >
-              For media & partners
-            </p>
-            <h1
+      {/* HERO */}
+      <section style={{ position: "relative", minHeight: "45vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 40%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.4) 60%, transparent 100%)" }} />
+        <div className="container relative z-10 pb-14 pt-24">
+          <p style={{ fontFamily: "'Caveat', cursive", color: "#FFD600", fontSize: "1.5rem", marginBottom: "0.5rem" }}>
+            For media & partners
+          </p>
+          <h1
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(3rem, 8vw, 6rem)",
+              lineHeight: 0.95,
+              textTransform: "uppercase",
+              color: "white",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Press Kit
+          </h1>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.15rem", lineHeight: 1.7, color: "rgba(255,255,255,0.75)", maxWidth: "480px", marginBottom: "2rem" }}>
+            Everything you need to know about Torran Anderson & the Center for Storytelling Innovation.
+          </p>
+          <Link href="/contact">
+            <button
+              className="flex items-center gap-2 transition-colors"
               style={{
+                backgroundColor: "#FFD600",
+                color: "#0A1628",
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 900,
-                fontSize: "clamp(3.5rem, 8vw, 6.5rem)",
-                lineHeight: 0.9,
+                fontSize: "1rem",
+                letterSpacing: "0.06em",
                 textTransform: "uppercase",
-                color: "white",
-                marginBottom: "1.5rem",
+                padding: "0.9rem 2rem",
+                border: "none",
+                cursor: "pointer",
               }}
             >
-              Press<br />
-              <span style={{ color: "#FFD600" }}>Kit</span>
-            </h1>
-            <p
-              style={{
-                fontFamily: "'Barlow', sans-serif",
-                fontSize: "1.15rem",
-                lineHeight: 1.7,
-                color: "rgba(255,255,255,0.75)",
-                maxWidth: "480px",
-                marginBottom: "2rem",
-              }}
-            >
-              Everything you need to know about Torran Anderson & the Center for Storytelling Innovation.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/contact">
-                <button
-                  className="flex items-center gap-2 transition-colors"
-                  style={{
-                    backgroundColor: "#FFD600",
-                    color: "#0A1628",
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 900,
-                    fontSize: "1rem",
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    padding: "0.9rem 2rem",
-                    border: "none",
-                    cursor: "pointer",
-                  }}
-                >
-                  <Mail size={16} /> Media Inquiries
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        {/* Right: Torran transparent image */}
-        <div
-          className="hidden md:block relative"
-          style={{ flex: "0 0 42%", overflow: "hidden" }}
-        >
-          <img
-            src={TORRAN_TRANSPARENT}
-            alt="Torran Anderson"
-            className="absolute inset-0 w-full h-full object-contain object-bottom"
-          />
-          {/* Gradient bleed from left */}
-          <div
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(to right, #0A1628 0%, transparent 30%)" }}
-          />
-          {/* Bottom gradient */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-32"
-            style={{ background: "linear-gradient(to top, #0A1628 0%, transparent 100%)" }}
-          />
+              <Mail size={16} /> Media Inquiries
+            </button>
+          </Link>
         </div>
         {/* Wave bottom */}
-        <div className="absolute bottom-0 left-0 right-0 z-20">
+        <div style={{ position: "absolute", bottom: "-1px", left: 0, right: 0, zIndex: 10 }}>
           <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0 60L1440 60L1440 20C1200 60 960 0 720 20C480 40 240 0 0 20L0 60Z" fill="white" />
           </svg>
@@ -131,12 +89,7 @@ export default function PressKit() {
                 <img
                   src={TORRAN_HEADSHOT}
                   alt="Torran Anderson headshot"
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    display: "block",
-                    zIndex: 1,
-                  }}
+                  style={{ position: "relative", width: "100%", display: "block", zIndex: 1 }}
                 />
                 <div
                   style={{
@@ -160,9 +113,7 @@ export default function PressKit() {
             </div>
             {/* Bio text */}
             <div>
-              <p
-                style={{ fontFamily: "'Caveat', cursive", color: "#FF5A36", fontSize: "1.5rem", marginBottom: "0.5rem" }}
-              >
+              <p style={{ fontFamily: "'Caveat', cursive", color: "#FF5A36", fontSize: "1.5rem", marginBottom: "0.5rem" }}>
                 About the author
               </p>
               <h2
@@ -178,26 +129,10 @@ export default function PressKit() {
               >
                 Torran Anderson
               </h2>
-              <p
-                style={{
-                  fontFamily: "'Barlow', sans-serif",
-                  fontSize: "1.05rem",
-                  lineHeight: 1.8,
-                  color: "rgba(10,22,40,0.8)",
-                  marginBottom: "1.5rem",
-                }}
-              >
+              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(10,22,40,0.8)", marginBottom: "1.5rem" }}>
                 Torran Anderson is the founder of the Center for Storytelling Innovation. His YA novel-in-verse, <em>Pi&ntilde;ata Moon</em>, won the Paterson Prize for Books for Young People. He has published over 50 books, and the environmental story app <em>Earth Day Carol</em>. Forthcoming books include the YA novel-in-verse <em>Songcoming</em> (West 44 Books) and the environmental picture book <em>Song of the Santa Cruz River</em> (Desert Ink Press).
               </p>
-              <p
-                style={{
-                  fontFamily: "'Barlow', sans-serif",
-                  fontSize: "1.05rem",
-                  lineHeight: 1.8,
-                  color: "rgba(10,22,40,0.8)",
-                  marginBottom: "2rem",
-                }}
-              >
+              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(10,22,40,0.8)", marginBottom: "2rem" }}>
                 Torran is open to working on books, games, and community engagement projects.
               </p>
               <Link href="/contact">
@@ -229,9 +164,7 @@ export default function PressKit() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <p
-                style={{ fontFamily: "'Caveat', cursive", color: "#FF5A36", fontSize: "1.5rem", marginBottom: "0.5rem" }}
-              >
+              <p style={{ fontFamily: "'Caveat', cursive", color: "#FF5A36", fontSize: "1.5rem", marginBottom: "0.5rem" }}>
                 The organization
               </p>
               <h2
@@ -247,14 +180,7 @@ export default function PressKit() {
               >
                 The Center for<br />Storytelling Innovation
               </h2>
-              <p
-                style={{
-                  fontFamily: "'Barlow', sans-serif",
-                  fontSize: "1.05rem",
-                  lineHeight: 1.8,
-                  color: "rgba(10,22,40,0.8)",
-                }}
-              >
+              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(10,22,40,0.8)" }}>
                 The Center for Storytelling Innovation is an online hub for books, games, workshops, and projects. It aims to make storytelling accessible to everyone through Germination Games like Story Grow and the Community Action deck. It addresses readers' needs through novels-in-verse and connects the community through story, engagement, and creative activities.
               </p>
             </div>
@@ -285,9 +211,7 @@ export default function PressKit() {
       <section style={{ backgroundColor: "white", padding: "5rem 0" }}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
-            <p
-              style={{ fontFamily: "'Caveat', cursive", color: "#FF5A36", fontSize: "1.5rem", marginBottom: "0.5rem" }}
-            >
+            <p style={{ fontFamily: "'Caveat', cursive", color: "#FF5A36", fontSize: "1.5rem", marginBottom: "0.5rem" }}>
               Published works
             </p>
             <h2
@@ -343,28 +267,10 @@ export default function PressKit() {
                     flex: 1,
                   }}
                 >
-                  <p
-                    style={{
-                      fontFamily: "'Barlow', sans-serif",
-                      fontSize: "0.95rem",
-                      fontStyle: "italic",
-                      color: "rgba(10,22,40,0.7)",
-                      lineHeight: 1.6,
-                    }}
-                  >
+                  <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.95rem", fontStyle: "italic", color: "rgba(10,22,40,0.7)", lineHeight: 1.6 }}>
                     "Teens are sure to fall in love with this fairy-tale romance."
                   </p>
-                  <p
-                    style={{
-                      fontFamily: "'Barlow Condensed', sans-serif",
-                      fontWeight: 700,
-                      fontSize: "0.75rem",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.06em",
-                      color: "rgba(10,22,40,0.5)",
-                      marginTop: "0.5rem",
-                    }}
-                  >
+                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "rgba(10,22,40,0.5)", marginTop: "0.5rem" }}>
                     &mdash; School Library Journal
                   </p>
                 </blockquote>
@@ -437,16 +343,7 @@ export default function PressKit() {
                 >
                   Pi&ntilde;ata Moon
                 </h3>
-                <p
-                  style={{
-                    fontFamily: "'Barlow', sans-serif",
-                    fontSize: "0.95rem",
-                    color: "rgba(10,22,40,0.7)",
-                    lineHeight: 1.6,
-                    marginBottom: "1rem",
-                    flex: 1,
-                  }}
-                >
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.95rem", color: "rgba(10,22,40,0.7)", lineHeight: 1.6, marginBottom: "1rem", flex: 1 }}>
                   Winner of the Paterson Prize for Books for Young People and NM-AZ Book Prize for Poetry.
                 </p>
                 <Link href="/pinata-moon">
@@ -498,35 +395,25 @@ export default function PressKit() {
                 >
                   Song of the Santa Cruz River
                 </h3>
-                <p
-                  style={{
-                    fontFamily: "'Barlow', sans-serif",
-                    fontSize: "0.95rem",
-                    color: "rgba(10,22,40,0.7)",
-                    lineHeight: 1.6,
-                    marginBottom: "1rem",
-                    flex: 1,
-                  }}
-                >
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.95rem", color: "rgba(10,22,40,0.7)", lineHeight: 1.6, marginBottom: "1rem", flex: 1 }}>
                   An environmental picture book celebrating the Santa Cruz River and the community it sustains.
                 </p>
-                <a
-                  href="https://storytellinginnovation.com/song-of-the-santa-cruz-river/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity"
-                  style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 800,
-                    fontSize: "0.8rem",
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    color: "#FF5A36",
-                    textDecoration: "none",
-                  }}
-                >
-                  Learn More &rarr;
-                </a>
+                <Link href="/song-of-the-santa-cruz-river">
+                  <span
+                    className="hover:opacity-70 transition-opacity"
+                    style={{
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontWeight: 800,
+                      fontSize: "0.8rem",
+                      letterSpacing: "0.06em",
+                      textTransform: "uppercase",
+                      color: "#FF5A36",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Learn More &rarr;
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
@@ -536,9 +423,7 @@ export default function PressKit() {
       {/* MEDIA INQUIRIES CTA */}
       <section style={{ backgroundColor: "#FF5A36", padding: "5rem 0" }}>
         <div className="container mx-auto px-6 text-center">
-          <p
-            style={{ fontFamily: "'Caveat', cursive", color: "white", fontSize: "1.5rem", marginBottom: "0.5rem" }}
-          >
+          <p style={{ fontFamily: "'Caveat', cursive", color: "white", fontSize: "1.5rem", marginBottom: "0.5rem" }}>
             Get in touch
           </p>
           <h2
@@ -554,16 +439,7 @@ export default function PressKit() {
           >
             Media Inquiries
           </h2>
-          <p
-            style={{
-              fontFamily: "'Barlow', sans-serif",
-              fontSize: "1.15rem",
-              color: "rgba(255,255,255,0.85)",
-              maxWidth: "550px",
-              margin: "0 auto 2.5rem",
-              lineHeight: 1.7,
-            }}
-          >
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.15rem", color: "rgba(255,255,255,0.85)", maxWidth: "550px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
             Interested in an interview, review copy, or collaboration? We'd love to hear from you.
           </p>
           <Link href="/contact">
