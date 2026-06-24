@@ -89,8 +89,7 @@ export default function Contact() {
               <div className="flex flex-col gap-3">
                 {[
                   { icon: "@", label: "Email", value: "info@storytellinginnovation.com", href: "mailto:info@storytellinginnovation.com", color: "#0F1B2D" },
-                  { icon: "in", label: "LinkedIn", value: "linkedin.com/in/torrananderson", href: "https://www.linkedin.com/in/torrananderson/", color: "#0F1B2D" },
-                  { icon: "▶", label: "YouTube", value: "@CenterforStorytellingInnovation", href: "https://www.youtube.com/@CenterforStorytellingInnovation", color: "#E8531D" },
+                  { icon: "in", label: "LinkedIn", value: "linkedin.com/in/torrananderson", href: "https://www.linkedin.com/in/torran-anderson/", color: "#0F1B2D" },
                 ].map((item) => (
                   <div key={item.label} style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem 1.25rem", border: "2px solid #0F1B2D" }}>
                     <div style={{ width: "36px", height: "36px", backgroundColor: item.color, color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.8rem", flexShrink: 0 }}>
