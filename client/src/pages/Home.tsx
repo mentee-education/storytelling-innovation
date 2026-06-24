@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* WHAT WE DO — 3 pillars */}
-      <section className="py-20 bg-white">
+      <section className="pt-12 pb-24 bg-white">
         <div className="container mx-auto px-6">
           <p className="font-caveat text-[#FF5A36] text-2xl text-center mb-2">What we do</p>
           <h2 className="font-barlow-condensed font-black text-[#0A1628] text-5xl md:text-6xl uppercase text-center mb-14">

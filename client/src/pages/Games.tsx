@@ -26,7 +26,7 @@ export default function Games() {
       <section style={{ position: "relative", minHeight: "45vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 30%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.35) 60%, transparent 100%)" }} />
-        <div className="container relative z-10 pb-14 pt-24">
+        <div className="container relative z-10 pb-20 pt-24">
           <div className="script-label mb-2" style={{ color: "#F5C842" }}>Play & create</div>
           <h1 className="display-heading" style={{ fontSize: "clamp(3rem, 8vw, 6rem)", color: "white" }}>Games</h1>
         </div>

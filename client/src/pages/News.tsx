@@ -66,7 +66,7 @@ export default function News() {
           position: "relative",
           minHeight: "45vh",
           display: "flex",
-          alignItems: "flex-end",
+          alignItems: "flex-start",
           overflow: "hidden",
           background: "linear-gradient(135deg, #0F1B2D 0%, #1a3050 40%, #0F1B2D 100%)",
         }}
@@ -105,7 +105,7 @@ export default function News() {
             backgroundColor: "rgba(245,200,66,0.08)",
           }}
         />
-        <div className="container relative z-10 pb-14 pt-24">
+        <div className="container relative z-10 pt-8 pb-16">
           <div className="script-label mb-2" style={{ color: "#F5C842" }}>
             What's happening
           </div>
@@ -377,7 +377,7 @@ export default function News() {
 
       {/* ── CTA BAND ── */}
       <section
-        style={{ backgroundColor: "#0F1B2D", borderTop: "2.5px solid #0F1B2D", padding: "3rem 0" }}
+        style={{ backgroundColor: "#0F1B2D", borderTop: "2.5px solid #0F1B2D", padding: "3rem 0 4rem" }}
       >
         <div className="container text-center">
           <div className="script-label mb-2" style={{ color: "#F5C842" }}>
@@ -406,6 +406,13 @@ export default function News() {
           </div>
         </div>
       </section>
+
+      {/* ── CTA / Footer divider ── */}
+      <div style={{ backgroundColor: "#0F1B2D" }}>
+        <div className="container">
+          <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(245,200,66,0.3), rgba(232,83,29,0.4), rgba(245,200,66,0.3), transparent)" }} />
+        </div>
+      </div>
 
       <Footer />
     </div>
