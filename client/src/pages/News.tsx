@@ -4,7 +4,6 @@
  */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { IMAGES } from "@/lib/images";
 
 const newsItems = [
   {
