@@ -143,7 +143,7 @@ export default function FeaturedProjects() {
           </div>
 
           {/* Mid-section text */}
-          <div className="py-12" style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <div className="py-20" style={{ maxWidth: "800px", margin: "0 auto" }}>
             <p className="font-barlow text-base leading-relaxed text-center" style={{ color: "rgba(15,27,45,0.65)" }}>
               Torran Anderson's work extends beyond books and workshops into a range of creative projects that bring storytelling into new and engaging forms. Through collaborations with educators, organizations, and creative partners, these projects inspire curiosity, support learning, and build meaningful connections. Spanning film, interactive media, and community-based initiatives, each project reflects a commitment to creativity with purpose — inviting audiences to engage, reflect, and experience stories beyond the page.
             </p>
