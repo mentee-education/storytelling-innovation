@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const HERO_BG = "/images/workshops-hero.png";      // Workshop hero
+const HERO_BG = IMAGES.upwardBoundWorkshop;        // Real workshop photo
 const WORKSHOP_PHOTO = IMAGES.upwardBoundWorkshop; // Piñata event
 const UB_COVID = IMAGES.torranTeachingCsi;         // Torran teaching at CSI
 const NORWEGIAN = IMAGES.workshopKautz;            // Writing hand
