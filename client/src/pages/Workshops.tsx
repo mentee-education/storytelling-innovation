@@ -24,7 +24,7 @@ export default function Workshops() {
 
       {/* ── PAGE HERO ── */}
       <section style={{ position: "relative", minHeight: "45vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center center" }} />
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 15%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.35) 60%, transparent 100%)" }} />
         <div className="container relative z-10 pb-14 pt-24">
           <div className="script-label mb-2" style={{ color: "#F5C842" }}>Learn & create together</div>
@@ -39,17 +39,6 @@ export default function Workshops() {
         </svg>
       </div>
 
-      {/* ── INTRO ── */}
-      <section style={{ backgroundColor: "white", paddingTop: "3rem", paddingBottom: "2rem" }}>
-        <div className="container" style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
-            We believe that stories have the power to reframe narratives and inspire action. Whether through film, photography, writing, or digital media, our storytelling practice connects knowledge with lived experience to illuminate the realities, strengths, and visions of community members.
-          </p>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-            Each workshop we take on is guided by a respect for community priorities, interests, and needs. We collaborate closely with partners to bring their stories to life — not as outside observers, but as co-creators committed to amplifying voices and advancing education, resilience, and self-determination.
-          </p>
-        </div>
-      </section>
 
       {/* ── WORKSHOP TYPES ── */}
       <section style={{ backgroundColor: "white", paddingTop: "2rem", paddingBottom: "5rem" }}>
@@ -79,6 +68,38 @@ export default function Workshops() {
                 desc: "Deep-dive workshops exploring the novel-in-verse form — how poetry and narrative intersect, how verse can carry a story, and how to find your own voice in this hybrid genre.",
                 features: ["Verse structure & form", "Narrative arc in poetry", "Voice & perspective", "Workshop critique sessions"],
               },
+            ].map((workshop) => (
+              <div key={workshop.title} style={{ border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D", overflow: "hidden" }}>
+                <div style={{ position: "relative", height: "240px", overflow: "hidden", borderBottom: "2.5px solid #0F1B2D" }}>
+                  <img src={workshop.img} alt={workshop.title} className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" />
+                  <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: workshop.badgeBg, color: (workshop as { badgeColor?: string }).badgeColor || "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.3rem 0.7rem", transform: "rotate(-2deg)" }}>
+                    {workshop.badge}
+                  </div>
+                </div>
+                <div style={{ padding: "1.5rem" }}>
+                  <h3 className="display-heading mb-3" style={{ fontSize: "1.75rem", color: "#0F1B2D" }}>{workshop.title}</h3>
+                  <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)", marginBottom: "1rem" }}>{workshop.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {workshop.features.map((f) => (
+                      <span key={f} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.65rem", letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.25rem 0.6rem", backgroundColor: "#F5F0EB", color: "#0F1B2D", border: "1.5px solid #0F1B2D" }}>
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* ── MISSION STATEMENT ── */}
+          <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center", padding: "3.5rem 0" }}>
+            <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
+              We believe that stories have the power to reframe narratives and inspire action. Whether through film, photography, writing, or digital media, our storytelling practice connects knowledge with lived experience to illuminate the realities, strengths, and visions of community members. Each workshop we take on is guided by a respect for community priorities, interests, and needs. We collaborate closely with partners to bring their stories to life — not as outside observers, but as co-creators committed to amplifying voices and advancing education, resilience, and self-determination.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
               {
                 title: "Educator Workshops",
                 img: IMAGES.torranTeachingCsi,
