@@ -101,7 +101,7 @@ export default function SantaCruzRiver() {
             background: "rgba(10,22,15,0.45)",
           }}
         />
-        <div className="container relative z-10 py-20">
+        <div className="container relative z-10 pt-16 pb-24">
           <div className="script-label mb-2" style={{ color: "#FFD600", fontFamily: "'Caveat', cursive", fontSize: "1.5rem" }}>Trilingual Children's Book</div>
           <h1
             className="display-heading"
