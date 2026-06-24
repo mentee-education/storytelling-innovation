@@ -41,20 +41,13 @@ const projects = [
   },
 ];
 
-function VideoCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function VideoCard({ project }: { project: typeof projects[0] }) {
   const [playing, setPlaying] = useState(false);
-  const isReversed = index % 2 === 1;
 
   return (
-    <div
-      className={`grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-xl shadow-lg`}
-      style={{ border: "2px solid #0F1B2D" }}
-    >
-      {/* Video */}
-      <div
-        className={`relative aspect-video lg:aspect-auto lg:min-h-[360px] ${isReversed ? "lg:order-2" : ""}`}
-        style={{ backgroundColor: "#111" }}
-      >
+    <div className="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300" style={{ border: "2px solid #0F1B2D" }}>
+      {/* Video - 16:9 aspect ratio */}
+      <div className="relative aspect-video" style={{ backgroundColor: "#111" }}>
         {playing ? (
           <iframe
             src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1`}
@@ -72,20 +65,16 @@ function VideoCard({ project, index }: { project: typeof projects[0]; index: num
                 (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${project.videoId}/hqdefault.jpg`;
               }}
             />
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-black/20" />
             <button
               onClick={() => setPlaying(true)}
               className="absolute inset-0 flex items-center justify-center group"
             >
               <div
-                className="w-16 h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
+                className="w-16 h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg"
                 style={{ backgroundColor: project.color }}
               >
-                <Play
-                  size={24}
-                  fill="white"
-                  className="text-white ml-1"
-                />
+                <Play size={24} fill="white" className="text-white ml-1" />
               </div>
             </button>
           </>
@@ -93,34 +82,17 @@ function VideoCard({ project, index }: { project: typeof projects[0]; index: num
       </div>
 
       {/* Content */}
-      <div
-        className={`p-8 lg:p-10 flex flex-col justify-center ${isReversed ? "lg:order-1" : ""}`}
-        style={{ backgroundColor: "white" }}
-      >
-        <div
-          className="w-12 h-1 mb-5"
-          style={{ backgroundColor: project.color }}
-        />
+      <div className="p-7" style={{ backgroundColor: "white" }}>
+        <div className="w-12 h-1 mb-4" style={{ backgroundColor: project.color }} />
         <h3
-          className="font-barlow-condensed font-black text-2xl lg:text-3xl uppercase mb-4"
+          className="font-barlow-condensed font-black text-2xl uppercase mb-3"
           style={{ color: "#0F1B2D", lineHeight: 1.1 }}
         >
           {project.title}
         </h3>
-        <p
-          className="font-barlow text-base leading-relaxed mb-6"
-          style={{ color: "rgba(15,27,45,0.7)" }}
-        >
+        <p className="font-barlow text-base leading-relaxed" style={{ color: "rgba(15,27,45,0.7)" }}>
           {project.description}
         </p>
-        <button
-          onClick={() => setPlaying(true)}
-          className="font-barlow-condensed font-bold uppercase text-sm tracking-widest flex items-center gap-2 self-start"
-          style={{ color: project.color, background: "none", border: "none", padding: 0 }}
-        >
-          <Play size={14} fill={project.color} />
-          Watch Video
-        </button>
       </div>
     </div>
   );
@@ -172,12 +144,12 @@ export default function FeaturedProjects() {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* Projects - 2 column grid */}
       <section className="pb-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col gap-12">
-            {projects.map((project, i) => (
-              <VideoCard key={project.videoId} project={project} index={i} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project) => (
+              <VideoCard key={project.videoId} project={project} />
             ))}
           </div>
         </div>
