@@ -52,7 +52,7 @@ export default function Home() {
             <p className="font-caveat text-[#FFD600] text-2xl mb-3">
               Welcome to
             </p>
-            <h1 className="font-barlow-condensed font-black text-white text-7xl md:text-9xl leading-none uppercase tracking-tight mb-6">
+            <h1 className="font-barlow-condensed font-black text-white text-6xl md:text-8xl leading-none uppercase tracking-tight mb-6">
               Stories<br />
               <span className="text-[#FFD600]">Connect</span><br />
               Us.
@@ -87,10 +87,10 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <p className="font-caveat text-[#FF5A36] text-2xl text-center mb-2">What we do</p>
-          <h2 className="font-barlow-condensed font-black text-[#0A1628] text-6xl md:text-7xl uppercase text-center mb-16">
+          <h2 className="font-barlow-condensed font-black text-[#0A1628] text-5xl md:text-6xl uppercase text-center mb-14">
             Our Collection
           </h2>
-          <div className="grid md:grid-cols-3 gap-0 border-2 border-[#0A1628]">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 label: "BOOKS",
@@ -115,8 +115,8 @@ export default function Home() {
               },
             ].map((item) => (
               <Link key={item.label} href={item.href}>
-                <div className="group border-r-2 border-[#0A1628] last:border-r-0 cursor-pointer overflow-hidden">
-                  <div className="h-64 overflow-hidden bg-white flex items-center justify-center p-4">
+                <div className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="h-56 overflow-hidden bg-[#f5f3f0] flex items-center justify-center p-6">
                     <img
                       src={item.img}
                       alt={item.label}
@@ -124,18 +124,18 @@ export default function Home() {
                     />
                   </div>
                   <div
-                    className="p-8"
+                    className="p-7"
                     style={{ backgroundColor: item.color }}
                   >
                     <h3
-                      className="font-barlow-condensed font-black text-4xl uppercase mb-3"
+                      className="font-barlow-condensed font-black text-3xl uppercase mb-2"
                       style={{ color: item.color === "#0A1628" ? "white" : "#0A1628" }}
                     >
                       {item.label}
                     </h3>
                     <p
-                      className="font-barlow text-base mb-4"
-                      style={{ color: item.color === "#0A1628" ? "rgba(255,255,255,0.8)" : "#0A1628" }}
+                      className="font-barlow text-sm mb-4 leading-relaxed"
+                      style={{ color: item.color === "#0A1628" ? "rgba(255,255,255,0.8)" : "rgba(10,22,40,0.8)" }}
                     >
                       {item.desc}
                     </p>
@@ -143,7 +143,7 @@ export default function Home() {
                       className="font-barlow-condensed font-bold uppercase text-sm tracking-widest flex items-center gap-2"
                       style={{ color: item.color === "#0A1628" ? "#FFD600" : "#0A1628" }}
                     >
-                      Learn More → 
+                      Learn More <ArrowRight size={14} />
                     </span>
                   </div>
                 </div>

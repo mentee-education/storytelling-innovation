@@ -45,7 +45,7 @@ export default function Contact() {
 
       {/* ── PAGE HERO ── */}
       <section style={{ position: "relative", minHeight: "45vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 40%" }} />
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 65%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.35) 60%, transparent 100%)" }} />
         <div className="container relative z-10 pb-14 pt-24">
           <div className="script-label mb-2" style={{ color: "#F5C842" }}>Let's connect</div>
@@ -77,7 +77,7 @@ export default function Contact() {
 
               {/* Founder card */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", padding: "1.5rem", border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D", marginBottom: "1.75rem" }}>
-                <img src={TORRAN_HEADSHOT} alt="Torran Anderson" style={{ width: "60px", height: "60px", borderRadius: "50%", objectFit: "cover", flexShrink: 0, border: "2px solid #E8531D" }} />
+                <img src={TORRAN_HEADSHOT} alt="Torran Anderson" style={{ width: "60px", height: "60px", borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%", flexShrink: 0, border: "2px solid #E8531D" }} />
                 <div>
                   <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Torran Anderson</h3>
                   <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.8rem", color: "rgba(15,27,45,0.55)", marginBottom: "0.5rem" }}>Founder, Center for Storytelling Innovation</p>
@@ -205,7 +205,7 @@ export default function Contact() {
         <div style={{ display: "flex", gap: "0.75rem", animation: "scroll-left 40s linear infinite", width: "max-content" }}>
           {[...CONTACT_CAROUSEL, ...CONTACT_CAROUSEL].map((src, i) => (
             <div key={i} style={{ width: "280px", height: "200px", flexShrink: 0, overflow: "hidden", border: "2.5px solid #0F1B2D" }}>
-              <img src={src} alt={`Gallery ${(i % 12) + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+              <img src={src} alt={`Gallery ${(i % 12) + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
             </div>
           ))}
         </div>
