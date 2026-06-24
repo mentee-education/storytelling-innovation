@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 import { Play } from "lucide-react";
 
-const HERO_BG = IMAGES.interviewLegacy;
+const HERO_BG = "/images/featured-projects-hero.png";
 
 const projects = [
   {
