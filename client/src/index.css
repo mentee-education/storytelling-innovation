@@ -208,7 +208,7 @@
     color: #0F1B2D;
   }
 
-  /* Wave divider */
+  /* Wave divider — eliminate sub-pixel white line gaps */
   .wave-divider {
     width: 100%;
     overflow: hidden;
@@ -217,6 +217,17 @@
   .wave-divider svg {
     display: block;
     width: 100%;
+  }
+
+  /* Global fix: eliminate sub-pixel white line gaps between all sections */
+  main > section + section,
+  main > div + section,
+  main > section + div,
+  .min-h-screen > section + section,
+  .min-h-screen > div + section,
+  .min-h-screen > section + div {
+    margin-top: -1px;
+    position: relative;
   }
 
   /* Underline highlight (826 Valencia style) */

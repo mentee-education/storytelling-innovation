@@ -35,7 +35,7 @@ const featuredBooks = [
   },
   {
     title: "Earth Day Carol",
-    img: IMAGES.earthDayCarolCover,
+    img: "/images/earth-day-carol-illustration.jpg",
     buyUrl: "https://storytellinginnovation.com/books/",
     badge: "Picture Book",
     badgeBg: "#1A8C7A",

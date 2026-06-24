@@ -288,7 +288,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-[#0A1628] py-20" style={{ marginTop: "-1px" }}>
+      <section className="bg-[#0A1628] py-20" style={{ marginTop: "-2px" }}>
         <div className="container mx-auto px-6">
           <p className="font-caveat text-[#FFD600] text-2xl text-center mb-2">What people say</p>
           <h2 className="font-barlow-condensed font-black text-white text-6xl uppercase text-center mb-16">

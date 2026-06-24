@@ -20,7 +20,7 @@ const navLinks: NavItem[] = [
   {
     label: "News",
     href: "/news",
-    children: [{ label: "Press Kit", href: "/news" }],
+    children: [{ label: "Press Kit", href: "/press-kit" }],
   },
   {
     label: "Books",
@@ -29,6 +29,7 @@ const navLinks: NavItem[] = [
       { label: "All Books", href: "/books" },
       { label: "Songcoming", href: "/songcoming" },
       { label: "Piñata Moon", href: "/pinata-moon" },
+      { label: "Song of the Santa Cruz River", href: "https://storytellinginnovation.com/song-of-the-santa-cruz-river/" },
     ],
   },
   { label: "Games", href: "/games" },

@@ -38,25 +38,138 @@ export default function Songcoming() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "white" }}>
       <Navbar />
 
-      {/* ── PAGE HERO ── */}
-      <section style={{ position: "relative", minHeight: "45vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 30%" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,27,45,0.95) 0%, rgba(15,27,45,0.4) 60%, transparent 100%)" }} />
+      {/* ── PAGE HERO — Moonlit night sky inspired by book cover ── */}
+      <section
+        style={{
+          position: "relative",
+          minHeight: "55vh",
+          display: "flex",
+          alignItems: "flex-end",
+          overflow: "hidden",
+          background: "linear-gradient(180deg, #060d1a 0%, #0b1a3a 30%, #162d5a 60%, #1a3a6a 80%, #0F1B2D 100%)",
+        }}
+      >
+        {/* Moon glow */}
+        <div
+          style={{
+            position: "absolute",
+            top: "8%",
+            right: "18%",
+            width: "clamp(120px, 18vw, 220px)",
+            height: "clamp(120px, 18vw, 220px)",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(255,248,220,0.9) 0%, rgba(255,248,220,0.3) 40%, transparent 70%)",
+            filter: "blur(2px)",
+          }}
+        />
+        {/* Moon disc */}
+        <div
+          style={{
+            position: "absolute",
+            top: "10%",
+            right: "19%",
+            width: "clamp(80px, 12vw, 160px)",
+            height: "clamp(80px, 12vw, 160px)",
+            borderRadius: "50%",
+            background: "radial-gradient(circle at 40% 35%, #fff8dc 0%, #f0e6b8 50%, #d4c98a 100%)",
+            boxShadow: "0 0 60px rgba(255,248,220,0.4), 0 0 120px rgba(255,248,220,0.15)",
+          }}
+        />
+        {/* Stars */}
+        {[
+          { top: "12%", left: "8%", size: 2, opacity: 0.7 },
+          { top: "18%", left: "25%", size: 1.5, opacity: 0.5 },
+          { top: "8%", left: "42%", size: 2.5, opacity: 0.8 },
+          { top: "22%", left: "55%", size: 1, opacity: 0.4 },
+          { top: "15%", left: "72%", size: 2, opacity: 0.6 },
+          { top: "28%", left: "12%", size: 1.5, opacity: 0.5 },
+          { top: "6%", left: "88%", size: 2, opacity: 0.7 },
+          { top: "32%", left: "35%", size: 1, opacity: 0.3 },
+          { top: "10%", left: "60%", size: 1.5, opacity: 0.5 },
+          { top: "25%", left: "82%", size: 2.5, opacity: 0.6 },
+        ].map((star, i) => (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              top: star.top,
+              left: star.left,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              borderRadius: "50%",
+              backgroundColor: "#fff8dc",
+              opacity: star.opacity,
+              boxShadow: `0 0 ${star.size * 3}px rgba(255,248,220,0.5)`,
+            }}
+          />
+        ))}
+        {/* Firefly-like warm dots */}
+        {[
+          { bottom: "30%", left: "10%", size: 4, opacity: 0.6 },
+          { bottom: "35%", left: "22%", size: 3, opacity: 0.4 },
+          { bottom: "25%", right: "15%", size: 5, opacity: 0.5 },
+          { bottom: "40%", left: "45%", size: 3, opacity: 0.3 },
+          { bottom: "28%", right: "30%", size: 4, opacity: 0.45 },
+        ].map((dot, i) => (
+          <div
+            key={`f${i}`}
+            style={{
+              position: "absolute",
+              ...dot,
+              width: `${dot.size}px`,
+              height: `${dot.size}px`,
+              borderRadius: "50%",
+              backgroundColor: "#FFD600",
+              opacity: dot.opacity,
+              boxShadow: `0 0 ${dot.size * 4}px rgba(255,214,0,0.6)`,
+            }}
+          />
+        ))}
+        {/* Water reflection at bottom */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "25%",
+            background: "linear-gradient(to top, rgba(20,60,120,0.5) 0%, transparent 100%)",
+          }}
+        />
+        {/* Subtle wave-like water line */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "20%",
+            left: 0,
+            right: 0,
+            height: "1px",
+            background: "linear-gradient(90deg, transparent 0%, rgba(255,248,220,0.15) 30%, rgba(255,248,220,0.08) 70%, transparent 100%)",
+          }}
+        />
         <div className="container relative z-10 pb-14 pt-24">
-          <div className="script-label mb-2" style={{ color: "#F5C842" }}>HI/LO Novel in Verse</div>
-          <h1 className="display-heading" style={{ fontSize: "clamp(3rem, 8vw, 6rem)", color: "white" }}>Songcoming</h1>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.75)", marginTop: "0.5rem" }}>
+          <div className="script-label mb-2" style={{ color: "#FFD600", fontFamily: "'Caveat', cursive", fontSize: "1.5rem" }}>HI/LO Novel in Verse</div>
+          <h1
+            className="display-heading"
+            style={{
+              fontSize: "clamp(3rem, 8vw, 6rem)",
+              color: "white",
+              textShadow: "0 2px 30px rgba(0,0,0,0.5)",
+            }}
+          >
+            Songcoming
+          </h1>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", color: "rgba(255,248,220,0.7)", marginTop: "0.5rem", maxWidth: "500px" }}>
             A fairy-tale romance for teen readers — reviewed by School Library Journal
           </p>
         </div>
+        {/* Bottom wave into white */}
+        <div style={{ position: "absolute", bottom: "-1px", left: 0, right: 0, zIndex: 10 }}>
+          <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+            <path d="M0 60L1440 60L1440 20C1200 60 960 0 720 20C480 40 240 0 0 20L0 60Z" fill="white" />
+          </svg>
+        </div>
       </section>
-
-      {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
-        </svg>
-      </div>
 
       {/* ── BOOK SUMMARY + COVER ── */}
       <section style={{ backgroundColor: "white", paddingTop: "4rem", paddingBottom: "4rem" }}>
@@ -74,13 +187,13 @@ export default function Songcoming() {
               {/* Buy buttons */}
               <div style={{ marginTop: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <a
-                  href="https://www.netgalley.com"
+                  href="https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=tmm_pap_swatch_0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-pill btn-pill-orange no-underline text-center"
                   style={{ fontSize: "0.85rem" }}
                 >
-                  Read Free on NetGalley
+                  Buy on Amazon
                 </a>
                 <a
                   href="https://www.west44books.com"
@@ -261,14 +374,14 @@ export default function Songcoming() {
       <section style={{ backgroundColor: "#1A8C7A", paddingTop: "3.5rem", paddingBottom: "3.5rem", textAlign: "center" }}>
         <div className="container">
           <h2 className="display-heading" style={{ fontSize: "clamp(2rem, 5vw, 3rem)", color: "white", marginBottom: "1rem" }}>
-            Pre-Order Songcoming Today
+            Get Songcoming Today
           </h2>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.85)", marginBottom: "2rem" }}>
-            Available now on NetGalley, West 44 Books, IndieBound, Barnes &amp; Noble, and Amazon.
+            Available now on Amazon, West 44 Books, IndieBound, and Barnes &amp; Noble.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="https://www.west44books.com"
+              href="https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=tmm_pap_swatch_0"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -286,7 +399,7 @@ export default function Songcoming() {
                 boxShadow: "4px 4px 0 rgba(0,0,0,0.2)",
               }}
             >
-              Pre-Order Now
+              Buy Now
             </a>
             <a
               href="/books"

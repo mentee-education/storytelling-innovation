@@ -127,60 +127,16 @@ export default function Games() {
         </svg>
       </div>
 
-      {/* ── GAMES IN ACTION ── */}
+      {/* ── VIDEO DEMOS ── */}
       <section style={{ backgroundColor: "white", paddingTop: "2rem", paddingBottom: "5rem" }}>
         <div className="container">
           <div className="text-center mb-10">
             <div className="script-label mb-2" style={{ color: "#E8531D" }}>See them in action</div>
-            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Games in the Wild</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {[
-              { img: IMAGES.storygrowCards, title: "StoryGrow Cards", desc: "The full StoryGrow deck laid out — each card a prompt, a possibility, a story waiting to happen.", fit: "object-contain", bg: "#f5f0e8", link: "https://www.thegamecrafter.com/games/story-grow" },
-              { img: IMAGES.communityActionDeck, title: "Community Action Deck", desc: "The Community Action Deck in use during a workshop session — sparking conversations and connections.", fit: "object-contain", bg: "#fff8e8", link: "https://www.thegamecrafter.com/games/community-action-deck" },
-              { img: IMAGES.earthDayCarolCover, title: "Earth Day Carol", desc: "Earth Day Carol — a game that brings environmental storytelling to life for all ages.", fit: "object-contain", bg: "#f0f8f0", link: "https://www.amazon.com/Zippy-Brain-Inc-Earth-Carol/dp/B00BQ0ZQ70" },
-            ].map((item) => (
-              <div key={item.title} style={{ border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D", overflow: "hidden" }}>
-                <div style={{ height: "200px", overflow: "hidden", borderBottom: "2.5px solid #0F1B2D", backgroundColor: item.bg, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img src={item.img} alt={item.title} className={`w-full h-full ${item.fit} hover:scale-105 transition-transform duration-500`} style={{ padding: item.fit.includes("contain") ? "0.75rem" : "0" }} />
-                </div>
-                <div style={{ padding: "1.25rem" }}>
-                  <h3 className="display-heading mb-2" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>{item.title}</h3>
-                  <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)", marginBottom: "0.75rem" }}>{item.desc}</p>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.75rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "#E8531D", textDecoration: "none" }} className="hover:opacity-70 transition-opacity">Buy Online →</a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── VIDEO DEMOS ── */}
-      <section style={{ backgroundColor: "#F5F0EB", borderTop: "2.5px solid #0F1B2D", paddingTop: "4rem", paddingBottom: "4rem" }}>
-        <div className="container">
-          <div className="text-center mb-10">
-            <div className="script-label mb-2" style={{ color: "#E8531D" }}>Watch them in action</div>
-            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Video Demos</h2>
+            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Watch the Games</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Community Action Deck video */}
-            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D", overflow: "hidden" }}>
-              <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
-                <iframe
-                  src="https://www.youtube.com/embed/zzlzqW9ddSE"
-                  title="Community Action Deck Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
-                />
-              </div>
-              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
-                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Community Action Deck</h3>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>See the Community Action Deck in action — a storytelling card game designed to spark conversations about community, belonging, and collective action.</p>
-              </div>
-            </div>
             {/* StoryGrow video */}
-            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #0F1B2D", overflow: "hidden" }}>
+            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D", overflow: "hidden" }}>
               <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
                 <iframe
                   src="https://www.youtube.com/embed/QRk66DYpmcs"
@@ -191,8 +147,24 @@ export default function Games() {
                 />
               </div>
               <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
-                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>StoryGrow</h3>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>Watch StoryGrow being played in a workshop setting — a collaborative card game that helps players build stories together through illustrated prompt cards.</p>
+                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>StoryGrow in Action</h3>
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>Watch StoryGrow being played in a workshop setting — players build stories together through illustrated prompt cards.</p>
+              </div>
+            </div>
+            {/* Community Action Deck video */}
+            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #0F1B2D", overflow: "hidden" }}>
+              <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/zzlzqW9ddSE"
+                  title="Community Action Deck Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+                />
+              </div>
+              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
+                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Community Action Deck in Action</h3>
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>See the Community Action Deck sparking conversations about community, belonging, and collective action.</p>
               </div>
             </div>
           </div>
@@ -200,7 +172,7 @@ export default function Games() {
       </section>
 
       {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#F5F0EB", lineHeight: 0 }}>
+      <div style={{ backgroundColor: "white", lineHeight: 0 }}>
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
         </svg>

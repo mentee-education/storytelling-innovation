@@ -17,6 +17,20 @@ const IMG_7640 = IMAGES.groupOutdoor;              // Group outdoors
 const PERSONAL_STATEMENTS = IMAGES.torranClassroomSelfie; // Torran portrait
 const CLI_FI = IMAGES.torranNorwayClassSelfie;     // Torran outdoor portrait
 
+const GALLERY_CAROUSEL = [
+  "http://storytellinginnovation.com/wp-content/uploads/2026/01/Odin-and-Torran-photo-768x1024.jpg",
+  "http://storytellinginnovation.com/wp-content/uploads/2026/01/DSC08155-1024x683.jpg",
+  "http://storytellinginnovation.com/wp-content/uploads/2026/01/Monsoon-poem.png",
+  "http://storytellinginnovation.com/wp-content/uploads/2026/01/chula-photo-1024x768.jpg",
+  "http://storytellinginnovation.com/wp-content/uploads/2025/10/2-cli-fi-picture-2.jpg",
+  "http://storytellinginnovation.com/wp-content/uploads/2025/10/Upward-Bound_2020Summer_Writing-Workshop_PinataMoon2-3-1024x744.png",
+  "http://storytellinginnovation.com/wp-content/uploads/2025/10/3-earth-day-carol-2.jpg",
+  "http://storytellinginnovation.com/wp-content/uploads/2025/10/cropped-personal-statements-2.jpg",
+  "http://storytellinginnovation.com/wp-content/uploads/2025/10/norwegian-students-2-1024x576.jpg",
+  "http://storytellinginnovation.com/wp-content/uploads/2026/01/playing-game-with-students-1024x586.png",
+  "http://storytellinginnovation.com/wp-content/uploads/2026/01/Picture2.jpg",
+];
+
 export default function Workshops() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "white" }}>
@@ -210,26 +224,27 @@ export default function Workshops() {
         </div>
       </section>
 
-      {/* ── GALLERY ── */}
-      <section style={{ backgroundColor: "#FAF8F5", borderTop: "2.5px solid #0F1B2D", borderBottom: "2.5px solid #0F1B2D", paddingTop: "4rem", paddingBottom: "5rem" }}>
-        <div className="container">
-          <div className="text-center mb-10">
+      {/* ── GALLERY CAROUSEL ── */}
+      <section style={{ backgroundColor: "white", padding: "3rem 0", overflow: "hidden" }}>
+        <div className="container mb-6">
+          <div className="text-center">
             <div className="script-label mb-2" style={{ color: "#E8531D" }}>From the field</div>
             <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Workshop Gallery</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              { img: IMAGES.pinataMoonBanner, alt: "Piñata Moon banner", pos: "object-center" },
-              { img: IMAGES.storygrowCards, alt: "StoryGrow cards", pos: "object-center" },
-              { img: IMAGES.communityActionDeck, alt: "Community Action Deck", pos: "object-center" },
-              { img: IMAGES.pinataMoon3d, alt: "Piñata Moon 3D", pos: "object-center" },
-            ].map((item, i) => (
-              <div key={i} style={{ height: "220px", overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: i % 2 === 0 ? "3px 3px 0 #E8531D" : "3px 3px 0 #0F1B2D" }}>
-                <img src={item.img} alt={item.alt} className={`w-full h-full object-cover ${item.pos} hover:scale-105 transition-transform duration-500`} />
-              </div>
-            ))}
-          </div>
         </div>
+        <div style={{ display: "flex", gap: "0.75rem", animation: "scroll-left 40s linear infinite", width: "max-content" }}>
+          {[...GALLERY_CAROUSEL, ...GALLERY_CAROUSEL].map((src, i) => (
+            <div key={i} style={{ width: "280px", height: "200px", flexShrink: 0, overflow: "hidden", border: "2.5px solid #0F1B2D" }}>
+              <img src={src} alt={`Workshop gallery ${(i % GALLERY_CAROUSEL.length) + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+            </div>
+          ))}
+        </div>
+        <style>{`
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
       </section>
 
       {/* ── CTA BAND ── */}

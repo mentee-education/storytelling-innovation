@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import FeaturedProjects from "./pages/FeaturedProjects";
 import PinataMoon from "./pages/PinataMoon";
 import Songcoming from "./pages/Songcoming";
+import PressKit from "./pages/PressKit";
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function Router() {
       <Route path={"/pinata-moon"} component={PinataMoon} />
       <Route path={"/songcoming"} component={Songcoming} />
       <Route path={"/news"} component={News} />
+      <Route path={"/press-kit"} component={PressKit} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
