@@ -18,8 +18,8 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="container pt-10 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 md:items-center">
+      <div className="container pt-6 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 md:items-start">
           {/* Brand */}
           <div>
             <div className="mb-4" style={{ lineHeight: 1.15 }}>

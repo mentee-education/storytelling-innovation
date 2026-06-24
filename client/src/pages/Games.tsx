@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const HERO_BG = IMAGES.upwardBoundWorkshop;
+const HERO_BG = "/images/games-hero.png";
 const STORYGROW_LOGO = IMAGES.germinationGamesLogo;
 const STORYGROW_CARDS = IMAGES.storygrowCards;
 const STORYGROW_CARDS2 = IMAGES.tinythingsCard;
@@ -39,19 +39,19 @@ export default function Games() {
         </svg>
       </div>
 
-      {/* ── INTRO ── */}
-      <section style={{ backgroundColor: "white", paddingTop: "3rem", paddingBottom: "2rem" }}>
+      {/* ── INTRO BANNER ── */}
+      <section style={{ backgroundColor: "#F5F0EB", borderBottom: "2.5px solid #0F1B2D", paddingTop: "3.5rem", paddingBottom: "3.5rem" }}>
         <div className="container" style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
           <div className="script-label mb-2" style={{ color: "#E8531D" }}>Germination Games</div>
           <h2 className="display-heading mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#0F1B2D" }}>Stories Through Play</h2>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-            We believe stories can inspire creativity, spark curiosity, and strengthen connection. Through interactive apps and thoughtful games, we bring storytelling to life in playful, accessible ways. Every project we create is guided by respect, collaboration, and the belief that great stories should be experienced, not just told. Our goal is to offer tools that connect people, inspire learning, and build meaningful shared experiences.
+            We believe stories can inspire creativity, spark curiosity, and strengthen connection. Through interactive apps and thoughtful games, we bring storytelling to life in playful, accessible ways. Every project we create is guided by respect, collaboration, and the belief that great stories should be experienced, not just told.
           </p>
         </div>
       </section>
 
       {/* ── STORYGROW ── */}
-      <section style={{ backgroundColor: "white", paddingTop: "2rem", paddingBottom: "5rem" }}>
+      <section style={{ backgroundColor: "white", paddingTop: "4rem", paddingBottom: "5rem" }}>
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -209,9 +209,9 @@ export default function Games() {
       {/* ── RIDERS & WALKERS ── */}
       <section style={{ backgroundColor: "#0F1B2D", paddingTop: "1rem", paddingBottom: "5rem" }}>
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <div>
-              <div style={{ display: "inline-block", backgroundColor: "#1A8C7A", color: "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.4rem 0.9rem", transform: "rotate(-2deg)", boxShadow: "3px 3px 0 rgba(255,255,255,0.3)", marginBottom: "1.25rem" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ alignItems: "stretch" }}>
+            <div className="flex flex-col">
+              <div style={{ display: "inline-block", backgroundColor: "#1A8C7A", color: "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.4rem 0.9rem", transform: "rotate(-2deg)", boxShadow: "3px 3px 0 rgba(255,255,255,0.3)", marginBottom: "1.25rem", alignSelf: "flex-start" }}>
                 Game Development
               </div>
               <h2 className="display-heading mb-5" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "white" }}>Riders &amp; Walkers Safety Game</h2>
@@ -225,7 +225,7 @@ export default function Games() {
                 <a href="https://saferoutestucson.org/riders-walkers-program/" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-orange no-underline">View Program →</a>
                 <a href="http://www.eeexchange.org/rwprogram" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-outline-white no-underline">EE Exchange</a>
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4" style={{ marginTop: "auto" }}>
                 {[
                   { title: "It's interactive.", desc: "The presenter covers content in an engaging and relatable way through a large magnetic game board, videos and photos featuring Tucson-area neighborhoods, and team exercises." },
                   { title: "It's curriculum-based.", desc: "Created to meet Arizona Department of Education standards for third-grade students. Teachers receive pre-visit activity ideas and vocabulary lists." },
@@ -241,17 +241,12 @@ export default function Games() {
                 ))}
               </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <div style={{ height: "220px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                <img src={PICTURE1_5} alt="Riders and Walkers game" className="w-full h-full object-cover" />
+            <div className="flex flex-col gap-4" style={{ justifyContent: "center" }}>
+              <div style={{ flex: "1 1 0", minHeight: "200px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
+                <img src={PICTURE1_5} alt="Riders and Walkers game" className="w-full h-full object-cover object-center" />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div style={{ height: "160px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                  <img src={PICTURE2_7} alt="Game in action" className="w-full h-full object-cover" />
-                </div>
-                <div style={{ height: "160px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                  <img src={PICTURE1_8} alt="Students playing" className="w-full h-full object-cover" />
-                </div>
+              <div style={{ flex: "1 1 0", minHeight: "200px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
+                <img src={PICTURE2_7} alt="Game in action" className="w-full h-full object-cover object-center" />
               </div>
             </div>
           </div>
