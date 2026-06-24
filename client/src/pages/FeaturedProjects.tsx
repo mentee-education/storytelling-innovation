@@ -103,14 +103,11 @@ export default function FeaturedProjects() {
     <div className="min-h-screen bg-white font-barlow">
       <Navbar />
 
-      {/* Hero Image */}
-      <div style={{ width: "100%", height: "45vh", overflow: "hidden" }}>
-        <img src={HERO_BG} alt="Featured Projects" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
-      </div>
-
-      {/* Hero Title */}
-      <section style={{ backgroundColor: "#0F1B2D", padding: "3rem 0 2.5rem" }}>
-        <div className="container">
+      {/* Hero */}
+      <section style={{ position: "relative", minHeight: "50vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
+        <img src={HERO_BG} alt="Featured Projects" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.7) 45%, rgba(15,27,45,0.25) 100%)" }} />
+        <div className="container relative z-10" style={{ paddingBottom: "3rem", paddingTop: "6rem" }}>
           <p className="font-caveat text-[#FFD600] text-2xl mb-2">Creativity with purpose</p>
           <h1 className="font-barlow-condensed font-black text-white text-5xl md:text-7xl uppercase leading-none">
             Featured<br />Projects

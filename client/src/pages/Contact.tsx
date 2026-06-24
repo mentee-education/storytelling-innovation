@@ -191,16 +191,11 @@ export default function Contact() {
                       <label style={labelStyle}>Inquiry Type *</label>
                       <select name="subject" required style={{ ...inputStyle, appearance: "none", backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230F1B2D' stroke-width='2' fill='none'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 1rem center", cursor: "pointer" }}>
                         <option value="">Select a topic...</option>
-                        <option value="Workshop Booking">Workshop Booking</option>
                         <option value="Books">Books & Publications</option>
                         <option value="Games">Games & Educational Tools</option>
-                        <option value="Piñata Moon">Piñata Moon</option>
-                        <option value="Songcoming">Songcoming</option>
-                        <option value="Speaking & Events">Speaking & Events</option>
+                        <option value="Workshops">Workshops & Events</option>
                         <option value="Collaboration">Collaboration & Partnerships</option>
-                        <option value="Media & Press">Media & Press</option>
                         <option value="Donation">Donation & Sponsorship</option>
-                        <option value="Newsletter">Newsletter</option>
                         <option value="General Inquiry">General Inquiry</option>
                       </select>
                     </div>

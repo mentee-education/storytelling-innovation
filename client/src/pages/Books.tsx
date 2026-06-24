@@ -26,7 +26,7 @@ const featuredBooks = [
   {
     title: "Songcoming",
     img: IMAGES.songcomingCover,
-    buyUrl: "/songcoming",
+    buyUrl: "https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=sr_1_1?crid=1ZKE61SY1M0LH&dib=eyJ2IjoiMSJ9.wbJT59m5HRIG7QnmaMClKg.cSJ0dsPwLqD9Lg1GUDiiJwGKPxA9fZHkFIdsyfwgSlY&dib_tag=se&keywords=songcoming&qid=1782270932&s=books&sprefix=songcom%2Cstripbooks%2C180&sr=1-1",
     badge: "Novel-in-Verse",
     badgeBg: "#0F1B2D",
     badgeColor: "white",

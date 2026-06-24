@@ -81,21 +81,21 @@ export default function Home() {
             {[
               {
                 label: "BOOKS",
-                color: "#FFD600",
+                accent: "#FFD600",
                 img: IMAGES.booksCard,
                 desc: "Novels-in-verse, picture books, and educational titles that spark curiosity and connection.",
                 href: "/books",
               },
               {
                 label: "GAMES",
-                color: "#FF5A36",
+                accent: "#FF5A36",
                 img: IMAGES.gamesCard,
                 desc: "Interactive card games and apps that bring storytelling to life through collaborative play.",
                 href: "/games",
               },
               {
                 label: "WORKSHOPS",
-                color: "#0A1628",
+                accent: "#FFD600",
                 img: IMAGES.workshopsCard,
                 desc: "Community-centered storytelling workshops for schools, organizations, and creative groups.",
                 href: "/workshops",
@@ -112,23 +112,23 @@ export default function Home() {
                   </div>
                   <div
                     className="p-7"
-                    style={{ backgroundColor: item.color }}
+                    style={{ backgroundColor: "#0A1628", borderTop: `4px solid ${item.accent}` }}
                   >
                     <h3
                       className="font-barlow-condensed font-black text-3xl uppercase mb-2"
-                      style={{ color: item.color === "#0A1628" ? "white" : "#0A1628" }}
+                      style={{ color: "white" }}
                     >
                       {item.label}
                     </h3>
                     <p
                       className="font-barlow text-sm mb-4 leading-relaxed"
-                      style={{ color: item.color === "#0A1628" ? "rgba(255,255,255,0.8)" : "rgba(10,22,40,0.8)" }}
+                      style={{ color: "rgba(255,255,255,0.8)" }}
                     >
                       {item.desc}
                     </p>
                     <span
                       className="font-barlow-condensed font-bold uppercase text-sm tracking-widest flex items-center gap-2"
-                      style={{ color: item.color === "#0A1628" ? "#FFD600" : "#0A1628" }}
+                      style={{ color: item.accent }}
                     >
                       Learn More <ArrowRight size={14} />
                     </span>
@@ -217,7 +217,7 @@ export default function Home() {
                 </p>
                 <p className="font-barlow italic text-xs text-[#0A1628]/50 mb-4">★★★★★ Pine Reads Review</p>
                 <a
-                  href="https://www.amazon.com/Songcoming-Torran-Anderson/dp/1952483085"
+                  href="https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=sr_1_1?crid=1ZKE61SY1M0LH&dib=eyJ2IjoiMSJ9.wbJT59m5HRIG7QnmaMClKg.cSJ0dsPwLqD9Lg1GUDiiJwGKPxA9fZHkFIdsyfwgSlY&dib_tag=se&keywords=songcoming&qid=1782270932&s=books&sprefix=songcom%2Cstripbooks%2C180&sr=1-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors"
