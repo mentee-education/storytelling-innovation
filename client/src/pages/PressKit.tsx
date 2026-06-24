@@ -17,52 +17,70 @@ export default function PressKit() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "white" }}>
       <Navbar />
 
-      {/* HERO */}
-      <section style={{ position: "relative", minHeight: "45vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 40%" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.4) 60%, transparent 100%)" }} />
-        <div className="container relative z-10 pb-14 pt-24">
-          <p style={{ fontFamily: "'Caveat', cursive", color: "#FFD600", fontSize: "1.5rem", marginBottom: "0.5rem" }}>
-            For media & partners
-          </p>
-          <h1
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(3rem, 8vw, 6rem)",
-              lineHeight: 0.95,
-              textTransform: "uppercase",
-              color: "white",
-              marginBottom: "1.5rem",
-            }}
-          >
-            Press Kit
-          </h1>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.15rem", lineHeight: 1.7, color: "rgba(255,255,255,0.75)", maxWidth: "480px", marginBottom: "2rem" }}>
-            Everything you need to know about Torran Anderson & the Center for Storytelling Innovation.
-          </p>
-          <Link href="/contact">
-            <button
-              className="flex items-center gap-2 transition-colors"
+      {/* HERO — split layout: text left, image right */}
+      <section className="relative overflow-hidden" style={{ minHeight: "50vh", display: "flex", backgroundColor: "#0A1628" }}>
+        {/* Left: text on solid dark background */}
+        <div className="relative z-10 flex-1 flex items-center" style={{ minHeight: "50vh" }}>
+          {/* Diagonal accent */}
+          <div
+            className="absolute top-0 right-0 w-32 h-full opacity-10 hidden md:block"
+            style={{ background: "linear-gradient(135deg, #FFD600 0%, transparent 100%)" }}
+          />
+          <div className="relative w-full px-8 md:px-16 py-20 max-w-2xl ml-auto">
+            <p style={{ fontFamily: "'Caveat', cursive", color: "#FFD600", fontSize: "1.5rem", marginBottom: "0.5rem" }}>
+              For media & partners
+            </p>
+            <h1
               style={{
-                backgroundColor: "#FFD600",
-                color: "#0A1628",
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 900,
-                fontSize: "1rem",
-                letterSpacing: "0.06em",
+                fontSize: "clamp(3rem, 8vw, 6rem)",
+                lineHeight: 0.95,
                 textTransform: "uppercase",
-                padding: "0.9rem 2rem",
-                border: "none",
-                cursor: "pointer",
+                color: "white",
+                marginBottom: "1.5rem",
               }}
             >
-              <Mail size={16} /> Media Inquiries
-            </button>
-          </Link>
+              Press<br /><span style={{ color: "#FFD600" }}>Kit</span>
+            </h1>
+            <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.15rem", lineHeight: 1.7, color: "rgba(255,255,255,0.75)", maxWidth: "480px", marginBottom: "2rem" }}>
+              Everything you need to know about Torran Anderson & the Center for Storytelling Innovation.
+            </p>
+            <Link href="/contact">
+              <button
+                className="flex items-center gap-2 transition-colors"
+                style={{
+                  backgroundColor: "#FFD600",
+                  color: "#0A1628",
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontWeight: 900,
+                  fontSize: "1rem",
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  padding: "0.9rem 2rem",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                <Mail size={16} /> Media Inquiries
+              </button>
+            </Link>
+          </div>
+        </div>
+        {/* Right: generated image */}
+        <div className="hidden md:block relative" style={{ flex: "0 0 42%", overflow: "hidden" }}>
+          <img
+            src={HERO_BG}
+            alt="Press workspace"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Gradient bleed from left — narrow so image pops */}
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #0A1628 0%, transparent 20%)" }} />
+          {/* Subtle bottom gradient */}
+          <div className="absolute bottom-0 left-0 right-0 h-16" style={{ background: "linear-gradient(to top, #0A1628 0%, transparent 100%)" }} />
         </div>
         {/* Wave bottom */}
-        <div style={{ position: "absolute", bottom: "-1px", left: 0, right: 0, zIndex: 10 }}>
+        <div className="absolute bottom-0 left-0 right-0 z-20">
           <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
             <path d="M0 60L1440 60L1440 20C1200 60 960 0 720 20C480 40 240 0 0 20L0 60Z" fill="white" />
           </svg>

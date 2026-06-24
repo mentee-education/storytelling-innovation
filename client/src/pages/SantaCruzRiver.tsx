@@ -46,17 +46,6 @@ export default function SantaCruzRiver() {
             background: "linear-gradient(to top, rgba(60,130,180,0.3) 0%, rgba(60,130,180,0.08) 50%, transparent 100%)",
           }}
         />
-        {/* Subtle water line */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "22%",
-            left: 0,
-            right: 0,
-            height: "1px",
-            background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0.06) 70%, transparent 100%)",
-          }}
-        />
         {/* Butterfly dots */}
         {[
           { top: "25%", left: "15%", size: 5, color: "#FFD600" },

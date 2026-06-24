@@ -136,17 +136,6 @@ export default function Songcoming() {
             background: "linear-gradient(to top, rgba(20,60,120,0.5) 0%, transparent 100%)",
           }}
         />
-        {/* Subtle wave-like water line */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "20%",
-            left: 0,
-            right: 0,
-            height: "1px",
-            background: "linear-gradient(90deg, transparent 0%, rgba(255,248,220,0.15) 30%, rgba(255,248,220,0.08) 70%, transparent 100%)",
-          }}
-        />
         <div className="container relative z-10 pb-14 pt-24">
           <div className="script-label mb-2" style={{ color: "#FFD600", fontFamily: "'Caveat', cursive", fontSize: "1.5rem" }}>HI/LO Novel in Verse</div>
           <h1
