@@ -16,19 +16,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white font-barlow">
-      {/* Announcement Bar */}
-      <div className="bg-[#FFD600] text-[#0A1628] text-center py-2 px-4 font-barlow-condensed font-bold text-sm tracking-wide uppercase">
-        ⚡ Piñata Moon is available for preorder —{" "}
-        <a
-          href="https://www.amazon.com/dp/B0DQZWJZ8X"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:no-underline"
-        >
-          Order now →
-        </a>
-      </div>
-
       <Navbar />
 
       {/* HERO */}
@@ -115,7 +102,7 @@ export default function Home() {
               },
             ].map((item) => (
               <Link key={item.label} href={item.href}>
-                <div className="group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div className="group cursor-pointer overflow-hidden rounded-md shadow-md hover:shadow-xl transition-shadow duration-300">
                   <div className="aspect-square overflow-hidden bg-[#f5f3f0]">
                     <img
                       src={item.img}
@@ -179,7 +166,7 @@ export default function Home() {
                   className="h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-[#FF5A36] text-white font-barlow-condensed font-black text-xs uppercase tracking-widest px-3 py-1">
-                  Preorder Now
+                  Buy Now
                 </div>
               </div>
               <div className="p-6 border-t-4 border-[#FF5A36]">
@@ -195,12 +182,12 @@ export default function Home() {
                 </p>
                 <p className="font-barlow italic text-xs text-[#0A1628]/50 mb-4">★★★★★ Arizona Daily Star</p>
                 <a
-                  href="https://www.amazon.com/dp/B0DQZWJZ8X"
+                  href="https://www.amazon.com/Pi%C3%B1ata-Moon-Torran-Anderson/dp/1733780904"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors"
                 >
-                  Preorder Now
+                  Buy Now
                 </a>
               </div>
             </div>

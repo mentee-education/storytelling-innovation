@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 import { Play } from "lucide-react";
 
-const HERO_BG = IMAGES.interviewLegacy;
+const HERO_BG = IMAGES.studentsWriting;
 
 const projects = [
   {
@@ -45,7 +45,7 @@ function VideoCard({ project }: { project: typeof projects[0] }) {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300" style={{ border: "2px solid #0F1B2D" }}>
+    <div className="overflow-hidden rounded-md shadow-md hover:shadow-lg transition-shadow duration-300" style={{ border: "2px solid #0F1B2D" }}>
       {/* Video - 16:9 aspect ratio */}
       <div className="relative aspect-video" style={{ backgroundColor: "#111" }}>
         {playing ? (

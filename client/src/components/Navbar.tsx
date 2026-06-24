@@ -146,7 +146,7 @@ export default function Navbar() {
           padding: "0.45rem 1rem",
         }}
       >
-        ⚡ Piñata Moon is available for preorder —{" "}
+        ⚡ Piñata Moon is available now —{" "}
         <a
           href="/pinata-moon"
           style={{ color: "white", fontWeight: 800, textDecoration: "underline" }}

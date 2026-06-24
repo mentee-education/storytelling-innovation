@@ -17,7 +17,7 @@ const featuredBooks = [
     title: "Piñata Moon",
     img: IMAGES.pinataMoonCover,
     buyUrl: "/pinata-moon",
-    badge: "Preorder Now",
+    badge: "Available Now",
     badgeBg: "#F5C842",
     badgeColor: "#0F1B2D",
     desc: "A YA novel-in-verse set in Tucson, Arizona — exploring teen grief, the desert night, and the will to keep living.",
@@ -135,7 +135,7 @@ export default function Books() {
                   <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", color: "rgba(15,27,45,0.7)", lineHeight: 1.6 }}>{book.desc}</p>
                   <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#E8531D", letterSpacing: "0.04em" }}>{book.review}</p>
                   <a href={book.buyUrl} className="btn-pill btn-pill-navy no-underline mt-auto text-center" style={{ fontSize: "0.8rem", padding: "0.55rem 1.25rem" }}>
-                    {book.title === "Piñata Moon" ? "Preorder Now" : book.title === "Songcoming" ? "Pre-Order Now" : "Buy Online"}
+                    {book.title === "Piñata Moon" ? "Buy Now" : book.title === "Songcoming" ? "Buy Now" : "Buy Online"}
                   </a>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function Books() {
                 className="btn-pill btn-pill-orange no-underline"
                 style={{ fontSize: "0.85rem" }}
               >
-                Preorder Now →
+                Buy Now →
               </a>
             </div>
           </div>
