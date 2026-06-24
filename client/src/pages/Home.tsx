@@ -115,12 +115,12 @@ export default function Home() {
               },
             ].map((item) => (
               <Link key={item.label} href={item.href}>
-                <div className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="h-56 overflow-hidden bg-[#f5f3f0] flex items-center justify-center p-6">
+                <div className="group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-square overflow-hidden bg-[#f5f3f0]">
                     <img
                       src={item.img}
                       alt={item.label}
-                      className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div

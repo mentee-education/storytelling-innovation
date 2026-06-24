@@ -106,15 +106,26 @@ export default function Contact() {
                 ))}
               </div>
 
-              {/* Donate */}
+              {/* Donate with QR Code */}
               <div style={{ marginTop: "1.75rem", padding: "1.5rem", backgroundColor: "#F5C842", border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #0F1B2D" }}>
-                <h4 className="display-heading mb-2" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Support the Mission</h4>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.8)", marginBottom: "1rem" }}>
-                  Help us make storytelling accessible to everyone. Your donation supports workshops, community programs, and new creative projects.
-                </p>
-                <a href="https://buymeacoffee.com/storytellinginnovation" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-navy no-underline" style={{ fontSize: "0.85rem" }}>
-                  Donate Now →
-                </a>
+                <div style={{ display: "flex", gap: "1.5rem", alignItems: "flex-start", flexWrap: "wrap" }}>
+                  <div style={{ flex: 1, minWidth: "200px" }}>
+                    <h4 className="display-heading mb-2" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Support the Mission</h4>
+                    <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.8)", marginBottom: "1rem" }}>
+                      Help us make storytelling accessible to everyone. Your donation supports workshops, community programs, and new creative projects.
+                    </p>
+                    <a href="https://buymeacoffee.com/storytellinginnovation" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-navy no-underline" style={{ fontSize: "0.85rem" }}>
+                      Donate Now →
+                    </a>
+                  </div>
+                  <a href="https://buymeacoffee.com/storytellinginnovation" target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
+                    <img
+                      src="/images/donate-qr.png"
+                      alt="Scan to donate"
+                      style={{ width: "120px", height: "120px", border: "3px solid #0F1B2D", backgroundColor: "white", padding: "4px" }}
+                    />
+                  </a>
+                </div>
               </div>
             </div>
 
