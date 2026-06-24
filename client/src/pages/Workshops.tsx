@@ -47,7 +47,7 @@ export default function Workshops() {
       </section>
 
       {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
+      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0, marginBottom: "-1px" }}>
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
@@ -157,7 +157,7 @@ export default function Workshops() {
       </section>
 
       {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "white", lineHeight: 0 }}>
+      <div style={{ backgroundColor: "white", lineHeight: 0, marginBottom: "-1px" }}>
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
         </svg>
@@ -196,7 +196,7 @@ export default function Workshops() {
       </section>
 
       {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
+      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0, marginBottom: "-1px" }}>
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
