@@ -27,8 +27,8 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: 0.85 }}
         />
-        {/* Dark gradient overlay — darker on left for text, lighter on right to let image pop */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.85) 35%, rgba(10,22,40,0.4) 60%, rgba(10,22,40,0.15) 100%)" }} />
+        {/* Dark gradient overlay — darker on left for text, very light on right to let image pop */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.85) 30%, rgba(10,22,40,0.2) 55%, rgba(10,22,40,0.05) 100%)" }} />
         {/* Subtle yellow accent stripe on right */}
         <div
           className="absolute right-0 top-0 bottom-0 w-1/4 bg-[#FFD600] opacity-10"
