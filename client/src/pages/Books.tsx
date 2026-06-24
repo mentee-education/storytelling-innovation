@@ -222,10 +222,9 @@ export default function Books() {
             <div style={{ flex: "0 0 auto", width: "260px", maxWidth: "100%" }}>
               <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "6px 6px 0 #1A8C7A", overflow: "hidden", backgroundColor: "#F5F0EB" }}>
                 <img
-                  src="https://storytellinginnovation.com/wp-content/uploads/2025/12/Song-of-the-Santa-Cruz-River-Cover.png"
+                  src="/images/santa-cruz-river-cover.jpg"
                   alt="Song of the Santa Cruz River"
                   style={{ width: "100%", display: "block", objectFit: "contain" }}
-                  onError={(e) => { (e.target as HTMLImageElement).src = IMAGES.pinataMoonBanner; }}
                 />
               </div>
             </div>
