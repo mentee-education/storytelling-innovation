@@ -38,7 +38,7 @@ export default function About() {
             <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
               <div style={{ position: "relative", width: "100%", maxWidth: "400px" }}>
                 <div style={{ position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)", width: "85%", height: "75%", backgroundColor: "#0F1B2D", borderRadius: "8px" }} />
-                <img src={TORRAN_HEADSHOT} alt="Torran Anderson" style={{ position: "relative", width: "100%", maxHeight: "480px", objectFit: "contain", objectPosition: "bottom", display: "block", zIndex: 1 }} />
+                <img src={TORRAN_HEADSHOT} alt="Torran Anderson" style={{ position: "relative", width: "100%", objectFit: "contain", objectPosition: "bottom", display: "block", zIndex: 1 }} />
               </div>
               <div style={{ position: "absolute", bottom: "-0.75rem", left: "50%", transform: "translateX(-50%) rotate(2deg)", backgroundColor: "#F5C842", color: "#0F1B2D", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.5rem 1rem", boxShadow: "3px 3px 0 #0F1B2D", whiteSpace: "nowrap", zIndex: 2 }}>
                 Author & Educator
