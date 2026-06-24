@@ -24,19 +24,10 @@ const CAROUSEL_IMAGES = [
   { src: "https://storytellinginnovation.com/wp-content/uploads/2025/12/Picture7.png", alt: "Community storytelling" },
   { src: "https://storytellinginnovation.com/wp-content/uploads/2025/12/black-text-for-Center-for-Storytelling-Innovation-1024x683.png", alt: "Center for Storytelling Innovation" },
 ];
-const PERSONAL_STATEMENTS = IMAGES.torranClassroomSelfie;
-const CLI_FI = IMAGES.torranNorwayClassSelfie;
-const NORWEGIAN = IMAGES.norwegianStudents;
-const UPWARD_BOUND = IMAGES.upwardBoundWorkshop;
-const COMPILATION_1 = IMAGES.pinataMoonBanner;
-const COMPILATION_2 = IMAGES.writingHand;
-const CHATGPT_IMG = IMAGES.groupOutdoor;
-const PICTURE7 = IMAGES.interviewLegacy;
-const PICTURE1_9 = IMAGES.workshopKautz;
-const BLACK_TEXT_LOGO = IMAGES.csiLogo;
-const HERO_BG = IMAGES.torranTeachingCsi;
 
-function PhotoCarousel() {
+const HERO_BG = "/images/about-hero.png";
+
+function PhotoCarousel({ height }: { height: string }) {
   const [current, setCurrent] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -48,16 +39,17 @@ function PhotoCarousel() {
   }, []);
 
   return (
-    <div style={{ position: "relative", width: "100%", overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D" }}>
+    <div style={{ position: "relative", width: "100%", height, overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D" }}>
       <div
         style={{
           display: "flex",
           transition: "transform 0.6s cubic-bezier(0.4,0,0.2,1)",
           transform: `translateX(-${current * 100}%)`,
+          height: "100%",
         }}
       >
         {CAROUSEL_IMAGES.map((img, i) => (
-          <div key={i} style={{ minWidth: "100%", height: "420px", flexShrink: 0 }}>
+          <div key={i} style={{ minWidth: "100%", height: "100%", flexShrink: 0 }}>
             <img
               src={img.src}
               alt={img.alt}
@@ -97,7 +89,7 @@ export default function About() {
 
       {/* ── PAGE HERO ── */}
       <section style={{ position: "relative", minHeight: "45vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 15%" }} />
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${HERO_BG})`, backgroundSize: "cover", backgroundPosition: "center 40%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.35) 60%, transparent 100%)" }} />
         <div className="container relative z-10 pb-14 pt-24">
           <div className="script-label mb-2" style={{ color: "#F5C842" }}>Get to know us</div>
@@ -107,46 +99,72 @@ export default function About() {
 
       {/* ── WAVE ── */}
       <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
       </div>
 
-      {/* ── OUR STORY ── */}
-      <section style={{ backgroundColor: "white", paddingTop: "3rem", paddingBottom: "5rem" }}>
+      {/* ── CORE VALUES (moved to top) ── */}
+      <section style={{ backgroundColor: "white", paddingTop: "3rem", paddingBottom: "4rem" }}>
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-stretch">
-            <div className="flex flex-col">
-              <div className="script-label mb-2" style={{ color: "#E8531D" }}>Our mission</div>
-              <h2 className="display-heading mb-6" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "#0F1B2D" }}>
+          <div className="text-center mb-10">
+            <div className="script-label mb-2" style={{ color: "#E8531D" }}>What drives us</div>
+            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", color: "#0F1B2D" }}>Core Values</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              { title: "Imagination", desc: "Storytelling has the power to create lasting impact. We value imagination that sparks new ideas and opens new worlds.", color: "#E8531D" },
+              { title: "Connection", desc: "Connection that brings people together. We are committed to making storytelling accessible to everyone, everywhere.", color: "#1A8C7A" },
+              { title: "Integrity", desc: "Integrity that honors authentic voices. Care and respect for the communities and creators behind every narrative.", color: "#F5C842" },
+            ].map((v) => (
+              <div key={v.title} style={{ backgroundColor: v.color, padding: "1.75rem", border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #0F1B2D", overflow: "hidden" }}>
+                <h3 className="display-heading mb-3" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: v.color === "#F5C842" ? "#0F1B2D" : "white", wordBreak: "break-word", lineHeight: 1.1 }}>{v.title}</h3>
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", lineHeight: 1.7, color: v.color === "#F5C842" ? "rgba(15,27,45,0.8)" : "rgba(255,255,255,0.88)" }}>{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WAVE ── */}
+      <div style={{ backgroundColor: "white", lineHeight: 0 }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
+          <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
+        </svg>
+      </div>
+
+      {/* ── OUR STORY ── */}
+      <section style={{ backgroundColor: "#0F1B2D", paddingTop: "1rem", paddingBottom: "5rem" }}>
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14" style={{ alignItems: "stretch" }}>
+            <div className="flex flex-col" style={{ minHeight: "420px" }}>
+              <div className="script-label mb-2" style={{ color: "#F5C842" }}>Our mission</div>
+              <h2 className="display-heading mb-6" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "white" }}>
                 Making Stories<br />Accessible<br />For Everyone
               </h2>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
-                At the <strong>Center for Storytelling Innovation</strong>, we believe stories shape how we learn, connect, and imagine. Whether in the pages of a book, gathered around a game, or inside a creative workshop — stories help us see ourselves and each other in new ways.
+              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.8)", marginBottom: "1rem" }}>
+                At the <strong style={{ color: "white" }}>Center for Storytelling Innovation</strong>, we believe stories shape how we learn, connect, and imagine. Whether in the pages of a book, gathered around a game, or inside a creative workshop — stories help us see ourselves and each other in new ways.
               </p>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
-                Founded by <strong>Torran Anderson</strong>, the Center began with a vision to bring meaningful storytelling into everyday life. What started as a small idea has grown into a curated collection that sparks curiosity, connection, and creativity for people of all ages.
-              </p>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1.75rem" }}>
-                The Center is an online hub for books, games, workshops, and projects — making storytelling accessible to everyone through Germination Games like StoryGrow, novels-in-verse, and community action activities.
+              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.8)", marginBottom: "1rem" }}>
+                Founded by <strong style={{ color: "white" }}>Torran Anderson</strong>, the Center began with a vision to bring meaningful storytelling into everyday life. What started as a small idea has grown into a curated collection that sparks curiosity, connection, and creativity for people of all ages.
               </p>
               <blockquote style={{ borderLeft: "4px solid #E8531D", paddingLeft: "1.25rem", marginTop: "auto" }}>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.1rem", fontStyle: "italic", color: "#0F1B2D", lineHeight: 1.65 }}>
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.1rem", fontStyle: "italic", color: "white", lineHeight: 1.65 }}>
                   "Let's work together to make stories accessible for everyone."
                 </p>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginTop: "0.75rem" }}>
                   <img src={TORRAN_HEADSHOT} alt="Torran Anderson" style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover", border: "2px solid #E8531D" }} />
                   <div>
-                    <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "#0F1B2D" }}>Torran Anderson</div>
-                    <div style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.75rem", color: "rgba(15,27,45,0.55)" }}>Founder</div>
+                    <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "white" }}>Torran Anderson</div>
+                    <div style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.55)" }}>Founder</div>
                   </div>
                 </div>
               </blockquote>
             </div>
 
-            {/* Auto-scrolling photo carousel — 11 images from original site */}
-            <div className="flex flex-col">
-              <PhotoCarousel />
+            {/* Auto-scrolling photo carousel — matches left column height */}
+            <div className="flex flex-col" style={{ minHeight: "420px" }}>
+              <PhotoCarousel height="100%" />
             </div>
           </div>
 
@@ -157,7 +175,7 @@ export default function About() {
               { num: "100+", label: "Workshops" },
               { num: "3", label: "Continents" },
             ].map((stat) => (
-              <div key={stat.label} style={{ backgroundColor: "#0F1B2D", padding: "1.25rem 0.75rem", textAlign: "center", border: "2.5px solid #0F1B2D", boxShadow: "3px 3px 0 #E8531D" }}>
+              <div key={stat.label} style={{ backgroundColor: "rgba(255,255,255,0.05)", padding: "1.25rem 0.75rem", textAlign: "center", border: "2.5px solid rgba(255,255,255,0.15)", boxShadow: "3px 3px 0 #E8531D" }}>
                 <div className="display-heading" style={{ fontSize: "2rem", color: "#F5C842" }}>{stat.num}</div>
                 <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginTop: "0.2rem" }}>{stat.label}</div>
               </div>
@@ -167,46 +185,8 @@ export default function About() {
       </section>
 
       {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "white", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
-        </svg>
-      </div>
-
-      {/* ── CORE VALUES ── */}
-      <section style={{ backgroundColor: "#0F1B2D", paddingTop: "1rem", paddingBottom: "5rem" }}>
-        <div className="container">
-          <div className="text-center mb-10">
-            <div className="script-label mb-2" style={{ color: "#F5C842" }}>What drives us</div>
-            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", color: "white" }}>Core Values</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
-            {[
-              { title: "Imagination", desc: "Storytelling has the power to create lasting impact. We value imagination that sparks new ideas and opens new worlds.", color: "#E8531D" },
-              { title: "Connection", desc: "Connection that brings people together. We are committed to making storytelling accessible to everyone, everywhere.", color: "#1A8C7A" },
-              { title: "Integrity", desc: "Integrity that honors authentic voices. Care and respect for the communities and creators behind every narrative.", color: "#F5C842" },
-            ].map((v) => (
-              <div key={v.title} style={{ backgroundColor: v.color, padding: "1.75rem", border: "2.5px solid rgba(255,255,255,0.2)", boxShadow: "4px 4px 0 rgba(255,255,255,0.15)", overflow: "hidden" }}>
-                <h3 className="display-heading mb-3" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: v.color === "#F5C842" ? "#0F1B2D" : "white", wordBreak: "break-word", lineHeight: 1.1 }}>{v.title}</h3>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", lineHeight: 1.7, color: v.color === "#F5C842" ? "rgba(15,27,45,0.8)" : "rgba(255,255,255,0.88)" }}>{v.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div style={{ height: "240px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-              <img src={UPWARD_BOUND} alt="Upward Bound workshop" className="w-full h-full object-cover" />
-            </div>
-            <div style={{ height: "240px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-              <img src={COMPILATION_2} alt="Community compilation" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WAVE ── */}
       <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="#E8531D" />
         </svg>
       </div>
@@ -233,7 +213,7 @@ export default function About() {
                 His upcoming YA novel-in-verse, <em>Piñata Moon</em>, is set in Tucson and explores teen grief, the desert night, and the will to keep living. It has already received early praise from the Arizona Daily Star.
               </p>
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.92)", marginBottom: "1.75rem" }}>
-                Beyond books, Torran creates storytelling games like StoryGrow, leads workshops globally (including Norway and Tucson's Upward Bound program), and publishes educational books through Reading A-Z.
+                Beyond books, Torran creates storytelling games like StoryGrow, leads workshops globally, and publishes educational books through Reading A-Z.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://www.linkedin.com/in/torrananderson/" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-yellow no-underline" style={{ fontSize: "0.85rem" }}>LinkedIn →</a>
@@ -246,7 +226,7 @@ export default function About() {
 
       {/* ── WAVE ── */}
       <div style={{ backgroundColor: "#E8531D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
       </div>
@@ -257,13 +237,13 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
             <div className="grid grid-cols-2 gap-3">
               <div style={{ gridColumn: "span 2", height: "220px", overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D" }}>
-                <img src={CHATGPT_IMG} alt="Storytelling community" className="w-full h-full object-cover object-center" />
+                <img src={IMAGES.groupOutdoor} alt="Storytelling community" className="w-full h-full object-cover object-center" />
               </div>
               <div style={{ height: "180px", overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: "3px 3px 0 #0F1B2D" }}>
-                <img src={PICTURE7} alt="Community event" className="w-full h-full object-cover object-center" />
+                <img src={IMAGES.interviewLegacy} alt="Community event" className="w-full h-full object-cover object-center" />
               </div>
               <div style={{ height: "180px", overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: "3px 3px 0 #E8531D" }}>
-                <img src={PICTURE1_9} alt="Workshop" className="w-full h-full object-cover object-top" />
+                <img src={IMAGES.upwardBoundWorkshop} alt="Workshop" className="w-full h-full object-cover object-center" />
               </div>
             </div>
             <div>
@@ -277,16 +257,21 @@ export default function About() {
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1.75rem" }}>
                 Whether exploring a book, playing a game, or attending a workshop — we celebrate creativity, learning, and the joy of stories. Together, we keep storytelling alive, relevant, and full of possibility.
               </p>
-              <img src={BLACK_TEXT_LOGO} alt="Center for Storytelling Innovation" style={{ maxWidth: "280px", display: "block" }} />
+              <img src={IMAGES.pinataMoonBanner} alt="Book compilation" style={{ maxWidth: "100%", maxHeight: "160px", objectFit: "contain", objectPosition: "left", display: "block" }} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── BOOK COMPILATION BANNER ── */}
-      <section style={{ backgroundColor: "#F5F0EB", borderTop: "2.5px solid #0F1B2D", borderBottom: "2.5px solid #0F1B2D", padding: "2rem 0" }}>
-        <div className="container">
-          <img src={COMPILATION_1} alt="Book compilation" style={{ width: "100%", maxHeight: "320px", objectFit: "contain", objectPosition: "center", display: "block", background: "#F5F0EB" }} />
+      {/* ── CTA BAND ── */}
+      <section style={{ backgroundColor: "#F5C842", borderTop: "2.5px solid #0F1B2D", borderBottom: "2.5px solid #0F1B2D", padding: "3rem 0" }}>
+        <div className="container text-center">
+          <div className="script-label mb-2" style={{ color: "#E8531D" }}>Join us</div>
+          <h2 className="display-heading mb-5" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#0F1B2D" }}>Ready to Explore?</h2>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a href="/books" className="btn-pill btn-pill-navy no-underline">Browse Books</a>
+            <a href="/contact" className="btn-pill btn-pill-outline no-underline">Get in Touch</a>
+          </div>
         </div>
       </section>
 
