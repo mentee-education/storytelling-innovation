@@ -136,8 +136,8 @@ export default function Games() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { img: STORYGROW_CARDS2, title: "StoryGrow Cards", desc: "The full StoryGrow deck laid out — each card a prompt, a possibility, a story waiting to happen.", fit: "object-contain", bg: "#f5f0e8", link: "https://www.thegamecrafter.com/games/story-grow" },
-              { img: COMMUNITY_ACTION2, title: "Community Action Deck", desc: "The Community Action Deck in use during a workshop session — sparking conversations and connections.", fit: "object-contain", bg: "#fff8e8", link: "https://www.thegamecrafter.com/games/community-action-deck" },
+              { img: IMAGES.storygrowCards, title: "StoryGrow Cards", desc: "The full StoryGrow deck laid out — each card a prompt, a possibility, a story waiting to happen.", fit: "object-contain", bg: "#f5f0e8", link: "https://www.thegamecrafter.com/games/story-grow" },
+              { img: IMAGES.communityActionDeck, title: "Community Action Deck", desc: "The Community Action Deck in use during a workshop session — sparking conversations and connections.", fit: "object-contain", bg: "#fff8e8", link: "https://www.thegamecrafter.com/games/community-action-deck" },
               { img: IMAGES.earthDayCarolCover, title: "Earth Day Carol", desc: "Earth Day Carol — a game that brings environmental storytelling to life for all ages.", fit: "object-contain", bg: "#f0f8f0", link: "https://www.amazon.com/Zippy-Brain-Inc-Earth-Carol/dp/B00BQ0ZQ70" },
             ].map((item) => (
               <div key={item.title} style={{ border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D", overflow: "hidden" }}>
