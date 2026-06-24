@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const HERO_BG = IMAGES.heroWorkshop;              // Workshop hero
+const HERO_BG = "/images/workshops-hero.png";      // Workshop hero
 const WORKSHOP_PHOTO = IMAGES.upwardBoundWorkshop; // Piñata event
 const UB_COVID = IMAGES.torranTeachingCsi;         // Torran teaching at CSI
 const NORWEGIAN = IMAGES.workshopKautz;            // Writing hand
@@ -189,21 +189,21 @@ export default function Workshops() {
       </div>
 
       {/* ── TESTIMONIAL ── */}
-      <section style={{ backgroundColor: “white”, paddingTop: “2rem”, paddingBottom: “4rem” }}>
-        <div className=”container” style={{ maxWidth: “800px”, margin: “0 auto” }}>
-          <div className=”text-center mb-6”>
-            <div className=”script-label mb-2” style={{ color: “#E8531D” }}>What educators say</div>
+      <section style={{ backgroundColor: "white", paddingTop: "2rem", paddingBottom: "4rem" }}>
+        <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <div className="text-center mb-6">
+            <div className="script-label mb-2" style={{ color: "#E8531D" }}>What educators say</div>
           </div>
-          <div style={{ border: “2.5px solid #0F1B2D”, boxShadow: “6px 6px 0 #E8531D”, backgroundColor: “white”, padding: “2.5rem 3rem” }}>
-            <div style={{ fontSize: “3rem”, color: “#E8531D”, fontFamily: “'Barlow Condensed', sans-serif”, fontWeight: 900, lineHeight: 1, marginBottom: “1rem” }}>”</div>
-            <blockquote style={{ fontFamily: “'Lora', serif”, fontSize: “1.05rem”, lineHeight: 1.8, color: “rgba(15,27,45,0.85)”, fontStyle: “italic”, marginBottom: “1.5rem” }}>
+          <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "6px 6px 0 #E8531D", backgroundColor: "white", padding: "2.5rem 3rem" }}>
+            <div style={{ fontSize: "3rem", color: "#E8531D", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, lineHeight: 1, marginBottom: "1rem" }}>"</div>
+            <blockquote style={{ fontFamily: "'Lora', serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.85)", fontStyle: "italic", marginBottom: "1.5rem" }}>
               Torran Anderson is one of the most engaging guest authors we've had visit our high school. The time passed altogether too quickly, with most of it spent stretching the students' creativity. His visit was packed with student-centered activities that were interesting and accessible to the wide range of students in the group. The activities related to his book <em>Piñata Moon</em>, a compelling novel in verse that follows a Tucson teen struggling to make sense of his life in the aftermath of a friend's suicide. The novel handles the topic of suicide in a graceful, life-affirming way. I would highly recommend making it required reading for your class before his visit to make the time even more meaningful for your students. <em>Piñata Moon</em> could start an important conversation in your classroom about mental health and the lyrical writing will inspire your student writers. It was truly a privilege to have Torran Anderson visit, and we hope to have him return in the future!
             </blockquote>
-            <div style={{ display: “flex”, alignItems: “center”, gap: “1rem” }}>
-              <div style={{ width: “40px”, height: “3px”, backgroundColor: “#E8531D” }} />
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <div style={{ width: "40px", height: "3px", backgroundColor: "#E8531D" }} />
               <div>
-                <p style={{ fontFamily: “'Barlow Condensed', sans-serif”, fontWeight: 800, fontSize: “1rem”, letterSpacing: “0.04em”, textTransform: “uppercase”, color: “#0F1B2D”, margin: 0 }}>Paige Riffle</p>
-                <p style={{ fontFamily: “'Barlow', sans-serif”, fontSize: “0.85rem”, color: “rgba(15,27,45,0.6)”, margin: 0 }}>TVHS Librarian / Technology Integration Specialist</p>
+                <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1rem", letterSpacing: "0.04em", textTransform: "uppercase", color: "#0F1B2D", margin: 0 }}>Paige Riffle</p>
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.85rem", color: "rgba(15,27,45,0.6)", margin: 0 }}>TVHS Librarian / Technology Integration Specialist</p>
               </div>
             </div>
           </div>
@@ -211,20 +211,20 @@ export default function Workshops() {
       </section>
 
       {/* ── GALLERY ── */}
-      <section style={{ backgroundColor: “#FAF8F5”, borderTop: “2.5px solid #0F1B2D”, borderBottom: “2.5px solid #0F1B2D”, paddingTop: “4rem”, paddingBottom: “5rem” }}>
-        <div className=”container”>
-          <div className=”text-center mb-10”>
-            <div className=”script-label mb-2” style={{ color: “#E8531D” }}>From the field</div>
-            <h2 className=”display-heading” style={{ fontSize: “clamp(2.5rem, 6vw, 4rem)”, color: “#0F1B2D” }}>Workshop Gallery</h2>
+      <section style={{ backgroundColor: "#FAF8F5", borderTop: "2.5px solid #0F1B2D", borderBottom: "2.5px solid #0F1B2D", paddingTop: "4rem", paddingBottom: "5rem" }}>
+        <div className="container">
+          <div className="text-center mb-10">
+            <div className="script-label mb-2" style={{ color: "#E8531D" }}>From the field</div>
+            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Workshop Gallery</h2>
           </div>
-          <div className=”grid grid-cols-2 md:grid-cols-4 gap-3”>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { img: IMAGES.pinataMoonBanner, alt: “Piñata Moon banner”, pos: “object-center” },
-              { img: IMAGES.storygrowCards, alt: “StoryGrow cards”, pos: “object-center” },
-              { img: IMAGES.communityActionDeck, alt: “Community Action Deck”, pos: “object-center” },
-              { img: IMAGES.pinataMoon3d, alt: “Piñata Moon 3D”, pos: “object-center” },
+              { img: IMAGES.pinataMoonBanner, alt: "Piñata Moon banner", pos: "object-center" },
+              { img: IMAGES.storygrowCards, alt: "StoryGrow cards", pos: "object-center" },
+              { img: IMAGES.communityActionDeck, alt: "Community Action Deck", pos: "object-center" },
+              { img: IMAGES.pinataMoon3d, alt: "Piñata Moon 3D", pos: "object-center" },
             ].map((item, i) => (
-              <div key={i} style={{ height: “220px”, overflow: “hidden”, border: “2.5px solid #0F1B2D”, boxShadow: i % 2 === 0 ? “3px 3px 0 #E8531D” : “3px 3px 0 #0F1B2D” }}>
+              <div key={i} style={{ height: "220px", overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: i % 2 === 0 ? "3px 3px 0 #E8531D" : "3px 3px 0 #0F1B2D" }}>
                 <img src={item.img} alt={item.alt} className={`w-full h-full object-cover ${item.pos} hover:scale-105 transition-transform duration-500`} />
               </div>
             ))}

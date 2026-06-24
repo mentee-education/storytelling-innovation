@@ -157,107 +157,89 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Piñata Moon */}
-            <div className="bg-white group overflow-hidden">
-              <div className="relative overflow-hidden h-80 bg-[#f5ede0] flex items-center justify-center">
-                <img
-                  src={IMAGES.pinataMoonCover}
-                  alt="Piñata Moon"
-                  className="h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-4 left-4 bg-[#FF5A36] text-white font-barlow-condensed font-black text-xs uppercase tracking-widest px-3 py-1">
-                  Buy Now
+            {[
+              {
+                title: "Piñata Moon",
+                img: IMAGES.pinataMoonCover,
+                imgBg: "#f5ede0",
+                badge: "Novel-in-Verse",
+                badgeBg: "#FF5A36",
+                badgeColor: "white",
+                borderColor: "#FF5A36",
+                genre: "Novel-in-Verse",
+                desc: "A YA novel-in-verse set in Tucson, Arizona — exploring teen grief, the desert night, and the will to keep living.",
+                review: "★★★★★ Arizona Daily Star",
+                stars: true,
+                href: "https://www.amazon.com/Pi%C3%B1ata-Moon-Torran-Anderson/dp/1733780904",
+                imgFit: "object-contain",
+              },
+              {
+                title: "Songcoming",
+                img: IMAGES.songcomingCover,
+                imgBg: "#e8f0f5",
+                badge: "Novel-in-Verse",
+                badgeBg: "#0A1628",
+                badgeColor: "white",
+                borderColor: "#0A1628",
+                genre: "Novel-in-Verse",
+                desc: "A lyrical novel-in-verse that gives the reader a new look at an old medium — an experience that keeps hold long after the last page.",
+                review: "★★★★★ Pine Reads Review",
+                stars: true,
+                href: "https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=sr_1_1?crid=1ZKE61SY1M0LH&dib=eyJ2IjoiMSJ9.wbJT59m5HRIG7QnmaMClKg.cSJ0dsPwLqD9Lg1GUDiiJwGKPxA9fZHkFIdsyfwgSlY&dib_tag=se&keywords=songcoming&qid=1782270932&s=books&sprefix=songcom%2Cstripbooks%2C180&sr=1-1",
+                imgFit: "object-contain",
+              },
+              {
+                title: "Earth Day Carol",
+                img: "/images/earth-day-carol-illustration.jpg",
+                imgBg: "#e8f4e8",
+                badge: "Picture Book",
+                badgeBg: "#FFD600",
+                badgeColor: "#0A1628",
+                borderColor: "#FFD600",
+                genre: "Picture Book",
+                desc: "A heartfelt picture book celebrating Earth Day and environmental stewardship for classrooms and families.",
+                review: "Available now",
+                stars: false,
+                href: "https://www.amazon.com/Earth-Day-Carol-Torran-Anderson/dp/1952483069",
+                imgFit: "object-cover",
+              },
+            ].map((book) => (
+              <div key={book.title} className="bg-white group overflow-hidden flex flex-col">
+                <div className="relative overflow-hidden h-80 flex items-center justify-center" style={{ backgroundColor: book.imgBg }}>
+                  <img
+                    src={book.img}
+                    alt={book.title}
+                    className={`w-full h-full ${book.imgFit} transition-transform duration-500 group-hover:scale-105`}
+                    style={{ padding: book.imgFit === "object-contain" ? "1rem" : "0" }}
+                  />
+                  <div
+                    className="absolute bottom-0 left-4 font-barlow-condensed font-black text-xs uppercase tracking-widest px-3 py-1"
+                    style={{ backgroundColor: book.badgeBg, color: book.badgeColor, transform: "translateY(50%)", zIndex: 2 }}
+                  >
+                    {book.badge}
+                  </div>
+                </div>
+                <div className="p-6 flex flex-col flex-1" style={{ borderTop: `4px solid ${book.borderColor}` }}>
+                  {book.stars && (
+                    <div className="flex text-[#FFD600] mb-2">
+                      {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
+                    </div>
+                  )}
+                  <p className="font-barlow text-xs text-[#0A1628]/50 uppercase tracking-widest mb-1">{book.genre}</p>
+                  <h3 className="font-barlow-condensed font-black text-[#0A1628] text-3xl uppercase mb-2">{book.title}</h3>
+                  <p className="font-barlow text-[#0A1628]/70 text-sm mb-4">{book.desc}</p>
+                  <p className="font-barlow italic text-xs text-[#0A1628]/50 mb-4">{book.review}</p>
+                  <a
+                    href={book.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors mt-auto"
+                  >
+                    Buy Now
+                  </a>
                 </div>
               </div>
-              <div className="p-6 border-t-4 border-[#FF5A36]">
-                <div className="flex text-[#FFD600] mb-2">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                </div>
-                <p className="font-barlow text-xs text-[#0A1628]/50 uppercase tracking-widest mb-1">Novel-in-Verse</p>
-                <h3 className="font-barlow-condensed font-black text-[#0A1628] text-3xl uppercase mb-2">
-                  Piñata Moon
-                </h3>
-                <p className="font-barlow text-[#0A1628]/70 text-sm mb-4">
-                  A YA novel-in-verse set in Tucson, Arizona — exploring teen grief, the desert night, and the will to keep living.
-                </p>
-                <p className="font-barlow italic text-xs text-[#0A1628]/50 mb-4">★★★★★ Arizona Daily Star</p>
-                <a
-                  href="https://www.amazon.com/Pi%C3%B1ata-Moon-Torran-Anderson/dp/1733780904"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors"
-                >
-                  Buy Now
-                </a>
-              </div>
-            </div>
-
-            {/* Songcoming */}
-            <div className="bg-white group overflow-hidden">
-              <div className="relative overflow-hidden h-80 bg-[#e8f0f5] flex items-center justify-center">
-                <img
-                  src={IMAGES.songcomingCover}
-                  alt="Songcoming"
-                  className="h-full w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-4 left-4 bg-[#0A1628] text-white font-barlow-condensed font-black text-xs uppercase tracking-widest px-3 py-1">
-                  Novel-in-Verse
-                </div>
-              </div>
-              <div className="p-6 border-t-4 border-[#0A1628]">
-                <div className="flex text-[#FFD600] mb-2">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                </div>
-                <p className="font-barlow text-xs text-[#0A1628]/50 uppercase tracking-widest mb-1">Novel-in-Verse</p>
-                <h3 className="font-barlow-condensed font-black text-[#0A1628] text-3xl uppercase mb-2">
-                  Songcoming
-                </h3>
-                <p className="font-barlow text-[#0A1628]/70 text-sm mb-4">
-                  A lyrical novel-in-verse that gives the reader a new look at an old medium — an experience that keeps hold long after the last page.
-                </p>
-                <p className="font-barlow italic text-xs text-[#0A1628]/50 mb-4">★★★★★ Pine Reads Review</p>
-                <a
-                  href="https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=sr_1_1?crid=1ZKE61SY1M0LH&dib=eyJ2IjoiMSJ9.wbJT59m5HRIG7QnmaMClKg.cSJ0dsPwLqD9Lg1GUDiiJwGKPxA9fZHkFIdsyfwgSlY&dib_tag=se&keywords=songcoming&qid=1782270932&s=books&sprefix=songcom%2Cstripbooks%2C180&sr=1-1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors"
-                >
-                  Buy Online
-                </a>
-              </div>
-            </div>
-
-            {/* Earth Day Carol */}
-            <div className="bg-white group overflow-hidden">
-              <div className="relative overflow-hidden h-80">
-                <img
-                  src={IMAGES.earthDayCarolCover}
-                  alt="Earth Day Carol"
-                  className="w-full h-full object-contain bg-[#e8f4e8] transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-4 left-4 bg-[#FFD600] text-[#0A1628] font-barlow-condensed font-black text-xs uppercase tracking-widest px-3 py-1">
-                  Picture Book
-                </div>
-              </div>
-              <div className="p-6 border-t-4 border-[#FFD600]">
-                <p className="font-barlow text-xs text-[#0A1628]/50 uppercase tracking-widest mb-1">Picture Book</p>
-                <h3 className="font-barlow-condensed font-black text-[#0A1628] text-3xl uppercase mb-2">
-                  Earth Day Carol
-                </h3>
-                <p className="font-barlow text-[#0A1628]/70 text-sm mb-4">
-                  A heartfelt picture book celebrating Earth Day and environmental stewardship for classrooms and families.
-                </p>
-                <p className="font-barlow italic text-xs text-[#0A1628]/50 mb-4">Available now</p>
-                <a
-                  href="https://www.amazon.com/Earth-Day-Carol-Torran-Anderson/dp/1952483069"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors"
-                >
-                  Buy Online
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -306,13 +288,13 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-white py-20">
+      <section className="bg-[#0A1628] py-20" style={{ marginTop: "-1px" }}>
         <div className="container mx-auto px-6">
-          <p className="font-caveat text-[#FF5A36] text-2xl text-center mb-2">What people say</p>
-          <h2 className="font-barlow-condensed font-black text-[#0A1628] text-6xl uppercase text-center mb-16">
+          <p className="font-caveat text-[#FFD600] text-2xl text-center mb-2">What people say</p>
+          <h2 className="font-barlow-condensed font-black text-white text-6xl uppercase text-center mb-16">
             Community<br />Voices
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 quote: "Edgy, inventive, and sincere, Anderson gives the reader a new look at an old medium, creating a unique experience that keeps hold of the reader long after the last page has been turned.",
@@ -330,16 +312,17 @@ export default function Home() {
                 quote: "It's not only young adults who can be touched by this affecting book.",
                 name: "Christine Wald-Hopkins",
                 role: "Arizona Daily Star",
-                color: "#0A1628",
+                color: "#FFD600",
               },
             ].map((t, i) => (
-              <div key={i} className="border-t-4 pt-8" style={{ borderColor: t.color }}>
-                <p className="font-barlow text-[#0A1628]/80 text-lg italic mb-6 leading-relaxed">
-                  "{t.quote}"
+              <div key={i} className="p-8 flex flex-col" style={{ backgroundColor: "rgba(255,255,255,0.06)", borderLeft: `4px solid ${t.color}` }}>
+                <div className="font-barlow-condensed font-black text-3xl mb-4" style={{ color: t.color }}>"</div>
+                <p className="font-barlow text-white/85 text-base italic mb-6 leading-relaxed flex-1">
+                  {t.quote}
                 </p>
                 <div>
-                  <p className="font-barlow-condensed font-black text-[#0A1628] text-xl uppercase">{t.name}</p>
-                  <p className="font-barlow text-[#0A1628]/50 text-sm">{t.role}</p>
+                  <p className="font-barlow-condensed font-black text-white text-lg uppercase">{t.name}</p>
+                  <p className="font-barlow text-white/40 text-sm">{t.role}</p>
                 </div>
               </div>
             ))}
@@ -347,21 +330,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOUNDER SECTION */}
-      <section className="bg-[#F5F0E8] py-20">
+      {/* FOUNDER — transparent image flush against CTA */}
+      <section className="bg-[#F5F0E8] overflow-hidden" style={{ paddingBottom: 0 }}>
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full bg-[#FFD600] -z-10" />
-              <div className="overflow-hidden" style={{ aspectRatio: "3/4" }}>
-                <img
-                  src={IMAGES.torranHeadshot}
-                  alt="Torran Anderson"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div>
+          <div className="grid md:grid-cols-2 gap-8 items-end">
+            <div className="pt-16 pb-12 md:pb-16">
               <p className="font-caveat text-[#FF5A36] text-2xl mb-2">Our founder</p>
               <h2 className="font-barlow-condensed font-black text-[#0A1628] text-6xl uppercase mb-6">
                 Torran<br />Anderson
@@ -380,28 +353,15 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PHOTO MOSAIC */}
-      <section className="py-0">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-          {[
-            IMAGES.pinataMoonBanner,
-            IMAGES.upwardBoundWorkshop,
-            IMAGES.writingHand,
-            IMAGES.groupOutdoor,
-          ].map((img, i) => (
-            <div key={i} className="relative overflow-hidden h-48 md:h-64 group">
+            <div className="flex justify-center md:justify-end items-end" style={{ marginBottom: 0 }}>
               <img
-                src={img}
-                alt="CSI community"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="/images/torran-transparent.webp"
+                alt="Torran Anderson"
+                className="w-full max-w-sm object-contain object-bottom"
+                style={{ display: "block", marginBottom: "-4px" }}
               />
-              <div className="absolute inset-0 bg-[#0A1628]/0 group-hover:bg-[#0A1628]/40 transition-colors duration-300" />
             </div>
-          ))}
+          </div>
         </div>
       </section>
 

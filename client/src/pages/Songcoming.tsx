@@ -2,6 +2,7 @@
  * Songcoming — Individual book detail page
  * Content sourced from storytellinginnovation.com/songcoming/
  */
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
@@ -32,6 +33,7 @@ const reviews = [
 ];
 
 export default function Songcoming() {
+  const [reviewIdx, setReviewIdx] = useState(0);
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "white" }}>
       <Navbar />
@@ -217,25 +219,40 @@ export default function Songcoming() {
           <div className="script-label mb-2" style={{ color: "#F5C842" }}>What readers are saying</div>
           <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "white", marginBottom: "3rem" }}>Reviews</h2>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-            {reviews.map((review, i) => (
-              <div
-                key={i}
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.05)",
-                  border: "1.5px solid rgba(255,255,255,0.12)",
-                  borderLeft: "4px solid #1A8C7A",
-                  padding: "1.75rem 2rem",
-                }}
+          <div style={{ position: "relative" }}>
+            <div
+              style={{
+                backgroundColor: "rgba(255,255,255,0.05)",
+                border: "1.5px solid rgba(255,255,255,0.12)",
+                borderLeft: "4px solid #1A8C7A",
+                padding: "2rem 2.5rem",
+                minHeight: "200px",
+              }}
+            >
+              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.975rem", lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: "1rem", fontStyle: "italic" }}>
+                {reviews[reviewIdx].quote}
+              </p>
+              <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", color: "#F5C842", letterSpacing: "0.05em" }}>
+                {reviews[reviewIdx].attribution}
+              </p>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1.5rem", marginTop: "1.5rem" }}>
+              <button
+                onClick={() => setReviewIdx((reviewIdx - 1 + reviews.length) % reviews.length)}
+                style={{ width: "40px", height: "40px", border: "2px solid rgba(255,255,255,0.3)", backgroundColor: "transparent", color: "white", fontSize: "1.2rem", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.975rem", lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: "1rem", fontStyle: "italic" }}>
-                  {review.quote}
-                </p>
-                <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", color: "#F5C842", letterSpacing: "0.05em" }}>
-                  {review.attribution}
-                </p>
-              </div>
-            ))}
+                ←
+              </button>
+              <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em" }}>
+                {reviewIdx + 1} / {reviews.length}
+              </span>
+              <button
+                onClick={() => setReviewIdx((reviewIdx + 1) % reviews.length)}
+                style={{ width: "40px", height: "40px", border: "2px solid rgba(255,255,255,0.3)", backgroundColor: "transparent", color: "white", fontSize: "1.2rem", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+              >
+                →
+              </button>
+            </div>
           </div>
         </div>
       </section>
