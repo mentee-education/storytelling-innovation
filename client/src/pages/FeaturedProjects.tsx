@@ -132,23 +132,26 @@ export default function FeaturedProjects() {
         </svg>
       </div>
 
-      {/* Intro */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6" style={{ maxWidth: "800px" }}>
-          <p className="font-barlow text-lg leading-relaxed text-center" style={{ color: "rgba(15,27,45,0.75)" }}>
-            Torran Anderson's work extends beyond books and workshops into a range of creative projects that bring storytelling into new and engaging forms. Through collaborations with educators, organizations, and creative partners, these projects inspire curiosity, support learning, and build meaningful connections.
-          </p>
-          <p className="font-barlow text-lg leading-relaxed text-center mt-6" style={{ color: "rgba(15,27,45,0.6)" }}>
-            Spanning film, interactive media, and community-based initiatives, each project reflects a commitment to creativity with purpose — inviting audiences to engage, reflect, and experience stories beyond the page.
-          </p>
-        </div>
-      </section>
-
-      {/* Projects - 2 column grid */}
-      <section className="pb-20 bg-white">
+      {/* Projects */}
+      <section className="pt-16 pb-12 bg-white">
         <div className="container mx-auto px-6">
+          {/* Top 2 cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project) => (
+            {projects.slice(0, 2).map((project) => (
+              <VideoCard key={project.videoId} project={project} />
+            ))}
+          </div>
+
+          {/* Mid-section text */}
+          <div className="py-12" style={{ maxWidth: "800px", margin: "0 auto" }}>
+            <p className="font-barlow text-base leading-relaxed text-center" style={{ color: "rgba(15,27,45,0.65)" }}>
+              Torran Anderson's work extends beyond books and workshops into a range of creative projects that bring storytelling into new and engaging forms. Through collaborations with educators, organizations, and creative partners, these projects inspire curiosity, support learning, and build meaningful connections. Spanning film, interactive media, and community-based initiatives, each project reflects a commitment to creativity with purpose — inviting audiences to engage, reflect, and experience stories beyond the page.
+            </p>
+          </div>
+
+          {/* Bottom 2 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.slice(2).map((project) => (
               <VideoCard key={project.videoId} project={project} />
             ))}
           </div>
@@ -156,7 +159,7 @@ export default function FeaturedProjects() {
       </section>
 
       {/* Closing */}
-      <section className="py-16" style={{ backgroundColor: "#F5F0E8" }}>
+      <section style={{ backgroundColor: "#F5F0E8", paddingTop: "3rem", paddingBottom: "4rem" }}>
         <div className="container mx-auto px-6" style={{ maxWidth: "800px" }}>
           <p className="font-barlow text-lg leading-relaxed text-center" style={{ color: "rgba(15,27,45,0.75)" }}>
             Though each project is distinct, all are rooted in storytelling as an active, participatory experience. Together, they show how narrative can support learning, spark dialogue, and create lasting impact across different audiences and formats.

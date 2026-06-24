@@ -16,7 +16,6 @@ const CONTACT_CAROUSEL = [
   "http://storytellinginnovation.com/wp-content/uploads/2026/01/DSC08155-1024x683.jpg",
   "http://storytellinginnovation.com/wp-content/uploads/2026/01/Monsoon-poem.png",
   "http://storytellinginnovation.com/wp-content/uploads/2026/01/chula-photo-1024x768.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2025/10/Book-Compilation2-2-1024x515.png",
   "http://storytellinginnovation.com/wp-content/uploads/2025/10/2-cli-fi-picture-2.jpg",
   "http://storytellinginnovation.com/wp-content/uploads/2025/10/Upward-Bound_2020Summer_Writing-Workshop_PinataMoon2-3-1024x744.png",
   "http://storytellinginnovation.com/wp-content/uploads/2025/10/3-earth-day-carol-2.jpg",

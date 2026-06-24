@@ -115,8 +115,8 @@ export default function About() {
       {/* ── OUR STORY ── */}
       <section style={{ backgroundColor: "white", paddingTop: "3rem", paddingBottom: "5rem" }}>
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-stretch">
+            <div className="flex flex-col">
               <div className="script-label mb-2" style={{ color: "#E8531D" }}>Our mission</div>
               <h2 className="display-heading mb-6" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "#0F1B2D" }}>
                 Making Stories<br />Accessible<br />For Everyone
@@ -130,7 +130,7 @@ export default function About() {
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1.75rem" }}>
                 The Center is an online hub for books, games, workshops, and projects — making storytelling accessible to everyone through Germination Games like StoryGrow, novels-in-verse, and community action activities.
               </p>
-              <blockquote style={{ borderLeft: "4px solid #E8531D", paddingLeft: "1.25rem", marginBottom: "2rem" }}>
+              <blockquote style={{ borderLeft: "4px solid #E8531D", paddingLeft: "1.25rem", marginTop: "auto" }}>
                 <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.1rem", fontStyle: "italic", color: "#0F1B2D", lineHeight: 1.65 }}>
                   "Let's work together to make stories accessible for everyone."
                 </p>
@@ -142,24 +142,26 @@ export default function About() {
                   </div>
                 </div>
               </blockquote>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { num: "25+", label: "Books Published" },
-                  { num: "100+", label: "Workshops" },
-                  { num: "3", label: "Continents" },
-                ].map((stat) => (
-                  <div key={stat.label} style={{ backgroundColor: "#0F1B2D", padding: "1.25rem 0.75rem", textAlign: "center", border: "2.5px solid #0F1B2D", boxShadow: "3px 3px 0 #E8531D" }}>
-                    <div className="display-heading" style={{ fontSize: "2rem", color: "#F5C842" }}>{stat.num}</div>
-                    <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginTop: "0.2rem" }}>{stat.label}</div>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Auto-scrolling photo carousel — 11 images from original site */}
-            <PhotoCarousel />
+            <div className="flex flex-col">
+              <PhotoCarousel />
+            </div>
+          </div>
+
+          {/* Stats — full width below both columns */}
+          <div className="grid grid-cols-3 gap-3 mt-10">
+            {[
+              { num: "25+", label: "Books Published" },
+              { num: "100+", label: "Workshops" },
+              { num: "3", label: "Continents" },
+            ].map((stat) => (
+              <div key={stat.label} style={{ backgroundColor: "#0F1B2D", padding: "1.25rem 0.75rem", textAlign: "center", border: "2.5px solid #0F1B2D", boxShadow: "3px 3px 0 #E8531D" }}>
+                <div className="display-heading" style={{ fontSize: "2rem", color: "#F5C842" }}>{stat.num}</div>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginTop: "0.2rem" }}>{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

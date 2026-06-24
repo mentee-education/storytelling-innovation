@@ -12,8 +12,8 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#0F1B2D", color: "white" }}>
       {/* Wave top divider */}
-      <div style={{ backgroundColor: "white", lineHeight: 0, marginBottom: "-1px" }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+      <div style={{ backgroundColor: "transparent", lineHeight: 0, marginTop: "-1px" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: "60px" }}>
           <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
         </svg>
       </div>
