@@ -164,7 +164,7 @@ export default function Navbar() {
         }}
       >
         <div className="container">
-          <div className="flex items-center justify-between" style={{ height: "72px" }}>
+          <div className="flex items-center justify-between" style={{ height: "84px" }}>
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 no-underline flex-shrink-0">
               <img
