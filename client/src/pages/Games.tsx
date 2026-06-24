@@ -45,7 +45,7 @@ export default function Games() {
           <div className="script-label mb-2" style={{ color: "#E8531D" }}>Germination Games</div>
           <h2 className="display-heading mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#0F1B2D" }}>Stories Through Play</h2>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-            We believe stories can inspire creativity, spark curiosity, and strengthen connection. Through interactive apps and thoughtful games, we bring storytelling to life in playful, accessible ways. Every project we create is guided by respect, collaboration, and the belief that great stories should be experienced, not just told.
+            Through interactive apps and thoughtful games, we bring storytelling to life in playful, accessible ways — guided by the belief that great stories should be experienced, not just told.
           </p>
         </div>
       </section>

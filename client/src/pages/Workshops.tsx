@@ -108,7 +108,7 @@ export default function Workshops() {
           {/* ── MISSION STATEMENT ── */}
           <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center", padding: "3.5rem 0" }}>
             <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-              We believe that stories have the power to reframe narratives and inspire action. Whether through film, photography, writing, or digital media, our storytelling practice connects knowledge with lived experience to illuminate the realities, strengths, and visions of community members. Each workshop we take on is guided by a respect for community priorities, interests, and needs. We collaborate closely with partners to bring their stories to life — not as outside observers, but as co-creators committed to amplifying voices and advancing education, resilience, and self-determination.
+              We believe stories have the power to reframe narratives and inspire action. Each workshop is guided by respect for community priorities and needs. We collaborate closely with partners to bring their stories to life — as co-creators committed to amplifying voices and advancing education, resilience, and self-determination.
             </p>
           </div>
 

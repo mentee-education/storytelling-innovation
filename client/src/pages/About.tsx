@@ -85,11 +85,8 @@ export default function About() {
             <h2 className="display-heading mb-6" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "#0F1B2D" }}>
               Making Stories Accessible For Everyone
             </h2>
-            <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
-              At the <strong>Center for Storytelling Innovation</strong>, we believe stories shape how we learn, connect, and imagine. Whether in the pages of a book, gathered around a game, or inside a creative workshop — stories help us see ourselves and each other in new ways.
-            </p>
             <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-              Founded by <strong>Torran Anderson</strong>, the Center began with a vision to bring meaningful storytelling into everyday life. What started as a small idea has grown into a curated collection that sparks curiosity, connection, and creativity for people of all ages. The Center is an online hub for books, games, workshops, and projects — making storytelling accessible to everyone through Germination Games like StoryGrow, novels-in-verse, and community action activities.
+              Founded by <strong>Torran Anderson</strong>, the <strong>Center for Storytelling Innovation</strong> is a hub for books, games, workshops, and projects that spark curiosity, connection, and creativity for people of all ages — making storytelling accessible to everyone through Germination Games like StoryGrow, novels-in-verse, and community action activities.
             </p>
           </div>
         </div>
@@ -161,7 +158,7 @@ export default function About() {
             Built Around Shared Imagination
           </h2>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-            Storytelling Innovation is more than a storefront — it's a space built around shared imagination and connection. Our community includes readers, players, educators, and community members who believe in the power of storytelling to inspire and unite. Whether exploring a book, playing a game, or attending a workshop — we celebrate creativity, learning, and the joy of stories. Together, we keep storytelling alive, relevant, and full of possibility.
+            Our community includes readers, players, educators, and community members who believe in the power of storytelling to inspire and unite. Whether exploring a book, playing a game, or attending a workshop — we celebrate creativity and keep storytelling alive, relevant, and full of possibility.
           </p>
         </div>
       </section>

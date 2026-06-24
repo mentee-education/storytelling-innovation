@@ -9,6 +9,7 @@ import { IMAGES } from "@/lib/images";
 import { ArrowRight, Download, Mail, BookOpen, Award, Star } from "lucide-react";
 
 const TORRAN_HEADSHOT = "/images/torran-headshot.jpg";
+const TORRAN_TRANSPARENT = "/images/torran-transparent.webp";
 const SANTA_CRUZ_COVER = "/images/santa-cruz-river-cover.jpg";
 
 export default function PressKit() {
@@ -81,15 +82,15 @@ export default function PressKit() {
             </div>
           </div>
         </div>
-        {/* Right: Torran headshot */}
+        {/* Right: Torran transparent image */}
         <div
           className="hidden md:block relative"
           style={{ flex: "0 0 42%", overflow: "hidden" }}
         >
           <img
-            src={TORRAN_HEADSHOT}
-            alt="Torran Anderson headshot"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            src={TORRAN_TRANSPARENT}
+            alt="Torran Anderson"
+            className="absolute inset-0 w-full h-full object-contain object-bottom"
           />
           {/* Gradient bleed from left */}
           <div
@@ -162,7 +163,7 @@ export default function PressKit() {
               <p
                 style={{ fontFamily: "'Caveat', cursive", color: "#FF5A36", fontSize: "1.5rem", marginBottom: "0.5rem" }}
               >
-                Meet the founder
+                About the author
               </p>
               <h2
                 style={{
