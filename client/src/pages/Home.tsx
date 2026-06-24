@@ -335,7 +335,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8 items-end">
             <div className="pt-16 pb-12 md:pb-16">
-              <p className="font-caveat text-[#FF5A36] text-2xl mb-2">Our founder</p>
+              <p className="font-caveat text-[#FF5A36] text-2xl mb-2">Our Founder</p>
               <h2 className="font-barlow-condensed font-black text-[#0A1628] text-6xl uppercase mb-6">
                 Torran<br />Anderson
               </h2>
