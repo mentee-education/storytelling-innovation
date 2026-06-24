@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const HERO_BG = IMAGES.pinataMoonBanner;
+const HERO_BG = "/images/pinata-moon-hero.png";
 
 const reviews = [
   {
