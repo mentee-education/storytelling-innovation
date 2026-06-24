@@ -15,6 +15,7 @@ import FeaturedProjects from "./pages/FeaturedProjects";
 import PinataMoon from "./pages/PinataMoon";
 import Songcoming from "./pages/Songcoming";
 import PressKit from "./pages/PressKit";
+import SantaCruzRiver from "./pages/SantaCruzRiver";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
       <Route path={"/songcoming"} component={Songcoming} />
       <Route path={"/news"} component={News} />
       <Route path={"/press-kit"} component={PressKit} />
+      <Route path={"/song-of-the-santa-cruz-river"} component={SantaCruzRiver} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
