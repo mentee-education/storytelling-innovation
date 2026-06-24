@@ -34,7 +34,7 @@ export default function Games() {
 
       {/* ── WAVE ── */}
       <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
       </div>
@@ -44,11 +44,8 @@ export default function Games() {
         <div className="container" style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
           <div className="script-label mb-2" style={{ color: "#E8531D" }}>Germination Games</div>
           <h2 className="display-heading mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#0F1B2D" }}>Stories Through Play</h2>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
-            We believe stories can inspire creativity, spark curiosity, and strengthen connection. Through interactive apps and thoughtful games, we bring storytelling to life in playful, accessible ways.
-          </p>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-            Every project we create is guided by respect, collaboration, and the belief that great stories should be experienced, not just told. Our goal is to offer tools that connect people, inspire learning, and build meaningful shared experiences.
+            We believe stories can inspire creativity, spark curiosity, and strengthen connection. Through interactive apps and thoughtful games, we bring storytelling to life in playful, accessible ways. Every project we create is guided by respect, collaboration, and the belief that great stories should be experienced, not just told. Our goal is to offer tools that connect people, inspire learning, and build meaningful shared experiences.
           </p>
         </div>
       </section>
@@ -82,9 +79,6 @@ export default function Games() {
               <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "8px 8px 0 #E8531D", overflow: "hidden", height: "340px", backgroundColor: "#f5f0e8", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <img src={STORYGROW_CARDS} alt="StoryGrow Cards" className="w-full h-full object-contain" style={{ display: "block", padding: "1rem" }} />
               </div>
-              <div style={{ position: "absolute", bottom: "-1rem", right: "1rem", overflow: "hidden", width: "90px", height: "90px", border: "2.5px solid #0F1B2D", boxShadow: "3px 3px 0 #0F1B2D" }}>
-                <img src={STORYGROW_LOGO} alt="StoryGrow Logo" className="w-full h-full object-cover" />
-              </div>
             </div>
           </div>
         </div>
@@ -92,7 +86,7 @@ export default function Games() {
 
       {/* ── WAVE ── */}
       <div style={{ backgroundColor: "white", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#E8531D" />
         </svg>
       </div>
@@ -128,7 +122,7 @@ export default function Games() {
 
       {/* ── WAVE ── */}
       <div style={{ backgroundColor: "#E8531D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
       </div>
@@ -161,9 +155,53 @@ export default function Games() {
         </div>
       </section>
 
+      {/* ── VIDEO DEMOS ── */}
+      <section style={{ backgroundColor: "#F5F0EB", borderTop: "2.5px solid #0F1B2D", paddingTop: "4rem", paddingBottom: "4rem" }}>
+        <div className="container">
+          <div className="text-center mb-10">
+            <div className="script-label mb-2" style={{ color: "#E8531D" }}>Watch them in action</div>
+            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Video Demos</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Community Action Deck video */}
+            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D", overflow: "hidden" }}>
+              <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/zzlzqW9ddSE"
+                  title="Community Action Deck Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+                />
+              </div>
+              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
+                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Community Action Deck</h3>
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>See the Community Action Deck in action — a storytelling card game designed to spark conversations about community, belonging, and collective action.</p>
+              </div>
+            </div>
+            {/* StoryGrow video */}
+            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #0F1B2D", overflow: "hidden" }}>
+              <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/QRk66DYpmcs"
+                  title="StoryGrow Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+                />
+              </div>
+              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
+                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>StoryGrow</h3>
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>Watch StoryGrow being played in a workshop setting — a collaborative card game that helps players build stories together through illustrated prompt cards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "white", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+      <div style={{ backgroundColor: "#F5F0EB", lineHeight: 0 }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
         </svg>
       </div>
@@ -222,59 +260,8 @@ export default function Games() {
 
       {/* ── WAVE ── */}
       <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
-        </svg>
-      </div>
-
-      {/* ── VIDEO DEMOS ── */}
-      <section style={{ backgroundColor: "white", paddingTop: "2rem", paddingBottom: "5rem" }}>
-        <div className="container">
-          <div className="text-center mb-10">
-            <div className="script-label mb-2" style={{ color: "#E8531D" }}>Watch them in action</div>
-            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Video Demos</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Community Action Deck video */}
-            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D", overflow: "hidden" }}>
-              <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
-                <iframe
-                  src="https://www.youtube.com/embed/zzlzqW9ddSE"
-                  title="Community Action Deck Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
-                />
-              </div>
-              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D" }}>
-                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Community Action Deck</h3>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>See the Community Action Deck in action — a storytelling card game designed to spark conversations about community, belonging, and collective action.</p>
-              </div>
-            </div>
-            {/* StoryGrow video */}
-            <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #0F1B2D", overflow: "hidden" }}>
-              <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
-                <iframe
-                  src="https://www.youtube.com/embed/QRk66DYpmcs"
-                  title="StoryGrow Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
-                />
-              </div>
-              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D" }}>
-                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>StoryGrow</h3>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>Watch StoryGrow being played in a workshop setting — a collaborative card game that helps players build stories together through illustrated prompt cards.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "white", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#F5C842" />
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
+          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="#F5C842" />
         </svg>
       </div>
 
