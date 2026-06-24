@@ -1,176 +1,196 @@
 /*
- * FeaturedProjects — Coming soon page matching the site's editorial design
- * 826-inspired bold typography, orange/navy palette
+ * FeaturedProjects — Showcases CSI's creative storytelling projects
+ * Each project has an embedded YouTube video and description
  */
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
+import { Play } from "lucide-react";
 
-const HERO_BG = IMAGES.pinataMoonCover;
+const HERO_BG = IMAGES.interviewLegacy;
 
-export default function FeaturedProjects() {
+const projects = [
+  {
+    title: "Legacy of Japanese Incarceration Project",
+    videoId: "75wCydmr26I",
+    color: "#FFD600",
+    description:
+      "An interactive storytelling project exploring the legacy of Japanese American incarceration during World War II. Through interviews, creative writing, and multimedia, this project preserves personal narratives and invites audiences to reflect on justice, memory, and resilience.",
+  },
+  {
+    title: "You Bring Out the Norwegian in Me",
+    videoId: "cPX8t7AuWQA",
+    color: "#FF5A36",
+    description:
+      "A cross-cultural storytelling exchange connecting students and communities in the United States and Norway. Through collaborative writing and film, participants explore shared themes of identity, place, and belonging across borders.",
+  },
+  {
+    title: "Remembering the River",
+    videoId: "Eoy-ijTru28",
+    color: "#0A1628",
+    description:
+      "A community-based project celebrating the Santa Cruz River and its significance to Tucson's history, ecology, and people. Through storytelling, poetry, and visual media, this project brings together diverse voices to honor the river's past and reimagine its future.",
+  },
+  {
+    title: "Tiny Things Project",
+    videoId: "t0UB204HIrE",
+    color: "#E8531D",
+    description:
+      "An intimate storytelling initiative that invites participants to find meaning in the smallest details of everyday life. Through writing prompts, photography, and community sharing, Tiny Things reveals how small observations can spark big conversations.",
+  },
+];
+
+function VideoCard({ project, index }: { project: typeof projects[0]; index: number }) {
+  const [playing, setPlaying] = useState(false);
+  const isReversed = index % 2 === 1;
+
   return (
-    <div style={{ fontFamily: "'Lora', serif", backgroundColor: "#FAF8F5", minHeight: "100vh" }}>
-      <Navbar />
-
-      {/* Hero */}
+    <div
+      className={`grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-xl shadow-lg`}
+      style={{ border: "2px solid #0F1B2D" }}
+    >
+      {/* Video */}
       <div
-        style={{
-          position: "relative",
-          height: "340px",
-          backgroundImage: `url(${HERO_BG})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center 40%",
-          backgroundRepeat: "no-repeat",
-        }}
+        className={`relative aspect-video lg:aspect-auto lg:min-h-[360px] ${isReversed ? "lg:order-2" : ""}`}
+        style={{ backgroundColor: "#111" }}
       >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "linear-gradient(to bottom, rgba(15,27,45,0.55) 0%, rgba(15,27,45,0.75) 100%)",
-          }}
-        />
-        <div
-          className="container"
-          style={{
-            position: "relative",
-            zIndex: 2,
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end",
-            paddingBottom: "2.5rem",
-          }}
-        >
-          <div
-            style={{
-              display: "inline-block",
-              backgroundColor: "#E8531D",
-              color: "white",
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 700,
-              fontSize: "0.75rem",
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              padding: "0.25rem 0.75rem",
-              marginBottom: "0.75rem",
-            }}
-          >
-            Coming Soon
-          </div>
-          <h1
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(2.5rem, 6vw, 4rem)",
-              letterSpacing: "0.02em",
-              textTransform: "uppercase",
-              color: "white",
-              lineHeight: 1,
-              margin: 0,
-            }}
-          >
-            Featured Projects
-          </h1>
-        </div>
+        {playing ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1`}
+            className="absolute inset-0 w-full h-full"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        ) : (
+          <>
+            <img
+              src={`https://img.youtube.com/vi/${project.videoId}/maxresdefault.jpg`}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${project.videoId}/hqdefault.jpg`;
+              }}
+            />
+            <div className="absolute inset-0 bg-black/30" />
+            <button
+              onClick={() => setPlaying(true)}
+              className="absolute inset-0 flex items-center justify-center group"
+            >
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
+                style={{ backgroundColor: project.color }}
+              >
+                <Play
+                  size={24}
+                  fill="white"
+                  className="text-white ml-1"
+                />
+              </div>
+            </button>
+          </>
+        )}
       </div>
 
       {/* Content */}
-      <div className="container" style={{ paddingTop: "5rem", paddingBottom: "6rem", maxWidth: "760px", margin: "0 auto" }}>
+      <div
+        className={`p-8 lg:p-10 flex flex-col justify-center ${isReversed ? "lg:order-1" : ""}`}
+        style={{ backgroundColor: "white" }}
+      >
         <div
-          style={{
-            textAlign: "center",
-            padding: "4rem 2rem",
-            border: "2px solid #0F1B2D",
-            backgroundColor: "white",
-          }}
+          className="w-12 h-1 mb-5"
+          style={{ backgroundColor: project.color }}
+        />
+        <h3
+          className="font-barlow-condensed font-black text-2xl lg:text-3xl uppercase mb-4"
+          style={{ color: "#0F1B2D", lineHeight: 1.1 }}
         >
-          <div
-            style={{
-              width: "64px",
-              height: "4px",
-              backgroundColor: "#E8531D",
-              margin: "0 auto 2rem",
-            }}
-          />
-          <h2
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 900,
-              fontSize: "2.25rem",
-              letterSpacing: "0.04em",
-              textTransform: "uppercase",
-              color: "#0F1B2D",
-              marginBottom: "1.25rem",
-            }}
-          >
-            Something exciting is on the way
-          </h2>
-          <p
-            style={{
-              fontFamily: "'Lora', serif",
-              fontSize: "1.05rem",
-              lineHeight: 1.75,
-              color: "#4A5568",
-              maxWidth: "520px",
-              margin: "0 auto 2rem",
-            }}
-          >
-            We are curating a showcase of our most impactful storytelling projects — from community workshops and book launches to games and digital experiences. Check back soon to explore the full collection.
+          {project.title}
+        </h3>
+        <p
+          className="font-barlow text-base leading-relaxed mb-6"
+          style={{ color: "rgba(15,27,45,0.7)" }}
+        >
+          {project.description}
+        </p>
+        <button
+          onClick={() => setPlaying(true)}
+          className="font-barlow-condensed font-bold uppercase text-sm tracking-widest flex items-center gap-2 self-start"
+          style={{ color: project.color, background: "none", border: "none", padding: 0 }}
+        >
+          <Play size={14} fill={project.color} />
+          Watch Video
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default function FeaturedProjects() {
+  return (
+    <div className="min-h-screen bg-white font-barlow">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden" style={{ minHeight: "45vh", display: "flex", alignItems: "flex-end" }}>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${HERO_BG})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to top, rgba(15,27,45,0.92) 0%, rgba(15,27,45,0.4) 60%, rgba(15,27,45,0.2) 100%)" }}
+        />
+        <div className="container relative z-10 pb-14 pt-24">
+          <p className="font-caveat text-[#FFD600] text-2xl mb-2">Creativity with purpose</p>
+          <h1 className="font-barlow-condensed font-black text-white text-5xl md:text-7xl uppercase leading-none">
+            Featured<br />Projects
+          </h1>
+        </div>
+      </section>
+
+      {/* Wave */}
+      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
+        </svg>
+      </div>
+
+      {/* Intro */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6" style={{ maxWidth: "800px" }}>
+          <p className="font-barlow text-lg leading-relaxed text-center" style={{ color: "rgba(15,27,45,0.75)" }}>
+            Torran Anderson's work extends beyond books and workshops into a range of creative projects that bring storytelling into new and engaging forms. Through collaborations with educators, organizations, and creative partners, these projects inspire curiosity, support learning, and build meaningful connections.
           </p>
-          <p
-            style={{
-              fontFamily: "'Lora', serif",
-              fontSize: "0.95rem",
-              lineHeight: 1.75,
-              color: "#718096",
-              maxWidth: "520px",
-              margin: "0 auto 2.5rem",
-            }}
-          >
-            In the meantime, explore our books, games, and workshops to see the work we are doing to make storytelling accessible to everyone.
+          <p className="font-barlow text-lg leading-relaxed text-center mt-6" style={{ color: "rgba(15,27,45,0.6)" }}>
+            Spanning film, interactive media, and community-based initiatives, each project reflects a commitment to creativity with purpose — inviting audiences to engage, reflect, and experience stories beyond the page.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="/books"
-              style={{
-                display: "inline-block",
-                backgroundColor: "#0F1B2D",
-                color: "white",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "0.9rem",
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                padding: "0.75rem 2rem",
-                textDecoration: "none",
-                transition: "background-color 0.2s",
-              }}
-            >
-              Explore Books
-            </a>
-            <a
-              href="/games"
-              style={{
-                display: "inline-block",
-                backgroundColor: "#E8531D",
-                color: "white",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "0.9rem",
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                padding: "0.75rem 2rem",
-                textDecoration: "none",
-                transition: "background-color 0.2s",
-              }}
-            >
-              Explore Games
-            </a>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="pb-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col gap-12">
+            {projects.map((project, i) => (
+              <VideoCard key={project.videoId} project={project} index={i} />
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Closing */}
+      <section className="py-16" style={{ backgroundColor: "#F5F0E8" }}>
+        <div className="container mx-auto px-6" style={{ maxWidth: "800px" }}>
+          <p className="font-barlow text-lg leading-relaxed text-center" style={{ color: "rgba(15,27,45,0.75)" }}>
+            Though each project is distinct, all are rooted in storytelling as an active, participatory experience. Together, they show how narrative can support learning, spark dialogue, and create lasting impact across different audiences and formats.
+          </p>
+        </div>
+      </section>
 
       <Footer />
     </div>

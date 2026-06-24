@@ -48,7 +48,7 @@ export default function Footer() {
             <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#E8531D", marginBottom: "1.25rem" }}>
               Navigation
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
               {[
                 { label: "Home", href: "/" },
                 { label: "About", href: "/about" },
