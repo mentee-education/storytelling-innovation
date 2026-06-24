@@ -34,7 +34,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailto = `mailto:info@storytellinginnovation.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+    const mailto = `mailto:torran.ian.anderson@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
     window.open(mailto);
     setSubmitted(true);
   };
@@ -88,7 +88,7 @@ export default function Contact() {
               {/* Contact methods */}
               <div className="flex flex-col gap-3">
                 {[
-                  { icon: "@", label: "Email", value: "info@storytellinginnovation.com", href: "mailto:info@storytellinginnovation.com", color: "#0F1B2D" },
+                  { icon: "@", label: "Email", value: "torran.ian.anderson@gmail.com", href: "mailto:torran.ian.anderson@gmail.com", color: "#0F1B2D" },
                   { icon: "in", label: "LinkedIn", value: "linkedin.com/in/torrananderson", href: "https://www.linkedin.com/in/torran-anderson/", color: "#0F1B2D" },
                 ].map((item) => (
                   <div key={item.label} style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem 1.25rem", border: "2px solid #0F1B2D" }}>
