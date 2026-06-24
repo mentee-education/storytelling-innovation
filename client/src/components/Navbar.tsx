@@ -20,7 +20,10 @@ const navLinks: NavItem[] = [
   {
     label: "News",
     href: "/news",
-    children: [{ label: "Press Kit", href: "/press-kit" }],
+    children: [
+      { label: "All News", href: "/news" },
+      { label: "Press Kit", href: "/press-kit" },
+    ],
   },
   {
     label: "Books",

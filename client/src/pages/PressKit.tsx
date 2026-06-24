@@ -67,17 +67,19 @@ export default function PressKit() {
             </Link>
           </div>
         </div>
-        {/* Right: generated image */}
-        <div className="hidden md:block relative" style={{ flex: "0 0 42%", overflow: "hidden" }}>
+        {/* Right: generated image with smooth blend */}
+        <div className="hidden md:block relative" style={{ flex: "0 0 45%", overflow: "hidden" }}>
           <img
             src={HERO_BG}
             alt="Press workspace"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          {/* Gradient bleed from left — narrow so image pops */}
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #0A1628 0%, transparent 20%)" }} />
+          {/* Smooth gradient blend from dark left into image */}
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #0A1628 0%, rgba(10,22,40,0.7) 15%, rgba(10,22,40,0.3) 35%, transparent 55%)" }} />
           {/* Subtle bottom gradient */}
-          <div className="absolute bottom-0 left-0 right-0 h-16" style={{ background: "linear-gradient(to top, #0A1628 0%, transparent 100%)" }} />
+          <div className="absolute bottom-0 left-0 right-0 h-20" style={{ background: "linear-gradient(to top, #0A1628 0%, transparent 100%)" }} />
+          {/* Subtle top gradient */}
+          <div className="absolute top-0 left-0 right-0 h-12" style={{ background: "linear-gradient(to bottom, #0A1628 0%, transparent 100%)" }} />
         </div>
         {/* Wave bottom */}
         <div className="absolute bottom-0 left-0 right-0 z-20">
