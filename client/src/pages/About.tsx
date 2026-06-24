@@ -167,11 +167,8 @@ export default function About() {
           <h2 className="display-heading mb-6" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "#0F1B2D" }}>
             Built Around Shared Imagination
           </h2>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
-            Storytelling Innovation is more than a storefront — it's a space built around shared imagination and connection. Our community includes readers, players, educators, and community members who believe in the power of storytelling to inspire and unite.
-          </p>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-            Whether exploring a book, playing a game, or attending a workshop — we celebrate creativity, learning, and the joy of stories. Together, we keep storytelling alive, relevant, and full of possibility.
+            Storytelling Innovation is more than a storefront — it's a space built around shared imagination and connection. Our community includes readers, players, educators, and community members who believe in the power of storytelling to inspire and unite. Whether exploring a book, playing a game, or attending a workshop — we celebrate creativity, learning, and the joy of stories. Together, we keep storytelling alive, relevant, and full of possibility.
           </p>
         </div>
       </section>
