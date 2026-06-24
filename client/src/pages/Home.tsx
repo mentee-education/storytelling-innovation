@@ -204,22 +204,22 @@ export default function Home() {
                 imgFit: "object-cover",
               },
             ].map((book) => (
-              <div key={book.title} className="bg-white group overflow-hidden flex flex-col">
-                <div className="relative overflow-hidden h-80 flex items-center justify-center" style={{ backgroundColor: book.imgBg }}>
+              <div key={book.title} className="bg-white group flex flex-col" style={{ overflow: "visible", position: "relative" }}>
+                <div className="relative h-80 flex items-center justify-center" style={{ backgroundColor: book.imgBg, overflow: "hidden" }}>
                   <img
                     src={book.img}
                     alt={book.title}
                     className={`w-full h-full ${book.imgFit} transition-transform duration-500 group-hover:scale-105`}
                     style={{ padding: book.imgFit === "object-contain" ? "1rem" : "0" }}
                   />
+                </div>
+                <div className="relative p-6 flex flex-col flex-1" style={{ borderTop: `4px solid ${book.borderColor}` }}>
                   <div
-                    className="absolute bottom-0 left-4 font-barlow-condensed font-black text-xs uppercase tracking-widest px-3 py-1"
-                    style={{ backgroundColor: book.badgeBg, color: book.badgeColor, transform: "translateY(50%)", zIndex: 2 }}
+                    className="absolute left-4 font-barlow-condensed font-black text-xs uppercase tracking-widest px-3 py-1"
+                    style={{ backgroundColor: book.badgeBg, color: book.badgeColor, top: "-0.75rem", zIndex: 2 }}
                   >
                     {book.badge}
                   </div>
-                </div>
-                <div className="p-6 flex flex-col flex-1" style={{ borderTop: `4px solid ${book.borderColor}` }}>
                   {book.stars && (
                     <div className="flex text-[#FFD600] mb-2">
                       {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
