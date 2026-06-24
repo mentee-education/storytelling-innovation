@@ -357,7 +357,7 @@ export default function Home() {
               <img
                 src="/images/torran-transparent.webp"
                 alt="Torran Anderson"
-                className="w-full max-w-sm object-contain object-bottom"
+                className="w-full max-w-lg object-contain object-bottom"
                 style={{ display: "block", marginBottom: "-4px" }}
               />
             </div>
