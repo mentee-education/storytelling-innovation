@@ -76,14 +76,6 @@ export default function Footer() {
             <a href="https://buymeacoffee.com/storytellinginnovation" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-orange no-underline" style={{ fontSize: "0.85rem", padding: "0.55rem 1.4rem" }}>
               Donate Now
             </a>
-            <div className="mt-6">
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#E8531D", marginBottom: "0.6rem" }}>
-                Contact
-              </div>
-              <a href="mailto:torran.ian.anderson@gmail.com" className="no-underline" style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", color: "rgba(255,255,255,0.65)" }}>
-                torran.ian.anderson@gmail.com
-              </a>
-            </div>
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 /*
- * Contact — 826-inspired bold editorial contact page
+ * Contact — bold editorial contact page with Web3Forms integration
  */
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -7,10 +7,10 @@ import Footer from "@/components/Footer";
 
 import { IMAGES } from "@/lib/images";
 
-const TORRAN_HEADSHOT = IMAGES.torranNorwayClassSelfie; // Torran's outdoor portrait headshot
-const HERO_BG = IMAGES.heroWorkshop; // Workshop group photo for contact page hero
+const WEB3FORMS_KEY = "f40bb234-f956-40a9-8d38-43d72d8210e0";
+const TORRAN_HEADSHOT = IMAGES.torranNorwayClassSelfie;
+const HERO_BG = IMAGES.heroWorkshop;
 
-// 12-image carousel from original Contact page
 const CONTACT_CAROUSEL = [
   "http://storytellinginnovation.com/wp-content/uploads/2026/01/Odin-and-Torran-photo-768x1024.jpg",
   "http://storytellinginnovation.com/wp-content/uploads/2026/01/DSC08155-1024x683.jpg",
@@ -26,17 +26,52 @@ const CONTACT_CAROUSEL = [
   "http://storytellinginnovation.com/wp-content/uploads/2026/01/Picture2.jpg",
 ];
 
-export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-  const [newsletter, setNewsletter] = useState({ name: "", email: "" });
-  const [newsletterDone, setNewsletterDone] = useState(false);
+const inputStyle = { width: "100%", padding: "0.75rem 1rem", border: "2px solid #0F1B2D", fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", outline: "none", boxSizing: "border-box" as const };
+const labelStyle = { display: "block" as const, fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "rgba(15,27,45,0.6)", marginBottom: "0.4rem" };
 
-  const handleSubmit = (e: React.FormEvent) => {
+export default function Contact() {
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const mailto = `mailto:torran.ian.anderson@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
-    window.open(mailto);
-    setSubmitted(true);
+    setFormStatus("sending");
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", WEB3FORMS_KEY);
+    formData.append("subject", `Contact form: ${formData.get("subject") || "New message"}`);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    if (data.success) {
+      setFormStatus("sent");
+      (e.target as HTMLFormElement).reset();
+    } else {
+      setFormStatus("error");
+    }
+  };
+
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setNewsletterStatus("sending");
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", WEB3FORMS_KEY);
+    formData.append("subject", "Newsletter signup");
+    formData.append("from_name", "Newsletter Signup");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    if (data.success) {
+      setNewsletterStatus("sent");
+      (e.target as HTMLFormElement).reset();
+    } else {
+      setNewsletterStatus("error");
+    }
   };
 
   return (
@@ -89,7 +124,7 @@ export default function Contact() {
               <div className="flex flex-col gap-3">
                 {[
                   { icon: "@", label: "Email", value: "torran.ian.anderson@gmail.com", href: "mailto:torran.ian.anderson@gmail.com", color: "#0F1B2D" },
-                  { icon: "in", label: "LinkedIn", value: "linkedin.com/in/torrananderson", href: "https://www.linkedin.com/in/torran-anderson/", color: "#0F1B2D" },
+                  { icon: "in", label: "LinkedIn", value: "linkedin.com/in/torran-anderson", href: "https://www.linkedin.com/in/torran-anderson/", color: "#0F1B2D" },
                 ].map((item) => (
                   <div key={item.label} style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem 1.25rem", border: "2px solid #0F1B2D" }}>
                     <div style={{ width: "36px", height: "36px", backgroundColor: item.color, color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.8rem", flexShrink: 0 }}>
@@ -133,49 +168,49 @@ export default function Contact() {
               <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "6px 6px 0 #E8531D", padding: "2.5rem" }}>
                 <h3 className="display-heading mb-6" style={{ fontSize: "2rem", color: "#0F1B2D" }}>Send a Message</h3>
 
-                {submitted ? (
+                {formStatus === "sent" ? (
                   <div style={{ textAlign: "center", padding: "3rem 0" }}>
                     <div style={{ fontSize: "3rem", color: "#1A8C7A", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, marginBottom: "1rem" }}>✓</div>
                     <h4 className="display-heading mb-2" style={{ fontSize: "2rem", color: "#0F1B2D" }}>Message Sent!</h4>
-                    <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", color: "rgba(15,27,45,0.65)", marginBottom: "1.5rem" }}>Your email client should have opened. We'll get back to you soon.</p>
-                    <button onClick={() => setSubmitted(false)} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "#E8531D", background: "none", border: "none", cursor: "pointer" }}>
+                    <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", color: "rgba(15,27,45,0.65)", marginBottom: "1.5rem" }}>Thank you for reaching out. We'll get back to you soon.</p>
+                    <button onClick={() => setFormStatus("idle")} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "#E8531D", background: "none", border: "none", cursor: "pointer" }}>
                       Send another message →
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+                  <form onSubmit={handleContactSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+                    <input type="hidden" name="from_name" value="Contact Form" />
                     {[
-                      { label: "Name", key: "name", type: "text", required: true },
-                      { label: "Email", key: "email", type: "email", required: true },
-                      { label: "Subject", key: "subject", type: "text", required: false },
+                      { label: "Name", name: "name", type: "text", required: true },
+                      { label: "Email", name: "email", type: "email", required: true },
+                      { label: "Subject", name: "subject", type: "text", required: false },
                     ].map((field) => (
-                      <div key={field.key}>
-                        <label style={{ display: "block", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,27,45,0.6)", marginBottom: "0.4rem" }}>
+                      <div key={field.name}>
+                        <label style={labelStyle}>
                           {field.label} {field.required && "*"}
                         </label>
                         <input
                           type={field.type}
+                          name={field.name}
                           required={field.required}
-                          value={formData[field.key as keyof typeof formData]}
-                          onChange={(e) => setFormData({ ...formData, [field.key]: e.target.value })}
-                          style={{ width: "100%", padding: "0.75rem 1rem", border: "2px solid #0F1B2D", fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", outline: "none", boxSizing: "border-box" }}
+                          style={inputStyle}
                         />
                       </div>
                     ))}
                     <div>
-                      <label style={{ display: "block", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,27,45,0.6)", marginBottom: "0.4rem" }}>
-                        Message *
-                      </label>
+                      <label style={labelStyle}>Message *</label>
                       <textarea
+                        name="message"
                         required
                         rows={5}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        style={{ width: "100%", padding: "0.75rem 1rem", border: "2px solid #0F1B2D", fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", outline: "none", resize: "vertical", boxSizing: "border-box" }}
+                        style={{ ...inputStyle, resize: "vertical" as const }}
                       />
                     </div>
-                    <button type="submit" className="btn-pill btn-pill-orange" style={{ fontSize: "0.9rem", width: "100%", justifyContent: "center" }}>
-                      Send Message →
+                    {formStatus === "error" && (
+                      <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.85rem", color: "#DC2626" }}>Something went wrong. Please try again.</p>
+                    )}
+                    <button type="submit" className="btn-pill btn-pill-orange" style={{ fontSize: "0.9rem", width: "100%", justifyContent: "center" }} disabled={formStatus === "sending"}>
+                      {formStatus === "sending" ? "Sending..." : "Send Message →"}
                     </button>
                   </form>
                 )}
@@ -192,19 +227,24 @@ export default function Contact() {
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.75, color: "rgba(15,27,45,0.7)", marginBottom: "2rem" }}>
             Stay up to date with new books, workshops, games, and storytelling events.
           </p>
-          {newsletterDone ? (
+          {newsletterStatus === "sent" ? (
             <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", color: "#1A8C7A", fontWeight: 700 }}>✓ You're subscribed! Thank you.</p>
           ) : (
-            <form onSubmit={(e) => { e.preventDefault(); setNewsletterDone(true); }} style={{ display: "flex", flexDirection: "column", gap: "1rem", textAlign: "left" }}>
+            <form onSubmit={handleNewsletterSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", textAlign: "left" }}>
               <div>
-                <label style={{ display: "block", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,27,45,0.6)", marginBottom: "0.4rem" }}>Name</label>
-                <input type="text" value={newsletter.name} onChange={(e) => setNewsletter({ ...newsletter, name: e.target.value })} style={{ width: "100%", padding: "0.75rem 1rem", border: "2px solid #0F1B2D", fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", outline: "none", boxSizing: "border-box", backgroundColor: "white" }} />
+                <label style={labelStyle}>Name</label>
+                <input type="text" name="name" style={{ ...inputStyle, backgroundColor: "white" }} />
               </div>
               <div>
-                <label style={{ display: "block", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,27,45,0.6)", marginBottom: "0.4rem" }}>Email *</label>
-                <input type="email" required value={newsletter.email} onChange={(e) => setNewsletter({ ...newsletter, email: e.target.value })} style={{ width: "100%", padding: "0.75rem 1rem", border: "2px solid #0F1B2D", fontFamily: "'Barlow', sans-serif", fontSize: "0.9rem", outline: "none", boxSizing: "border-box", backgroundColor: "white" }} />
+                <label style={labelStyle}>Email *</label>
+                <input type="email" name="email" required style={{ ...inputStyle, backgroundColor: "white" }} />
               </div>
-              <button type="submit" className="btn-pill btn-pill-orange" style={{ fontSize: "0.9rem", alignSelf: "flex-start" }}>Submit →</button>
+              {newsletterStatus === "error" && (
+                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.85rem", color: "#DC2626" }}>Something went wrong. Please try again.</p>
+              )}
+              <button type="submit" className="btn-pill btn-pill-orange" style={{ fontSize: "0.9rem", alignSelf: "flex-start" }} disabled={newsletterStatus === "sending"}>
+                {newsletterStatus === "sending" ? "Submitting..." : "Submit →"}
+              </button>
             </form>
           )}
         </div>
