@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 import { Play } from "lucide-react";
 
-const HERO_BG = IMAGES.studentsWriting;
+const HERO_BG = IMAGES.interviewLegacy;
 
 const projects = [
   {

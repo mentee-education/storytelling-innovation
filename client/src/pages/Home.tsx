@@ -28,7 +28,7 @@ export default function Home() {
           style={{ opacity: 0.85 }}
         />
         {/* Dark gradient overlay for text legibility */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(10,22,40,0.82) 0%, rgba(10,22,40,0.55) 55%, rgba(10,22,40,0.2) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.75) 45%, rgba(10,22,40,0.35) 100%)" }} />
         {/* Subtle yellow accent stripe on right */}
         <div
           className="absolute right-0 top-0 bottom-0 w-1/4 bg-[#FFD600] opacity-10"
@@ -37,7 +37,7 @@ export default function Home() {
         <div className="relative container mx-auto px-6 py-24 z-10">
           <div className="max-w-3xl">
             <p className="font-caveat text-[#FFD600] text-2xl mb-3">
-              Welcome to
+              Center for Storytelling Innovation
             </p>
             <h1 className="font-barlow-condensed font-black text-white text-6xl md:text-8xl leading-none uppercase tracking-tight mb-6">
               Stories<br />

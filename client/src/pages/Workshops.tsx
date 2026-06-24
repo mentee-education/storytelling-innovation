@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const HERO_BG = IMAGES.norwegianStudents;       // Zoom students holding Piñata Moon
+const HERO_BG = IMAGES.heroWorkshop;              // Workshop hero
 const WORKSHOP_PHOTO = IMAGES.upwardBoundWorkshop; // Piñata event
 const UB_COVID = IMAGES.torranTeachingCsi;         // Torran teaching at CSI
 const NORWEGIAN = IMAGES.workshopKautz;            // Writing hand
@@ -16,9 +16,6 @@ const INTERVIEW_LEGACY = IMAGES.interviewLegacy;   // CSI logo
 const IMG_7640 = IMAGES.groupOutdoor;              // Group outdoors
 const PERSONAL_STATEMENTS = IMAGES.torranClassroomSelfie; // Torran portrait
 const CLI_FI = IMAGES.torranNorwayClassSelfie;     // Torran outdoor portrait
-const NORWAY1 = IMAGES.upwardBoundWorkshop;        // Piñata event (different from hero)
-const NORWAY2 = IMAGES.writingHand;                // Classroom selfie
-const NORWAY3 = IMAGES.torranTeachingCsi;          // Torran at CSI (different from hero)
 
 export default function Workshops() {
   return (
@@ -45,8 +42,11 @@ export default function Workshops() {
       {/* ── INTRO ── */}
       <section style={{ backgroundColor: "white", paddingTop: "3rem", paddingBottom: "2rem" }}>
         <div className="container" style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
+            We believe that stories have the power to reframe narratives and inspire action. Whether through film, photography, writing, or digital media, our storytelling practice connects knowledge with lived experience to illuminate the realities, strengths, and visions of community members.
+          </p>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
-            We believe stories can inspire creativity, spark curiosity, and strengthen connection. Through interactive workshops, we bring storytelling to life in ways that invite reflection, imagination, and shared experience — crafted with care for the communities we serve.
+            Each workshop we take on is guided by a respect for community priorities, interests, and needs. We collaborate closely with partners to bring their stories to life — not as outside observers, but as co-creators committed to amplifying voices and advancing education, resilience, and self-determination.
           </p>
         </div>
       </section>
@@ -162,45 +162,6 @@ export default function Workshops() {
 
       {/* ── WAVE ── */}
       <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0 }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="#E8531D" />
-        </svg>
-      </div>
-
-      {/* ── NORWAY ── */}
-      <section style={{ backgroundColor: "#E8531D", paddingTop: "1rem", paddingBottom: "5rem" }}>
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="grid grid-cols-2 gap-4">
-              <div style={{ gridColumn: "span 2", height: "240px", overflow: "hidden", border: "2.5px solid white" }}>
-                <img src={NORWAY1} alt="Norway workshop" className="w-full h-full object-cover object-top" />
-              </div>
-              <div style={{ height: "180px", overflow: "hidden", border: "2.5px solid white" }}>
-                <img src={NORWAY2} alt="Norway workshop 2" className="w-full h-full object-cover object-center" />
-              </div>
-              <div style={{ height: "180px", overflow: "hidden", border: "2.5px solid white" }}>
-                <img src={NORWAY3} alt="Norway workshop 3" className="w-full h-full object-cover object-center" />
-              </div>
-            </div>
-            <div>
-              <div style={{ display: "inline-block", backgroundColor: "#F5C842", color: "#0F1B2D", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.4rem 0.9rem", transform: "rotate(2deg)", boxShadow: "3px 3px 0 #0F1B2D", marginBottom: "1.25rem" }}>
-                International
-              </div>
-              <h2 className="display-heading mb-5" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "white" }}>Norway Storytelling Workshops</h2>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.9)", marginBottom: "1rem" }}>
-                Storytelling Innovation has brought collaborative storytelling workshops to Norway — working with students and educators in an international context to explore how stories cross cultural and linguistic boundaries.
-              </p>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.9)", marginBottom: "1.75rem" }}>
-                These workshops demonstrate that the core human impulse to tell and share stories is universal — and that games like StoryGrow can facilitate connection even across language barriers.
-              </p>
-              <a href="/contact" className="btn-pill btn-pill-yellow no-underline">Bring Workshops to Your Country →</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#E8531D", lineHeight: 0 }}>
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
