@@ -48,13 +48,10 @@ export default function About() {
               <div className="script-label mb-2" style={{ color: "#F5C842" }}>Meet the founder</div>
               <h2 className="display-heading mb-5" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "white" }}>Torran Anderson</h2>
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.92)", marginBottom: "1rem" }}>
-                Torran Anderson is an author, educator, and community storyteller based in Tucson, Arizona. His debut novel, <em>Songcoming</em>, was praised by Pine Reads Review as "edgy, inventive, and sincere" — a novel that "gives the reader a new look at an old medium."
-              </p>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.92)", marginBottom: "1rem" }}>
-                His upcoming YA novel-in-verse, <em>Piñata Moon</em>, is set in Tucson and explores teen grief, the desert night, and the will to keep living. It has already received early praise from the Arizona Daily Star.
+                Torran Anderson is the founder of the Center for Storytelling Innovation. His YA novel-in-verse, <em>Piñata Moon</em>, won the Paterson Prize for Books for Young People. He has published over 50 books, and the environmental story app <em>Earth Day Carol</em>.
               </p>
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.92)", marginBottom: "1.75rem" }}>
-                Beyond books, Torran creates storytelling games like StoryGrow, leads workshops globally, and publishes educational books through Reading A-Z.
+                Forthcoming books include the YA novel-in-verse <em>Songcoming</em> (West 44 Books) and the environmental picture book <em>Song of the Santa Cruz River</em> (Desert Ink Press). Torran is open to working on books, games, and community engagement projects.
               </p>
               <blockquote style={{ borderLeft: "4px solid #F5C842", paddingLeft: "1.25rem", marginBottom: "1.75rem" }}>
                 <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", fontStyle: "italic", color: "white", lineHeight: 1.65 }}>
@@ -62,7 +59,7 @@ export default function About() {
                 </p>
               </blockquote>
               <div className="flex flex-wrap gap-3">
-                <a href="https://www.linkedin.com/in/torrananderson/" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-yellow no-underline" style={{ fontSize: "0.85rem" }}>LinkedIn →</a>
+                <a href="https://www.linkedin.com/in/torran-anderson/" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-yellow no-underline" style={{ fontSize: "0.85rem" }}>LinkedIn →</a>
                 <a href="/books" className="btn-pill btn-pill-outline-white no-underline" style={{ fontSize: "0.85rem" }}>See His Books</a>
               </div>
             </div>
