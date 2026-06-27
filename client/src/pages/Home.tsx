@@ -278,7 +278,7 @@ export default function Home() {
               onClick={(e) => e.stopPropagation()}
             >
               <iframe
-                src="https://www.youtube.com/embed/2XLZ4Z8sTtA?autoplay=1"
+                src="https://www.youtube.com/embed/0HekdeqP3Tk?autoplay=1"
                 className="w-full h-full"
                 allow="autoplay; fullscreen"
                 allowFullScreen
