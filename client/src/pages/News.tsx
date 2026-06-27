@@ -169,7 +169,8 @@ export default function News() {
                   <img
                     src={featured.img}
                     alt={featured.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
+                    style={{ backgroundColor: "#0F1B2D" }}
                   />
                 </div>
                 <div
