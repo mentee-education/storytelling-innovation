@@ -281,7 +281,7 @@ export default function Books() {
       {/* ── COMPILATION BANNER ── */}
       <section style={{ backgroundColor: "#F5F0EB", paddingTop: "2rem", paddingBottom: "4rem", borderBottom: "2.5px solid #0F1B2D" }}>
         <div className="container">
-          <img src={COMPILATION} alt="Book compilation" style={{ width: "100%", display: "block", border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D" }} />
+          <img src={COMPILATION} alt="Book compilation" style={{ width: "100%", maxHeight: "400px", objectFit: "cover", objectPosition: "center 35%", display: "block", border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D" }} />
         </div>
       </section>
 
