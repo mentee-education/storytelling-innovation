@@ -34,7 +34,7 @@ export default function Home() {
           className="absolute right-0 top-0 bottom-0 w-1/4 bg-[#FFD600] opacity-10"
           style={{ clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0% 100%)" }}
         />
-        <div className="relative container mx-auto px-8 md:px-12 py-24 z-10">
+        <div className="relative container mx-auto px-6 py-24 z-10">
           <div className="max-w-3xl">
             <p className="font-caveat text-[#FFD600] text-2xl mb-3">
               Center for Storytelling Innovation
