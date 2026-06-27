@@ -154,7 +154,7 @@ export default function Games() {
         <div className="container">
           <div className="text-center mb-10">
             <div className="script-label mb-2" style={{ color: "#E8531D" }}>See them in action</div>
-            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Watch the Games</h2>
+            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Game Promos</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* StoryGrow video */}
@@ -169,8 +169,7 @@ export default function Games() {
                 />
               </div>
               <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
-                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>StoryGrow in Action</h3>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>Watch StoryGrow being played in a workshop setting — players build stories together through illustrated prompt cards.</p>
+                <h3 className="display-heading" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Story Grow</h3>
               </div>
             </div>
             {/* Community Action Deck video */}
@@ -185,8 +184,7 @@ export default function Games() {
                 />
               </div>
               <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
-                <h3 className="display-heading mb-1" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Community Action Deck in Action</h3>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)" }}>See the Community Action Deck sparking conversations about community, belonging, and collective action.</p>
+                <h3 className="display-heading" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Community Action Deck</h3>
               </div>
             </div>
           </div>
