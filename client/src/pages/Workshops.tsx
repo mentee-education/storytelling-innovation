@@ -156,52 +156,6 @@ export default function Workshops() {
         </div>
       </section>
 
-      {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "white", lineHeight: 0, marginBottom: "-1px" }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
-          <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
-        </svg>
-      </div>
-
-      {/* ── UPWARD BOUND ── */}
-      <section style={{ backgroundColor: "#0F1B2D", paddingTop: "1rem", paddingBottom: "5rem" }}>
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div style={{ display: "inline-block", backgroundColor: "#E8531D", color: "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.4rem 0.9rem", transform: "rotate(-2deg)", boxShadow: "3px 3px 0 rgba(255,255,255,0.3)", marginBottom: "1.25rem" }}>
-                Featured Program
-              </div>
-              <h2 className="display-heading mb-5" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "white" }}>Upward Bound Writing Workshop</h2>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: "1rem" }}>
-                The Upward Bound Writing Workshop is a multi-week creative writing program for high school students preparing for college. Participants explore personal narrative, poetry, and fiction — developing their voices and building confidence as writers.
-              </p>
-              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: "1.75rem" }}>
-                The program uses <em>Piñata Moon</em> as a central text — exploring how a novel-in-verse can speak to real teen experiences of grief, identity, and resilience in the Tucson desert.
-              </p>
-              <a href="/contact" className="btn-pill btn-pill-orange no-underline">Book a Workshop →</a>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div style={{ gridColumn: "span 2", height: "240px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                <img src={PICTURE1_JAN} alt="Upward Bound workshop" className="w-full h-full object-cover object-center" />
-              </div>
-              <div style={{ height: "180px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                <img src={PERSONAL_STATEMENTS} alt="Personal statements" className="w-full h-full object-cover object-top" />
-              </div>
-              <div style={{ height: "180px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                <img src={CLI_FI} alt="Cli-fi workshop" className="w-full h-full object-cover object-top" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0, marginBottom: "-1px" }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
-          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
-        </svg>
-      </div>
-
       {/* ── TESTIMONIAL ── */}
       <section style={{ backgroundColor: "white", paddingTop: "2rem", paddingBottom: "4rem" }}>
         <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
