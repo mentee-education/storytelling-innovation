@@ -72,12 +72,11 @@ export default function Games() {
               </blockquote>
               <div className="flex flex-wrap gap-3">
                 <a href="https://www.thegamecrafter.com/games/story-grow" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-orange no-underline">Buy StoryGrow →</a>
-                <a href="https://www.thegamecrafter.com/games/story-grow" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-outline no-underline">The Game Crafter</a>
               </div>
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "8px 8px 0 #E8531D", overflow: "hidden", height: "340px", backgroundColor: "#f5f0e8", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <img src={STORYGROW_CARDS} alt="StoryGrow Cards" className="w-full h-full object-contain" style={{ display: "block", padding: "1rem" }} />
+                <img src="/images/germination-games-logo.jpg" alt="Germination Games - StoryGrow" className="w-full h-full object-contain" style={{ display: "block", padding: "1rem" }} />
               </div>
             </div>
           </div>
