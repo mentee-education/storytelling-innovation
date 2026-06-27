@@ -116,8 +116,8 @@ export default function About() {
         <div className="container">
           <div className="grid grid-cols-3 gap-3">
             {[
-              { num: "25+", label: "Books Published" },
-              { num: "100+", label: "Workshops" },
+              { num: "50+", label: "Books Published" },
+              { num: "1,000+", label: "Workshops" },
               { num: "3", label: "Continents" },
             ].map((stat) => (
               <div key={stat.label} style={{ padding: "1.25rem 0.75rem", textAlign: "center" }}>
