@@ -62,7 +62,7 @@ export default function Games() {
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
                 Grow stories with this collaborative story pass writing game. Draw fertilizer cards to add in challenges.
               </p>
-              <ul style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem", paddingLeft: "1.25rem" }}>
+              <ul style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem", paddingLeft: "1.25rem", listStyleType: "disc" }}>
                 <li>Stories made fun — you pick the person, problem, place</li>
                 <li>Flex your creativity, humor, and problem-solving skills</li>
                 <li>Roll the die to add in story elements</li>
