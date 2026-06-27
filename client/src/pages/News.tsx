@@ -7,6 +7,17 @@ import Footer from "@/components/Footer";
 
 const newsItems = [
   {
+    date: "May 9, 2026",
+    category: "Review",
+    categoryColor: "#7B2D8E",
+    title: "School Library Journal Review of Songcoming",
+    excerpt:
+      "A beautiful cross between a romance and fantasy story. Eve happens upon a merman named Oorin by chance at the river. Both characters are struggling to accept life's fate: Eve, a hideous betrothal; and Oorin, a lost rite of passage. VERDICT: Teens are sure to fall in love with this fairy-tale romance.",
+    img: "/images/news-slj-review.png",
+    link: "https://storytellinginnovation.com/2026/05/09/school-library-journal-review-of-songcoming/",
+    featured: true,
+  },
+  {
     date: "February 4, 2026",
     category: "Fellowship",
     categoryColor: "#1A8C7A",
@@ -15,7 +26,7 @@ const newsItems = [
       "Fellowships have a way of opening doors you did not even know existed. They lead across continents, into classrooms and communities, and toward entirely new ways of seeing the world. For Torran Anderson, fellowships became catalysts for creativity, storytelling, and connection. As a multi-fellowship winner — including the Mira, Rotary Peace, and Fulbright — Torran's journey spans the globe.",
     img: "/images/news-fellowships.jpg",
     link: "https://storytellinginnovation.com/2026/02/04/fellowships-across-the-globe-torran-andersons-path-to-creative-storytelling/",
-    featured: true,
+    featured: false,
   },
   {
     date: "February 4, 2026",
@@ -37,17 +48,6 @@ const newsItems = [
       "Episode #422: Torran Anderson \u2014 Our first official Boy of Summer is JV's wonderful and dear lifelong (from 4th grade onward!) friend, author Torran Anderson (Pi\u00f1ata Moon). Hear about the amazing work Torran is doing in partnership with the Navajo nation, and memories that Torran and JV share from their own teen years in Tucson, AZ.",
     img: "/images/news-jv-club.jpg",
     link: "https://storytellinginnovation.com/2026/02/04/jv-club-podcast-torran-anderson/",
-    featured: false,
-  },
-  {
-    date: "May 9, 2026",
-    category: "Review",
-    categoryColor: "#7B2D8E",
-    title: "School Library Journal Review of Songcoming",
-    excerpt:
-      "A beautiful cross between a romance and fantasy story. Eve happens upon a merman named Oorin by chance at the river. Both characters are struggling to accept life's fate: Eve, a hideous betrothal; and Oorin, a lost rite of passage. VERDICT: Teens are sure to fall in love with this fairy-tale romance.",
-    img: "/images/news-slj-review.png",
-    link: "https://storytellinginnovation.com/2026/05/09/school-library-journal-review-of-songcoming/",
     featured: false,
   },
 ];
@@ -396,7 +396,7 @@ export default function News() {
               Get in Touch &rarr;
             </a>
             <a
-              href="https://www.youtube.com/@CenterforStorytellingInnovation"
+              href="https://www.youtube.com/@torrananderson2084"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-pill btn-pill-outline-white no-underline"
