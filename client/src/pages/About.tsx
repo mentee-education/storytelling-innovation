@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const TORRAN_HEADSHOT = "/images/torran-transparent.webp";
+const TORRAN_HEADSHOT = "/images/torran-founder.png";
 const HERO_BG = "/images/about-hero.png";
 
 export default function About() {
