@@ -36,11 +36,11 @@ const featuredBooks = [
   {
     title: "Earth Day Carol",
     img: "/images/earth-day-carol-illustration.jpg",
-    buyUrl: "https://storytellinginnovation.com/books/",
-    badge: "Picture Book",
+    buyUrl: "https://www.amazon.com/Zippy-Brain-Inc-Earth-Carol/dp/B00BQ0ZQ70",
+    badge: "Picture Book App",
     badgeBg: "#1A8C7A",
     badgeColor: "white",
-    desc: "A heartfelt picture book celebrating Earth Day and environmental stewardship for classrooms and families.",
+    desc: "A free picture book app celebrating Earth Day and environmental stewardship for classrooms and families.",
     review: "Available now",
   },
 ];
