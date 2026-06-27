@@ -157,7 +157,7 @@ export default function Workshops() {
       </section>
 
       {/* ── TESTIMONIAL ── */}
-      <section style={{ backgroundColor: "white", paddingTop: "2rem", paddingBottom: "4rem" }}>
+      <section style={{ backgroundColor: "#F5F0EB", borderTop: "2.5px solid #0F1B2D", borderBottom: "2.5px solid #0F1B2D", paddingTop: "3rem", paddingBottom: "4rem" }}>
         <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
           <div className="text-center mb-6">
             <div className="script-label mb-2" style={{ color: "#E8531D" }}>What educators say</div>
