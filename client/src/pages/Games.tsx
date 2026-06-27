@@ -60,16 +60,16 @@ export default function Games() {
               </div>
               <h2 className="display-heading mb-5" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "#0F1B2D" }}>StoryGrow</h2>
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem" }}>
-                StoryGrow is a collaborative card game that helps players build stories together. Using a deck of illustrated prompt cards, players take turns growing a shared narrative — building vocabulary, creativity, and connection along the way.
+                Grow stories with this collaborative story pass writing game. Draw fertilizer cards to add in challenges.
               </p>
-              <blockquote style={{ borderLeft: "4px solid #E8531D", paddingLeft: "1.25rem", marginBottom: "1.75rem" }}>
-                <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.95rem", fontStyle: "italic", color: "#0F1B2D", lineHeight: 1.65, marginBottom: "0.5rem" }}>
-                  "StoryGrow is a great game to get students engaged with their creativity, one another, and the world around them through writing (and occasionally drawing)."
-                </p>
-                <footer style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "#E8531D" }}>
-                  — Maia Schneider, Environmental Education Program Coordinator, University of Arizona
-                </footer>
-              </blockquote>
+              <ul style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1rem", paddingLeft: "1.25rem" }}>
+                <li>Stories made fun — you pick the person, problem, place</li>
+                <li>Flex your creativity, humor, and problem-solving skills</li>
+                <li>Roll the die to add in story elements</li>
+              </ul>
+              <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginBottom: "1.75rem" }}>
+                Story Grow is a fun way to create stories as a group and flex your creative muscles.
+              </p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://www.thegamecrafter.com/games/story-grow" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-orange no-underline">Buy StoryGrow →</a>
               </div>
@@ -105,22 +105,45 @@ export default function Games() {
               </div>
               <h2 className="display-heading mb-5" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", color: "white" }}>Community<br />Action Deck</h2>
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.9)", marginBottom: "1rem" }}>
-                The Community Action Deck is a storytelling card game designed to spark conversations about community, belonging, and collective action. Players use the cards to build stories that connect personal experience with broader social themes.
+                The Community Action deck can help you engage with your local community. There are eight categories of prompts:
               </p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.25rem 1.5rem", marginBottom: "1rem" }}>
+                {["Personal", "History & Art", "Environment", "Communities", "Create", "Play", "Events", "Communication"].map((cat) => (
+                  <p key={cat} style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.9)" }}>• {cat}</p>
+                ))}
+              </div>
               <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.9)", marginBottom: "1.75rem" }}>
-                Perfect for community organizations, classrooms, and workshops — this game bridges individual storytelling with collective meaning-making.
+                Each category provides a different entry point into connecting with your community. When used together, they create a holistic community engagement approach.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://www.thegamecrafter.com/games/community-action-deck" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-yellow no-underline">Buy the Deck →</a>
-                <a href="https://www.thegamecrafter.com/games/community-action-deck" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-outline-white no-underline">The Game Crafter</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* ── ABOUT GERMINATION GAMES ── */}
+      <section style={{ backgroundColor: "#F5F0EB", borderTop: "2.5px solid #0F1B2D", paddingTop: "4rem", paddingBottom: "4rem" }}>
+        <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <div className="text-center mb-6">
+            <div className="script-label mb-2" style={{ color: "#1A8C7A" }}>Our philosophy</div>
+            <h2 className="display-heading" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#0F1B2D" }}>About Germination Games</h2>
+          </div>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
+            Germination Games supports participants to be creators, not victims. When people face existential threats like climate change, they often hunker down in their old ways of thinking. Just when we need skills like creativity, broadening perspectives, and problem-solving, we tend to be most rigid. Germination Games are designed to examine wicked problems in new ways, engage people as active participants in real-world problems, and serve as a catalyst for action.
+          </p>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginTop: "1rem" }}>
+            Some of the benefits of games include reducing stress, enhancing cognitive abilities, getting away from screens, and forming connections with others. Current Projects for Germination Games include a Story Grow Game to explore challenging situations through collaborative storytelling. Participants bring in multiple perspectives and cross-generational storytelling to develop problem-solving skills within a story structure. With the Community Action Deck, participants draw cards to engage with their cities.
+          </p>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginTop: "1rem" }}>
+            Germination Games cultivate the process of bringing new ideas into existence. Instead of being stuck in despair, participants play games to create new possible futures.
+          </p>
+        </div>
+      </section>
+
       {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#E8531D", lineHeight: 0, marginBottom: "-1px" }}>
+      <div style={{ backgroundColor: "#F5F0EB", lineHeight: 0, marginBottom: "-1px" }}>
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", marginBottom: "-1px" }}>
           <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="white" />
         </svg>
