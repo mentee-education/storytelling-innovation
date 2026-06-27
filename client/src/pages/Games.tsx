@@ -168,7 +168,7 @@ export default function Games() {
                   style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
                 />
               </div>
-              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
+              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white", textAlign: "center" }}>
                 <h3 className="display-heading" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Story Grow</h3>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Games() {
                   style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
                 />
               </div>
-              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white" }}>
+              <div style={{ padding: "1.25rem", borderTop: "2.5px solid #0F1B2D", backgroundColor: "white", textAlign: "center" }}>
                 <h3 className="display-heading" style={{ fontSize: "1.5rem", color: "#0F1B2D" }}>Community Action Deck</h3>
               </div>
             </div>
