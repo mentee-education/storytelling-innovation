@@ -149,7 +149,7 @@ export default function Songcoming() {
             Songcoming
           </h1>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1.05rem", color: "rgba(255,248,220,0.7)", marginTop: "0.5rem", maxWidth: "500px" }}>
-            A fairy-tale romance for teen readers — reviewed by School Library Journal
+            A fairy-tale romance for teen readers
           </p>
         </div>
         {/* Bottom wave into white */}
