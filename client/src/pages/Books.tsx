@@ -249,7 +249,7 @@ export default function Books() {
             </div>
           </div>
           <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7, maxWidth: "600px", marginBottom: "2.5rem" }}>
-            A comprehensive collection of educational books published through Reading A-Z — covering science, nature, history, and imagination for young readers.
+            A selected collection of educational books published through Reading A-Z — covering science, nature, history, and imagination for young readers.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
