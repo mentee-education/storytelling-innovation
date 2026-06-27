@@ -68,7 +68,7 @@ export default function Workshops() {
               {[
               {
                 title: "Creative Writing Workshops",
-                img: IMAGES.heroWorkshop,
+                img: "/images/workshop-k12.jpg",
                 badge: "K-12 & Community",
                 badgeBg: "#E8531D",
                 desc: "Hands-on creative writing workshops for students and community members. Participants explore personal narrative, poetry, fiction, and more — guided by prompts, games, and collaborative exercises.",
@@ -76,7 +76,7 @@ export default function Workshops() {
               },
               {
                 title: "Novel-in-Verse Workshops",
-                img: IMAGES.torranClassroomSelfie,
+                img: "/images/workshop-highschool.jpg",
                 badge: "High School & College",
                 badgeBg: "#0F1B2D",
                 desc: "Deep-dive workshops exploring the novel-in-verse form — how poetry and narrative intersect, how verse can carry a story, and how to find your own voice in this hybrid genre.",
@@ -124,11 +124,11 @@ export default function Workshops() {
               },
               {
                 title: "Community Storytelling",
-                img: IMAGES.groupOutdoor,
+                img: "/images/workshop-community.png",
                 badge: "All Ages",
                 badgeBg: "#F5C842",
                 badgeColor: "#0F1B2D",
-                desc: "Inclusive storytelling workshops for community organizations, libraries, nonprofits, and cultural groups. These sessions celebrate diverse voices and build community through shared narrative.",
+                desc: "Inclusive storytelling workshops for community organizations, libraries, and nonprofits. These sessions celebrate diverse voices and build community through shared narrative.",
                 features: ["Oral storytelling traditions", "Intergenerational stories", "Community memory projects", "Multilingual support"],
               },
             ].map((workshop) => (
