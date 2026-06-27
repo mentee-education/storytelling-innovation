@@ -82,8 +82,7 @@ function VideoCard({ project }: { project: typeof projects[0] }) {
       </div>
 
       {/* Content */}
-      <div className="p-7" style={{ backgroundColor: "white" }}>
-        <div className="w-12 h-1 mb-4" style={{ backgroundColor: project.color }} />
+      <div className="p-5" style={{ backgroundColor: "white", textAlign: "center" }}>
         <h3
           className="font-barlow-condensed font-black text-2xl uppercase"
           style={{ color: "#0F1B2D", lineHeight: 1.1 }}
