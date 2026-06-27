@@ -356,7 +356,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center md:justify-end items-end" style={{ marginBottom: 0 }}>
               <img
-                src="/images/torran-transparent.webp"
+                src="/images/torran-founder.jpg"
                 alt="Torran Anderson"
                 className="w-full max-w-lg object-contain object-bottom"
                 style={{ display: "block", marginBottom: "-4px" }}
