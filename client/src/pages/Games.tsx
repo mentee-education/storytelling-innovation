@@ -130,13 +130,13 @@ export default function Games() {
             <div className="script-label mb-2" style={{ color: "#1A8C7A" }}>Our philosophy</div>
             <h2 className="display-heading" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#0F1B2D" }}>About Germination Games</h2>
           </div>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)" }}>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.6, color: "rgba(15,27,45,0.75)" }}>
             Germination Games supports participants to be creators, not victims. When people face existential threats like climate change, they often hunker down in their old ways of thinking. Just when we need skills like creativity, broadening perspectives, and problem-solving, we tend to be most rigid. Germination Games are designed to examine wicked problems in new ways, engage people as active participants in real-world problems, and serve as a catalyst for action.
           </p>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginTop: "1rem" }}>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.6, color: "rgba(15,27,45,0.75)", marginTop: "1.5rem" }}>
             Some of the benefits of games include reducing stress, enhancing cognitive abilities, getting away from screens, and forming connections with others. Current Projects for Germination Games include a Story Grow Game to explore challenging situations through collaborative storytelling. Participants bring in multiple perspectives and cross-generational storytelling to develop problem-solving skills within a story structure. With the Community Action Deck, participants draw cards to engage with their cities.
           </p>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "rgba(15,27,45,0.75)", marginTop: "1rem" }}>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "1rem", lineHeight: 1.6, color: "rgba(15,27,45,0.75)", marginTop: "1.5rem" }}>
             Germination Games cultivate the process of bringing new ideas into existence. Instead of being stuck in despair, participants play games to create new possible futures.
           </p>
         </div>
