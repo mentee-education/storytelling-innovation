@@ -176,7 +176,7 @@ export default function Songcoming() {
               {/* Buy buttons */}
               <div style={{ marginTop: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <a
-                  href="https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=tmm_pap_swatch_0"
+                  href="https://www.amazon.com/dp/1978598319?ref=cm_sw_r_ffobk_cp_ud_dp_RA0KVMT3DNAE1NG2FW72&ref_=cm_sw_r_ffobk_cp_ud_dp_RA0KVMT3DNAE1NG2FW72&social_share=cm_sw_r_ffobk_cp_ud_dp_RA0KVMT3DNAE1NG2FW72&bestFormat=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-pill btn-pill-orange no-underline text-center"
@@ -185,7 +185,7 @@ export default function Songcoming() {
                   Buy on Amazon
                 </a>
                 <a
-                  href="https://www.west44books.com"
+                  href="https://west44books.com/books/songcoming/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-pill btn-pill-navy no-underline text-center"
@@ -194,7 +194,7 @@ export default function Songcoming() {
                   West 44 Books
                 </a>
                 <a
-                  href="https://www.indiebound.org"
+                  href="https://bookshop.org/p/books/songcoming/23be3814b1509caf?ean=9781978598324&next=t"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -370,7 +370,7 @@ export default function Songcoming() {
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=tmm_pap_swatch_0"
+              href="https://www.amazon.com/dp/1978598319?ref=cm_sw_r_ffobk_cp_ud_dp_RA0KVMT3DNAE1NG2FW72&ref_=cm_sw_r_ffobk_cp_ud_dp_RA0KVMT3DNAE1NG2FW72&social_share=cm_sw_r_ffobk_cp_ud_dp_RA0KVMT3DNAE1NG2FW72&bestFormat=true"
               target="_blank"
               rel="noopener noreferrer"
               style={{
