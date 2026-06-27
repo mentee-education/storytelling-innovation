@@ -144,76 +144,6 @@ export default function Books() {
         </div>
       </section>
 
-      {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "white", lineHeight: 0, marginBottom: "-1px" }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
-        </svg>
-      </div>
-
-      {/* ── READING A-Z ── */}
-      <section style={{ backgroundColor: "#0F1B2D", paddingTop: "1rem", paddingBottom: "5rem" }}>
-        <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
-              <div className="script-label mb-1" style={{ color: "#F5C842" }}>Educational series</div>
-              <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "white" }}>Reading A-Z Collection</h2>
-            </div>
-            <div
-              style={{
-                backgroundColor: "#E8531D",
-                color: "white",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 800,
-                fontSize: "0.75rem",
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                padding: "0.5rem 1rem",
-                transform: "rotate(-2deg)",
-                boxShadow: "3px 3px 0 rgba(255,255,255,0.3)",
-                flexShrink: 0,
-              }}
-            >
-              {readingAZBooks.length} Titles
-            </div>
-          </div>
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7, maxWidth: "600px", marginBottom: "2.5rem" }}>
-            A comprehensive collection of educational books published through Reading A-Z — covering science, nature, history, and imagination for young readers.
-          </p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {readingAZBooks.map((book) => (
-              <div
-                key={book.title}
-                className="card-lift"
-                style={{ backgroundColor: "white", border: "2px solid rgba(255,255,255,0.15)", overflow: "hidden" }}
-              >
-                <div style={{ height: "160px", backgroundColor: "#F5F0EB", overflow: "hidden", borderBottom: "2px solid rgba(0,0,0,0.1)" }}>
-                  <img src={book.img} alt={book.title} className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div style={{ padding: "0.6rem 0.75rem" }}>
-                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.02em", color: "#0F1B2D", lineHeight: 1.3 }}>{book.title}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── WAVE ── */}
-      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0, marginBottom: "-1px" }}>
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="#F5F0EB" />
-        </svg>
-      </div>
-
-      {/* ── COMPILATION BANNER ── */}
-      <section style={{ backgroundColor: "#F5F0EB", paddingTop: "2rem", paddingBottom: "4rem", borderBottom: "2.5px solid #0F1B2D" }}>
-        <div className="container">
-          <img src={COMPILATION} alt="Book compilation" style={{ width: "100%", maxHeight: "280px", objectFit: "cover", display: "block", border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D" }} />
-        </div>
-      </section>
-
       {/* ── SONG OF THE SANTA CRUZ RIVER ── */}
       <section style={{ backgroundColor: "white", paddingTop: "5rem", paddingBottom: "5rem", borderTop: "2.5px solid #0F1B2D" }}>
         <div className="container">
@@ -282,6 +212,76 @@ export default function Books() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── WAVE ── */}
+      <div style={{ backgroundColor: "white", lineHeight: 0, marginBottom: "-1px" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+          <path d="M0 60 C360 0, 1080 0, 1440 60 L1440 60 L0 60 Z" fill="#0F1B2D" />
+        </svg>
+      </div>
+
+      {/* ── READING A-Z ── */}
+      <section style={{ backgroundColor: "#0F1B2D", paddingTop: "1rem", paddingBottom: "5rem" }}>
+        <div className="container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <div className="script-label mb-1" style={{ color: "#F5C842" }}>Educational series</div>
+              <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "white" }}>Reading A-Z Collection</h2>
+            </div>
+            <div
+              style={{
+                backgroundColor: "#E8531D",
+                color: "white",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 800,
+                fontSize: "0.75rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                padding: "0.5rem 1rem",
+                transform: "rotate(-2deg)",
+                boxShadow: "3px 3px 0 rgba(255,255,255,0.3)",
+                flexShrink: 0,
+              }}
+            >
+              {readingAZBooks.length} Titles
+            </div>
+          </div>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.95rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7, maxWidth: "600px", marginBottom: "2.5rem" }}>
+            A comprehensive collection of educational books published through Reading A-Z — covering science, nature, history, and imagination for young readers.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {readingAZBooks.map((book) => (
+              <div
+                key={book.title}
+                className="card-lift"
+                style={{ backgroundColor: "white", border: "2px solid rgba(255,255,255,0.15)", overflow: "hidden" }}
+              >
+                <div style={{ height: "160px", backgroundColor: "#F5F0EB", overflow: "hidden", borderBottom: "2px solid rgba(0,0,0,0.1)" }}>
+                  <img src={book.img} alt={book.title} className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div style={{ padding: "0.6rem 0.75rem" }}>
+                  <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.02em", color: "#0F1B2D", lineHeight: 1.3 }}>{book.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WAVE ── */}
+      <div style={{ backgroundColor: "#0F1B2D", lineHeight: 0, marginBottom: "-1px" }}>
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
+          <path d="M0 0 C360 60, 1080 60, 1440 0 L1440 60 L0 60 Z" fill="#F5F0EB" />
+        </svg>
+      </div>
+
+      {/* ── COMPILATION BANNER ── */}
+      <section style={{ backgroundColor: "#F5F0EB", paddingTop: "2rem", paddingBottom: "4rem", borderBottom: "2.5px solid #0F1B2D" }}>
+        <div className="container">
+          <img src={COMPILATION} alt="Book compilation" style={{ width: "100%", maxHeight: "280px", objectFit: "cover", display: "block", border: "2.5px solid #0F1B2D", boxShadow: "5px 5px 0 #E8531D" }} />
         </div>
       </section>
 
