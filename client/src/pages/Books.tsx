@@ -16,7 +16,7 @@ const featuredBooks = [
   {
     title: "Piñata Moon",
     img: IMAGES.pinataMoonCover,
-    buyUrl: "/pinata-moon",
+    buyUrl: "https://www.amazon.com/Pi%C3%B1ata-Moon-Torran-Anderson/dp/1733780904",
     badge: "Available Now",
     badgeBg: "#F5C842",
     badgeColor: "#0F1B2D",
@@ -30,8 +30,8 @@ const featuredBooks = [
     badge: "Novel-in-Verse",
     badgeBg: "#0F1B2D",
     badgeColor: "white",
-    desc: "\"Teens are sure to fall in love with this fairy-tale romance.\"",
-    review: "— School Library Journal",
+    desc: "When Eve meets a merman in the creek, she must choose between a life under water, where she can\u2019t breathe\u2014and a life on land that will surely suffocate her.",
+    review: "",
   },
   {
     title: "Earth Day Carol",
