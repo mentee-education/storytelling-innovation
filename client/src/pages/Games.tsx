@@ -235,10 +235,10 @@ export default function Games() {
             </div>
             <div className="flex flex-col gap-4" style={{ justifyContent: "center" }}>
               <div style={{ flex: "1 1 0", minHeight: "200px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                <img src={PICTURE1_5} alt="Riders and Walkers game" className="w-full h-full object-cover object-center" />
+                <img src="/images/riders-walkers-classroom.png" alt="Riders and Walkers in classroom" className="w-full h-full object-cover object-center" />
               </div>
               <div style={{ flex: "1 1 0", minHeight: "200px", overflow: "hidden", border: "2.5px solid rgba(255,255,255,0.2)" }}>
-                <img src={PICTURE2_7} alt="Game in action" className="w-full h-full object-cover object-center" />
+                <img src="/images/riders-walkers-board.png" alt="Riders and Walkers game board" className="w-full h-full object-contain" style={{ backgroundColor: "#1a2a3d" }} />
               </div>
             </div>
           </div>
