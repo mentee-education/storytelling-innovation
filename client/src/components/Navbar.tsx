@@ -153,9 +153,11 @@ export default function Navbar() {
           padding: "0.45rem 1rem",
         }}
       >
-        ⚡ Piñata Moon is available now —{" "}
+        ⚡ Songcoming is now available —{" "}
         <a
-          href="/pinata-moon"
+          href="https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598319"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{ color: "white", fontWeight: 800, textDecoration: "underline" }}
         >
           Order now →

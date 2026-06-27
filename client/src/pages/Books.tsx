@@ -30,8 +30,8 @@ const featuredBooks = [
     badge: "Novel-in-Verse",
     badgeBg: "#0F1B2D",
     badgeColor: "white",
-    desc: "A lyrical novel-in-verse that gives the reader a new look at an old medium — an experience that keeps hold long after the last page.",
-    review: "★★★★★ Pine Reads Review",
+    desc: "\"Teens are sure to fall in love with this fairy-tale romance.\"",
+    review: "— School Library Journal",
   },
   {
     title: "Earth Day Carol",
