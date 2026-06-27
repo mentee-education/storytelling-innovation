@@ -135,12 +135,12 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { src: "/images/about-gallery-1.png", alt: "Piñata Moon virtual book club" },
-              { src: "/images/about-gallery-2.png", alt: "Songcoming and Piñata Moon books", pos: "60% center" },
+              { src: "/images/about-gallery-2.png", alt: "Songcoming and Piñata Moon books", pos: "center center", fit: "contain" },
               { src: IMAGES.upwardBoundWorkshop, alt: "Upward Bound" },
               { src: "/images/about-gallery-4.png", alt: "Workshop discussion" },
             ].map((img, i) => (
               <div key={i} style={{ height: "200px", overflow: "hidden", border: "2.5px solid #0F1B2D", boxShadow: i % 2 === 0 ? "3px 3px 0 #E8531D" : "3px 3px 0 #0F1B2D" }}>
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" style={{ objectPosition: (img as any).pos || "center" }} />
+                <img src={img.src} alt={img.alt} className={`w-full h-full ${(img as any).fit === "contain" ? "object-contain" : "object-cover"} hover:scale-105 transition-transform duration-500`} style={{ objectPosition: (img as any).pos || "center", backgroundColor: (img as any).fit === "contain" ? "#0F1B2D" : undefined }} />
               </div>
             ))}
           </div>
