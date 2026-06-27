@@ -76,7 +76,7 @@ export default function Games() {
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ border: "2.5px solid #0F1B2D", boxShadow: "8px 8px 0 #E8531D", overflow: "hidden", height: "340px", backgroundColor: "#f5f0e8", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <img src="/images/germination-games-logo.jpg" alt="Germination Games - StoryGrow" className="w-full h-full object-contain" style={{ display: "block", padding: "1rem" }} />
+                <img src="/images/germination-games-logo.png" alt="Germination Games - StoryGrow" className="w-full h-full object-contain" style={{ display: "block", padding: "1rem" }} />
               </div>
             </div>
           </div>
