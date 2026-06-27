@@ -183,7 +183,7 @@ export default function Workshops() {
         <div className="container mb-6">
           <div className="text-center">
             <div className="script-label mb-2" style={{ color: "#E8531D" }}>From the field</div>
-            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Workshop Gallery</h2>
+            <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Gallery</h2>
           </div>
         </div>
         <div style={{ display: "flex", gap: "0.75rem", animation: "scroll-left 40s linear infinite", width: "max-content" }}>
