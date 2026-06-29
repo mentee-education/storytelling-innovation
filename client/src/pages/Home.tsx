@@ -316,14 +316,21 @@ export default function Home() {
                 color: "#FFD600",
               },
             ].map((t, i) => (
-              <div key={i} className="p-8 flex flex-col" style={{ backgroundColor: "rgba(255,255,255,0.08)", borderLeft: `4px solid ${t.color}` }}>
-                <div className="font-barlow-condensed font-black text-3xl mb-4" style={{ color: t.color }}>"</div>
-                <p className="font-barlow text-white/85 text-base italic mb-6 leading-relaxed flex-1">
+              <div
+                key={i}
+                className="p-8 flex flex-col transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] group cursor-default"
+                style={{ backgroundColor: "rgba(255,255,255,0.08)", borderLeft: `4px solid ${t.color}` }}
+              >
+                <div
+                  className="font-barlow-condensed font-black text-3xl mb-4 transition-transform duration-500 group-hover:scale-110 origin-left"
+                  style={{ color: t.color }}
+                >"</div>
+                <p className="font-barlow text-white/85 text-base italic mb-6 leading-relaxed flex-1 transition-colors duration-500 group-hover:text-white">
                   {t.quote}
                 </p>
                 <div>
                   <p className="font-barlow-condensed font-black text-white text-lg uppercase">{t.name}</p>
-                  <p className="font-barlow text-white/40 text-sm">{t.role}</p>
+                  <p className="font-barlow text-white/40 text-sm transition-colors duration-500 group-hover:text-white/60">{t.role}</p>
                 </div>
               </div>
             ))}
