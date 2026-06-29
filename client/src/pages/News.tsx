@@ -14,7 +14,7 @@ const newsItems = [
     excerpt:
       "A beautiful cross between a romance and fantasy story. Eve happens upon a merman named Oorin by chance at the river. Both characters are struggling to accept life's fate: Eve, a hideous betrothal; and Oorin, a lost rite of passage. VERDICT: Teens are sure to fall in love with this fairy-tale romance.",
     img: "/images/news-slj-review.png",
-    link: "https://storytellinginnovation.com/2026/05/09/school-library-journal-review-of-songcoming/",
+    link: "",
     featured: true,
   },
   {
@@ -25,7 +25,7 @@ const newsItems = [
     excerpt:
       "Fellowships have a way of opening doors you did not even know existed. They lead across continents, into classrooms and communities, and toward entirely new ways of seeing the world. For Torran Anderson, fellowships became catalysts for creativity, storytelling, and connection. As a multi-fellowship winner — including the Mira, Rotary Peace, and Fulbright — Torran's journey spans the globe.",
     img: "/images/news-fellowships.jpg",
-    link: "https://storytellinginnovation.com/2026/02/04/fellowships-across-the-globe-torran-andersons-path-to-creative-storytelling/",
+    link: "",
     featured: false,
   },
   {
@@ -36,7 +36,7 @@ const newsItems = [
     excerpt:
       "Torran Anderson is from the desert town of Tucson, Arizona. He has published over 50 books and loves doing writing workshops with schools and community groups. Torran is currently working on his Tiny Things project as part of the Pi\u00f1ata Moon book.",
     img: "/images/news-pine-reads.png",
-    link: "https://storytellinginnovation.com/2026/02/04/pine-reads-interview-with-torran-anderson/",
+    link: "",
     featured: false,
   },
   {
@@ -47,7 +47,7 @@ const newsItems = [
     excerpt:
       "Episode #422: Torran Anderson \u2014 Our first official Boy of Summer is JV's wonderful and dear lifelong (from 4th grade onward!) friend, author Torran Anderson (Pi\u00f1ata Moon). Hear about the amazing work Torran is doing in partnership with the Navajo nation, and memories that Torran and JV share from their own teen years in Tucson, AZ.",
     img: "/images/news-jv-club.jpg",
-    link: "https://storytellinginnovation.com/2026/02/04/jv-club-podcast-torran-anderson/",
+    link: "",
     featured: false,
   },
 ];
@@ -236,15 +236,17 @@ export default function News() {
                   >
                     {featured.excerpt}
                   </p>
-                  <a
-                    href={featured.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-pill btn-pill-orange no-underline"
-                    style={{ alignSelf: "flex-start", fontSize: "0.85rem" }}
-                  >
-                    Read More &rarr;
-                  </a>
+                  {featured.link && (
+                    <a
+                      href={featured.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-pill btn-pill-orange no-underline"
+                      style={{ alignSelf: "flex-start", fontSize: "0.85rem" }}
+                    >
+                      Read More &rarr;
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -351,24 +353,26 @@ export default function News() {
                   >
                     {item.excerpt}
                   </p>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      fontFamily: "'Barlow Condensed', sans-serif",
-                      fontWeight: 800,
-                      fontSize: "0.75rem",
-                      letterSpacing: "0.06em",
-                      textTransform: "uppercase",
-                      color: "#E8531D",
-                      textDecoration: "none",
-                      marginTop: "0.5rem",
-                    }}
-                    className="hover:opacity-70 transition-opacity"
-                  >
-                    Read More &rarr;
-                  </a>
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        fontFamily: "'Barlow Condensed', sans-serif",
+                        fontWeight: 800,
+                        fontSize: "0.75rem",
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase",
+                        color: "#E8531D",
+                        textDecoration: "none",
+                        marginTop: "0.5rem",
+                      }}
+                      className="hover:opacity-70 transition-opacity"
+                    >
+                      Read More &rarr;
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

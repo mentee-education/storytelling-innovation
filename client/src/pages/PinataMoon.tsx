@@ -74,15 +74,7 @@ export default function PinataMoon() {
                 >
                   IndieBound.org
                 </a>
-                <a
-                  href="http://storytellinginnovation.com/wp-content/uploads/2025/12/Pinata-Moon-Reader-Questions-V3.docx.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-pill btn-pill-navy no-underline text-center"
-                  style={{ fontSize: "0.85rem" }}
-                >
-                  Download Reader Guide
-                </a>
+                {/* Reader guide PDF unavailable — re-add when file is re-uploaded to /images/ */}
                 <a
                   href="https://www.amazon.com/Pi%C3%B1ata-Moon-Torran-Anderson/dp/1733780904"
                   target="_blank"

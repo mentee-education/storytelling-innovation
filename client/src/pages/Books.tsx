@@ -7,8 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { IMAGES } from "@/lib/images";
 
-const BASE = "https://storytellinginnovation.com/wp-content/uploads/2025/12/";
-const BASE2 = "https://storytellinginnovation.com/wp-content/uploads/2025/10/";
+const BASE = "/images/az-";
 const HERO_BG = "/images/books-hero.png";
 const COMPILATION = IMAGES.pinataMoonBanner;
 
@@ -112,9 +111,6 @@ export default function Books() {
               <div className="script-label mb-1" style={{ color: "#E8531D" }}>Handpicked favorites</div>
               <h2 className="display-heading" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: "#0F1B2D" }}>Featured Titles</h2>
             </div>
-            <a href="https://storytellinginnovation.com/books/" target="_blank" rel="noopener noreferrer" className="btn-pill btn-pill-orange no-underline flex-shrink-0" style={{ fontSize: "0.85rem" }}>
-              View on original site →
-            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

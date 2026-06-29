@@ -18,17 +18,17 @@ const PERSONAL_STATEMENTS = IMAGES.torranClassroomSelfie; // Torran portrait
 const CLI_FI = IMAGES.torranNorwayClassSelfie;     // Torran outdoor portrait
 
 const GALLERY_CAROUSEL = [
-  "http://storytellinginnovation.com/wp-content/uploads/2026/01/Odin-and-Torran-photo-768x1024.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2026/01/DSC08155-1024x683.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2026/01/Monsoon-poem.png",
-  "http://storytellinginnovation.com/wp-content/uploads/2026/01/chula-photo-1024x768.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2025/10/2-cli-fi-picture-2.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2025/10/Upward-Bound_2020Summer_Writing-Workshop_PinataMoon2-3-1024x744.png",
-  "http://storytellinginnovation.com/wp-content/uploads/2025/10/3-earth-day-carol-2.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2025/10/cropped-personal-statements-2.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2025/10/norwegian-students-2-1024x576.jpg",
-  "http://storytellinginnovation.com/wp-content/uploads/2026/01/playing-game-with-students-1024x586.png",
-  "http://storytellinginnovation.com/wp-content/uploads/2026/01/Picture2.jpg",
+  "/images/heroWorkshop.webp",
+  "/images/workshopKautz.webp",
+  "/images/norwegianStudents.webp",
+  "/images/upwardBoundWorkshop.webp",
+  "/images/torranTeachingCsi.webp",
+  "/images/studentsWriting.webp",
+  "/images/groupOutdoor.webp",
+  "/images/torranClassroomSelfie.webp",
+  "/images/upwardBoundCovid.webp",
+  "/images/teachersWorkshopCooper.webp",
+  "/images/interviewLegacy.webp",
 ];
 
 export default function Workshops() {
