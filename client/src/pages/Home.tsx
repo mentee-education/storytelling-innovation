@@ -246,9 +246,9 @@ export default function Home() {
       </section>
 
       {/* VIDEO SECTION */}
-      <section className="bg-[#0A1628] py-20 relative overflow-hidden">
+      <section className="bg-[#0F1F38] py-20 relative overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-15"
+          className="absolute inset-0 bg-cover bg-center opacity-25"
           style={{ backgroundImage: `url(${IMAGES.torranTeachingCsi})` }}
         />
         <div className="relative container mx-auto px-6 text-center">
@@ -289,7 +289,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-[#0F1F38] py-20" style={{ marginTop: "-2px" }}>
+      <section className="bg-[#132847] py-20" style={{ marginTop: "-2px" }}>
         <div className="container mx-auto px-6">
           <p className="font-caveat text-[#FFD600] text-2xl text-center mb-2">What people say</p>
           <h2 className="font-barlow-condensed font-black text-white text-6xl uppercase text-center mb-16">
