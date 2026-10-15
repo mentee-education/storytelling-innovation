@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 import { IMAGES } from "@/lib/images";
 
-const WEB3FORMS_KEY = "f40bb234-f956-40a9-8d38-43d72d8210e0";
+const WEB3FORMS_KEY = "d6332037-01ab-4a0b-b9dc-2758536e5cd0";
 const TORRAN_HEADSHOT = IMAGES.torranNorwayClassSelfie;
 const HERO_BG = "/images/contact-hero.png";
 
