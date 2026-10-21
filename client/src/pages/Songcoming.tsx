@@ -13,6 +13,12 @@ const reviews = [
   {
     quote: `Gr 8 Up–A beautiful cross between a romance and fantasy story. Eve happens upon a merman named Oorin by chance at the river. Both characters are struggling to accept life's fate: Eve, a hideous betrothal; and Oorin, a lost rite of passage. As Eve copes with the death of her mother and the changes in her father, she is soothed only by her mother's singing that she hears from memory. Oorin is drawn to her humanity. Longing to fill the void of loneliness and embark on the journey to identity and independence, Eve and Oorin find themselves in a battle against external forces—Eve's father and the townspeople's beliefs in mythical beasts. Written in free verse, Anderson's writing expresses the emotional intensity of the characters' struggles through visual techniques that bring readers into this magical realm and demonstrates the power of love that unites them in this coming-of-age romantasy. Race of the characters is not mentioned; Oorin has "skin the color of wet sand." This hi-lo novel is written at a grade two to three reading level. VERDICT Teens are sure to fall in love with this fairy-tale romance.`,
     attribution: "— Reviewed by Mitzi Mack, School Library Journal",
+    source: "https://www.slj.com/review/songcoming-100011183",
+  },
+  {
+    quote: `Her character is an inspiration for today's young women. I think this book is an easy to follow poetry introduction for young readers, with a unique take on historical mythology. Eve and Oorin show what forming decisions means for youth romance, as well as how family pasts and vulnerability can create something new.`,
+    attribution: "— Amelia Sommerhauser, Pine Reads Review",
+    source: "https://www.pinereadsreview.com/blog/songcoming-torran-anderson/",
   },
   {
     quote: `As a HI/LO book this is a really fast and easy read but it still hits emotionally with lots of open ended provocation. The tone and speed of the story builds towards the conclusion, which left me feeling a bit wrecked - in a good way! As a teacher I would use this book in my class as a teaching tool. It gives a really good entry into prediction, what is left unsaid and what is said but might mean something deeper. I love finding a book that has the dual result of leaving me, as an adult, wanting more of the story but also being something I can use as a tool for my students.`,
@@ -335,7 +341,18 @@ export default function Songcoming() {
                 {reviews[reviewIdx].quote}
               </p>
               <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.85rem", color: "#F5C842", letterSpacing: "0.05em" }}>
-                {reviews[reviewIdx].attribution}
+                {reviews[reviewIdx].source ? (
+                  <a
+                    href={reviews[reviewIdx].source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#F5C842", textDecoration: "underline", textUnderlineOffset: "3px" }}
+                  >
+                    {reviews[reviewIdx].attribution} ↗
+                  </a>
+                ) : (
+                  reviews[reviewIdx].attribution
+                )}
               </p>
             </div>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1.5rem", marginTop: "1.5rem" }}>

@@ -172,6 +172,7 @@ export default function Home() {
                 review: "★★★★★ Arizona Daily Star",
                 stars: true,
                 href: "https://www.amazon.com/Pi%C3%B1ata-Moon-Torran-Anderson/dp/1733780904",
+                learnMore: "/pinata-moon",
                 imgFit: "object-contain",
               },
               {
@@ -187,6 +188,7 @@ export default function Home() {
                 review: "",
                 stars: false,
                 href: "https://www.amazon.com/Songcoming-YA-Verse-Torran-Anderson/dp/1978598327/ref=sr_1_1?crid=1ZKE61SY1M0LH&dib=eyJ2IjoiMSJ9.wbJT59m5HRIG7QnmaMClKg.cSJ0dsPwLqD9Lg1GUDiiJwGKPxA9fZHkFIdsyfwgSlY&dib_tag=se&keywords=songcoming&qid=1782270932&s=books&sprefix=songcom%2Cstripbooks%2C180&sr=1-1",
+                learnMore: "/songcoming",
                 imgFit: "object-contain",
               },
               {
@@ -202,6 +204,7 @@ export default function Home() {
                 review: "Available now",
                 stars: false,
                 href: "https://www.amazon.com/Zippy-Brain-Inc-Earth-Carol/dp/B00BQ0ZQ70",
+                learnMore: "",
                 imgFit: "object-cover",
               },
             ].map((book) => (
@@ -230,14 +233,23 @@ export default function Home() {
                   <h3 className="font-barlow-condensed font-black text-[#0A1628] text-3xl uppercase mb-2">{book.title}</h3>
                   <p className="font-barlow text-[#0A1628]/70 text-sm mb-4">{book.desc}</p>
                   <p className="font-barlow italic text-xs text-[#0A1628]/50 mb-4">{book.review}</p>
-                  <a
-                    href={book.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors mt-auto"
-                  >
-                    Buy Now
-                  </a>
+                  <div className="mt-auto flex flex-col gap-2">
+                    {book.learnMore && (
+                      <Link href={book.learnMore}>
+                        <button className="w-full text-center bg-transparent text-[#0A1628] border-2 border-[#0A1628] font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#0A1628] hover:text-white transition-colors">
+                          Learn More
+                        </button>
+                      </Link>
+                    )}
+                    <a
+                      href={book.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center bg-[#0A1628] text-white font-barlow-condensed font-black uppercase tracking-wide py-3 hover:bg-[#FF5A36] transition-colors"
+                    >
+                      Buy Now
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
