@@ -14,8 +14,30 @@ const newsItems = [
     excerpt:
       "A beautiful cross between a romance and fantasy story. Eve happens upon a merman named Oorin by chance at the river. Both characters are struggling to accept life's fate: Eve, a hideous betrothal; and Oorin, a lost rite of passage. VERDICT: Teens are sure to fall in love with this fairy-tale romance.",
     img: "/images/news-slj-review.png",
-    link: "",
+    link: "https://www.slj.com/review/songcoming-100011183",
     featured: true,
+  },
+  {
+    date: "October 2026",
+    category: "Review",
+    categoryColor: "#7B2D8E",
+    title: "Reader Views Review of Songcoming",
+    excerpt:
+      "Reader Views reviews Torran Anderson's Songcoming — a novel-in-verse romantasy following Eve and the merman Oorin as they each wrestle with the fates set before them.",
+    img: "/images/news-slj-review.png",
+    link: "https://readerviews.com/reviews/songcoming-anderson/",
+    featured: false,
+  },
+  {
+    date: "September 30, 2026",
+    category: "Review",
+    categoryColor: "#7B2D8E",
+    title: "Pine Reads Review of Songcoming",
+    excerpt:
+      "Pine Reads Review spotlights Songcoming, Torran Anderson's YA verse novel, praising its emotional intensity and the way free verse carries readers into its magical, coming-of-age world.",
+    img: "/images/news-pine-reads.png",
+    link: "https://www.pinereadsreview.com/blog/songcoming-torran-anderson/",
+    featured: false,
   },
   {
     date: "February 4, 2026",
@@ -36,7 +58,7 @@ const newsItems = [
     excerpt:
       "Torran Anderson is from the desert town of Tucson, Arizona. He has published over 50 books and loves doing writing workshops with schools and community groups. Torran is currently working on his Tiny Things project as part of the Pi\u00f1ata Moon book.",
     img: "/images/news-pine-reads.png",
-    link: "",
+    link: "https://www.pinereadsreview.com/blog/interview-torran-anderson/",
     featured: false,
   },
   {
@@ -47,7 +69,7 @@ const newsItems = [
     excerpt:
       "Episode #422: Torran Anderson \u2014 Our first official Boy of Summer is JV's wonderful and dear lifelong (from 4th grade onward!) friend, author Torran Anderson (Pi\u00f1ata Moon). Hear about the amazing work Torran is doing in partnership with the Navajo nation, and memories that Torran and JV share from their own teen years in Tucson, AZ.",
     img: "/images/news-jv-club.jpg",
-    link: "",
+    link: "https://www.thejvclub.org/episodes/2021/episode-422-torran-anderson",
     featured: false,
   },
 ];
@@ -151,11 +173,18 @@ export default function News() {
             <div className="script-label mb-2" style={{ color: "#E8531D" }}>
               Latest story
             </div>
-            <div
+            <a
+              href={featured.link || undefined}
+              target={featured.link ? "_blank" : undefined}
+              rel={featured.link ? "noopener noreferrer" : undefined}
+              className="no-underline"
               style={{
+                display: "block",
+                color: "inherit",
                 border: "2.5px solid #0F1B2D",
                 boxShadow: "6px 6px 0 #E8531D",
                 overflow: "hidden",
+                cursor: featured.link ? "pointer" : "default",
               }}
             >
               <div className="grid grid-cols-1 md:grid-cols-2" style={{ minHeight: "320px" }}>
@@ -237,19 +266,16 @@ export default function News() {
                     {featured.excerpt}
                   </p>
                   {featured.link && (
-                    <a
-                      href={featured.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <span
                       className="btn-pill btn-pill-orange no-underline"
                       style={{ alignSelf: "flex-start", fontSize: "0.85rem" }}
                     >
                       Read More &rarr;
-                    </a>
+                    </span>
                   )}
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </section>
       )}
@@ -276,14 +302,20 @@ export default function News() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {rest.map((item) => (
-              <div
+              <a
                 key={item.title}
+                href={item.link || undefined}
+                target={item.link ? "_blank" : undefined}
+                rel={item.link ? "noopener noreferrer" : undefined}
+                className="no-underline"
                 style={{
+                  color: "inherit",
                   border: "2.5px solid #0F1B2D",
                   boxShadow: "3px 3px 0 #E8531D",
                   overflow: "hidden",
                   display: "flex",
                   flexDirection: "column",
+                  cursor: item.link ? "pointer" : "default",
                 }}
               >
                 <div
@@ -354,10 +386,7 @@ export default function News() {
                     {item.excerpt}
                   </p>
                   {item.link && (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <span
                       style={{
                         fontFamily: "'Barlow Condensed', sans-serif",
                         fontWeight: 800,
@@ -371,10 +400,10 @@ export default function News() {
                       className="hover:opacity-70 transition-opacity"
                     >
                       Read More &rarr;
-                    </a>
+                    </span>
                   )}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
