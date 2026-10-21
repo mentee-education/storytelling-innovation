@@ -372,7 +372,16 @@ export default function News() {
                   </div>
                   <h3
                     className="display-heading"
-                    style={{ fontSize: "1.4rem", color: "#0F1B2D", lineHeight: 1.2 }}
+                    style={{
+                      fontSize: "1.4rem",
+                      color: "#0F1B2D",
+                      lineHeight: 1.2,
+                      display: "-webkit-box",
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                      minHeight: "calc(1.4rem * 1.2 * 2)",
+                    }}
                   >
                     {item.title}
                   </h3>
@@ -383,6 +392,10 @@ export default function News() {
                       lineHeight: 1.65,
                       color: "rgba(15,27,45,0.7)",
                       flex: 1,
+                      display: "-webkit-box",
+                      WebkitLineClamp: 4,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
                     }}
                   >
                     {item.excerpt}
