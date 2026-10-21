@@ -24,7 +24,8 @@ const newsItems = [
     title: "Reader Views Review of Songcoming",
     excerpt:
       "Reader Views reviews Torran Anderson's Songcoming — a novel-in-verse romantasy following Eve and the merman Oorin as they each wrestle with the fates set before them.",
-    img: "/images/news-slj-review.png",
+    img: "/images/news-songcoming-review.png",
+    imgPosition: "center 70%",
     link: "https://readerviews.com/reviews/songcoming-anderson/",
     featured: false,
   },
@@ -35,7 +36,7 @@ const newsItems = [
     title: "Pine Reads Review of Songcoming",
     excerpt:
       "Pine Reads Review spotlights Songcoming, Torran Anderson's YA verse novel, praising its emotional intensity and the way free verse carries readers into its magical, coming-of-age world.",
-    img: "/images/news-pine-reads.png",
+    img: "/images/news-songcoming-review-2.png",
     link: "https://www.pinereadsreview.com/blog/songcoming-torran-anderson/",
     featured: false,
   },
@@ -47,7 +48,7 @@ const newsItems = [
     excerpt:
       "Fellowships have a way of opening doors you did not even know existed. They lead across continents, into classrooms and communities, and toward entirely new ways of seeing the world. For Torran Anderson, fellowships became catalysts for creativity, storytelling, and connection. As a multi-fellowship winner — including the Mira, Rotary Peace, and Fulbright — Torran's journey spans the globe.",
     img: "/images/news-fellowships.jpg",
-    link: "",
+    link: "https://www.profellow.com/interviews/fellowships-across-the-globe-torran-andersons-path-to-creative-storytelling/",
     featured: false,
   },
   {
@@ -329,6 +330,7 @@ export default function News() {
                     src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    style={{ objectPosition: item.imgPosition || "center" }}
                   />
                 </div>
                 <div
