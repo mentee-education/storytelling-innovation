@@ -88,11 +88,11 @@ export default function Footer() {
       </div>
 
       {/* Developed by bar */}
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", backgroundColor: "#f5f0eb" }}>
-        <div className="container" style={{ padding: "1rem 0", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem" }}>
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 500, fontSize: "0.7rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(15,27,45,0.4)" }}>Developed by</span>
-          <a href="https://mentee.ca" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-opacity">
-            <img src="/images/mentee-logo.png" alt="Mentee" style={{ height: "28px", width: "auto" }} />
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.10)", backgroundColor: "rgba(0,0,0,0.25)" }}>
+        <div style={{ padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.75)" }}>Developed by</span>
+          <a href="https://mentee.ca" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" style={{ display: "inline-flex", alignItems: "center" }}>
+            <img src="/mentee-logo.svg" alt="Mentee" width={156} height={52} style={{ display: "block", height: "32px", width: "auto", opacity: 0.85 }} />
           </a>
         </div>
       </div>
