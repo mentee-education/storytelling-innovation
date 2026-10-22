@@ -58,7 +58,7 @@ export default function Footer() {
                 { label: "News", href: "/news" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
-                <Link key={link.href} href={link.href} className="no-underline transition-opacity hover:opacity-100" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "0.95rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)" }}>
+                <Link key={link.href} href={link.href} className="no-underline transition-opacity hover:opacity-100" style={{ padding: "1px 0", margin: "-1px 0", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "0.95rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)" }}>
                   {link.label}
                 </Link>
               ))}

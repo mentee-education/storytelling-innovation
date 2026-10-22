@@ -86,7 +86,7 @@ export default function Workshops() {
               <div key={workshop.title} style={{ border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D", overflow: "hidden" }}>
                 <div style={{ position: "relative", height: "240px", overflow: "hidden", borderBottom: "2.5px solid #0F1B2D" }}>
                   <img src={workshop.img} alt={workshop.title} className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" />
-                  <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: workshop.badgeBg, color: (workshop as { badgeColor?: string }).badgeColor || "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.3rem 0.7rem", transform: "rotate(-2deg)" }}>
+                  <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: workshop.badgeBg, color: (workshop as { badgeColor?: string }).badgeColor || "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.3rem 0.7rem", transform: "rotate(-2deg)" }}>
                     {workshop.badge}
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function Workshops() {
                   <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)", marginBottom: "1rem" }}>{workshop.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {workshop.features.map((f) => (
-                      <span key={f} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.65rem", letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.25rem 0.6rem", backgroundColor: "#F5F0EB", color: "#0F1B2D", border: "1.5px solid #0F1B2D" }}>
+                      <span key={f} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.6875rem", letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.25rem 0.6rem", backgroundColor: "#F5F0EB", color: "#0F1B2D", border: "1.5px solid #0F1B2D" }}>
                         {f}
                       </span>
                     ))}
@@ -135,7 +135,7 @@ export default function Workshops() {
               <div key={workshop.title} style={{ border: "2.5px solid #0F1B2D", boxShadow: "4px 4px 0 #E8531D", overflow: "hidden" }}>
                 <div style={{ position: "relative", height: "240px", overflow: "hidden", borderBottom: "2.5px solid #0F1B2D" }}>
                   <img src={workshop.img} alt={workshop.title} className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" />
-                  <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: workshop.badgeBg, color: (workshop as { badgeColor?: string }).badgeColor || "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.3rem 0.7rem", transform: "rotate(-2deg)" }}>
+                  <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: workshop.badgeBg, color: (workshop as { badgeColor?: string }).badgeColor || "white", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.3rem 0.7rem", transform: "rotate(-2deg)" }}>
                     {workshop.badge}
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function Workshops() {
                   <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", lineHeight: 1.65, color: "rgba(15,27,45,0.7)", marginBottom: "1rem" }}>{workshop.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {workshop.features.map((f) => (
-                      <span key={f} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.65rem", letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.25rem 0.6rem", backgroundColor: "#F5F0EB", color: "#0F1B2D", border: "1.5px solid #0F1B2D" }}>
+                      <span key={f} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.6875rem", letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.25rem 0.6rem", backgroundColor: "#F5F0EB", color: "#0F1B2D", border: "1.5px solid #0F1B2D" }}>
                         {f}
                       </span>
                     ))}
@@ -188,8 +188,8 @@ export default function Workshops() {
         </div>
         <div style={{ display: "flex", gap: "0.75rem", animation: "scroll-left 40s linear infinite", width: "max-content" }}>
           {[...GALLERY_CAROUSEL, ...GALLERY_CAROUSEL].map((src, i) => (
-            <div key={i} style={{ width: "280px", height: "200px", flexShrink: 0, overflow: "hidden", border: "2.5px solid #0F1B2D" }}>
-              <img src={src} alt={`Workshop gallery ${(i % GALLERY_CAROUSEL.length) + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+            <div key={i} style={{ height: "200px", flexShrink: 0, overflow: "hidden", border: "2.5px solid #0F1B2D" }}>
+              <img src={src} alt={`Workshop gallery ${(i % GALLERY_CAROUSEL.length) + 1}`} style={{ width: "auto", height: "100%", display: "block" }} />
             </div>
           ))}
         </div>

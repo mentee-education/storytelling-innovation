@@ -78,6 +78,8 @@ function DropdownItem({ item, location }: { item: NavItem; location: string }) {
           href={item.href}
           className="no-underline transition-colors"
           style={{
+            padding: "1px 0",
+            margin: "-1px 0",
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 700,
             fontSize: "0.9rem",
@@ -90,7 +92,7 @@ function DropdownItem({ item, location }: { item: NavItem; location: string }) {
         </Link>
         <button
           onClick={() => setOpen(!open)}
-          style={{ background: "none", border: "none", cursor: "pointer", padding: "0 0 0 4px", color: active ? "#E8531D" : "#0F1B2D" }}
+          style={{ background: "none", border: "none", cursor: "pointer", padding: "5px 6px 5px 4px", margin: "-5px -6px -5px 0", color: active ? "#E8531D" : "#0F1B2D" }}
           aria-label={`${item.label} submenu`}
         >
           <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />

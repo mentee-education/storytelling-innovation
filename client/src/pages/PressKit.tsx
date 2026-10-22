@@ -338,7 +338,7 @@ export default function PressKit() {
                     color: "#0A1628",
                     fontFamily: "'Barlow Condensed', sans-serif",
                     fontWeight: 900,
-                    fontSize: "0.6rem",
+                    fontSize: "0.6875rem",
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
                     padding: "0.35rem 0.7rem",

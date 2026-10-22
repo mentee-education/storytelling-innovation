@@ -122,7 +122,7 @@ export default function Books() {
               >
                 <div style={{ position: "relative", height: "300px", overflow: "hidden", borderBottom: "2.5px solid #0F1B2D", backgroundColor: "#F5F0EB" }}>
                   <img src={book.img} alt={book.title} className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500" />
-                  <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: book.badgeBg, color: book.badgeColor, fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.3rem 0.7rem", transform: "rotate(-2deg)" }}>
+                  <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: book.badgeBg, color: book.badgeColor, fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.3rem 0.7rem", transform: "rotate(-2deg)" }}>
                     {book.badge}
                   </div>
                 </div>

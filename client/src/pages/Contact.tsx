@@ -130,7 +130,7 @@ export default function Contact() {
                       {item.icon}
                     </div>
                     <div>
-                      <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,27,45,0.5)", marginBottom: "0.15rem" }}>{item.label}</p>
+                      <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(15,27,45,0.5)", marginBottom: "0.15rem" }}>{item.label}</p>
                       <a href={item.href} target={item.href.startsWith("mailto") ? undefined : "_blank"} rel="noopener noreferrer" style={{ fontFamily: "'Barlow', sans-serif", fontSize: "0.875rem", color: "#0F1B2D", textDecoration: "none" }} className="hover:opacity-70 transition-opacity">
                         {item.value}
                       </a>
@@ -256,8 +256,8 @@ export default function Contact() {
       <section style={{ backgroundColor: "white", padding: "3rem 0", overflow: "hidden" }}>
         <div style={{ display: "flex", gap: "0.75rem", animation: "scroll-left 40s linear infinite", width: "max-content" }}>
           {[...CONTACT_CAROUSEL, ...CONTACT_CAROUSEL].map((src, i) => (
-            <div key={i} style={{ width: "280px", height: "200px", flexShrink: 0, overflow: "hidden", border: "2.5px solid #0F1B2D" }}>
-              <img src={src} alt={`Gallery ${(i % 12) + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+            <div key={i} style={{ height: "200px", flexShrink: 0, overflow: "hidden", border: "2.5px solid #0F1B2D" }}>
+              <img src={src} alt={`Gallery ${(i % 12) + 1}`} style={{ width: "auto", height: "100%", display: "block" }} />
             </div>
           ))}
         </div>
